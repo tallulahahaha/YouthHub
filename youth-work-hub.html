@@ -1526,6 +1526,303 @@ body.tone-focus[data-acc=rose]{--acc:#C23A6E;--acc-s:#962653;--acc-p:#FF8FB8}
 @property --p{syntax:'<percentage>';inherits:false;initial-value:0%}
 @keyframes luhold{to{--p:100%}}
 body.lunch-on .bf-btn{z-index:89}
+/* ===== Sleep check ===== */
+.sl{--night:#1E1A4A;--moon:#FFE14D;display:grid;gap:20px}
+.sl-intro{position:relative;overflow:hidden;isolation:isolate;display:grid;justify-items:center;gap:14px;text-align:center;background:linear-gradient(160deg,#2A2366,#1E1A4A 60%,#3B2E7A);color:#F6F0FF;border:3px solid var(--pop-line);box-shadow:0 8px 0 var(--pop-line);border-radius:30px;padding:clamp(28px,6vw,64px) clamp(18px,4vw,48px)}
+.sl-intro::before{content:"";position:absolute;width:clamp(70px,9vw,110px);aspect-ratio:1;border-radius:50%;right:5%;top:9%;box-shadow:inset clamp(16px,2vw,26px) clamp(-12px,-1.2vw,-8px) 0 0 #FFE14D;filter:drop-shadow(0 0 18px rgba(255,225,77,.45));transform:rotate(-20deg);z-index:-1}
+.sl-stars{position:absolute;inset:0;z-index:-1}
+.sl-stars i{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;opacity:.7;animation:sltw 3s ease-in-out infinite}
+.sl-stars i:nth-child(1){left:8%;top:18%}.sl-stars i:nth-child(2){left:20%;top:70%;animation-delay:.6s}.sl-stars i:nth-child(3){left:32%;top:12%;animation-delay:1.2s}.sl-stars i:nth-child(4){left:44%;top:82%;animation-delay:.3s}.sl-stars i:nth-child(5){left:56%;top:22%;animation-delay:1.8s}.sl-stars i:nth-child(6){left:66%;top:64%;animation-delay:.9s}.sl-stars i:nth-child(7){left:76%;top:84%;animation-delay:2.1s}.sl-stars i:nth-child(8){left:88%;top:52%;animation-delay:1.5s}.sl-stars i:nth-child(9){left:14%;top:44%;animation-delay:2.4s}.sl-stars i:nth-child(10){left:94%;top:14%;animation-delay:.2s}.sl-stars i:nth-child(11){left:5%;top:88%;animation-delay:1.1s}.sl-stars i:nth-child(12){left:38%;top:48%;animation-delay:2.7s;opacity:.4}.sl-stars i:nth-child(13){left:60%;top:6%;animation-delay:.5s}.sl-stars i:nth-child(14){left:82%;top:34%;animation-delay:1.9s}
+@keyframes sltw{50%{opacity:.15;transform:scale(.6)}}
+.sl-kick{display:inline-block;background:var(--pop-yellow);color:#1B1630;border:2.5px solid var(--pop-line);box-shadow:0 4px 0 var(--pop-line);border-radius:999px;padding:5px 15px;font:800 .82em var(--display);letter-spacing:.06em;text-transform:uppercase;transform:rotate(-3deg);justify-self:center}
+.sl-intro h2{margin:0;font:800 clamp(2em,5.5vw,3.6em)/1.08 var(--display);text-wrap:balance}
+.sl-intro p{margin:0;max-width:34em;font-size:1.15em;color:#D9D2F5}
+.sl-rules{list-style:none;margin:4px 0;padding:0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.sl-rules li{background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);border-radius:999px;padding:6px 14px;font-weight:600;font-size:.95em}
+.sl-go{background:var(--pop-yellow);color:#1B1630;border:3px solid var(--pop-line);box-shadow:0 6px 0 var(--pop-line);border-radius:999px;padding:16px 38px;font:800 1.3em var(--display);margin-top:8px;transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.sl-go:hover{transform:translateY(-3px) rotate(-2deg)}
+.sl-q{display:grid;gap:18px;background:var(--card);border:3px solid var(--pop-line);box-shadow:0 8px 0 var(--pop-line);border-radius:30px;padding:clamp(20px,4vw,44px)}
+.sl-prog{display:flex;gap:6px}.sl-prog i{flex:1;height:10px;border-radius:999px;border:2px solid var(--pop-line);background:var(--card)}.sl-prog i.done{background:var(--acc-p)}.sl-prog i.now{background:var(--pop-yellow)}
+.sl-area{justify-self:start;font:700 .85em var(--font);letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.sl-q h2{margin:0;font:800 clamp(1.5em,3.6vw,2.5em)/1.15 var(--display);text-wrap:balance}
+.sl-q.anim h2,.sl-q.anim .sl-qart{animation:lvpop .35s both}
+.sl-opts.multi{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.sl-opts.multi .sl-opt{font-size:1.02em;padding:12px 14px}
+.sl-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.sl-opt{text-align:left;background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);box-shadow:0 5px 0 var(--pop-line);border-radius:20px;padding:16px 18px;font:600 1.12em var(--font);transition:transform .15s,background .2s}
+.sl-opt:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--acc-p) 15%,var(--card))}
+.sl-opt.on{background:var(--acc-p);color:#1B1630;transform:translateY(3px);box-shadow:0 2px 0 var(--pop-line)}
+.sl-opt.alt{border-style:dashed;box-shadow:none;color:var(--muted)}
+.sl-nav{display:flex;justify-content:space-between;gap:10px}.sl-nav.c{justify-content:center}
+.sl-ghost{background:transparent;color:var(--muted);border:2px solid var(--line);border-radius:999px;padding:9px 18px;font:600 .95em var(--font)}
+.sl-ghost:hover{border-color:var(--pop-line);color:var(--forest)}
+.sl-res{display:grid;gap:22px}
+.sl-score{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(18px,4vw,44px);align-items:center;background:linear-gradient(160deg,#2A2366,#1E1A4A);color:#F6F0FF;border:3px solid var(--pop-line);box-shadow:0 8px 0 var(--pop-line);border-radius:30px;padding:clamp(20px,4vw,40px)}
+.sl-score h2{margin:10px 0 6px;font:800 clamp(2em,5vw,3.2em)/1.05 var(--display)}.sl-score p{margin:0;font-size:1.15em;color:#D9D2F5;max-width:30em}
+.sl-score .sl-kick{justify-self:start}
+.sl-rw{position:relative;width:clamp(150px,22vw,220px);aspect-ratio:1}
+.sl-ring{width:100%;height:100%;overflow:visible}.sl-ring .sh{fill:none;stroke:#06040F;stroke-width:22}.sl-ring .bg{fill:none;stroke:#3B3375;stroke-width:22}
+.sl-ring .fg{fill:none;stroke:var(--pop-yellow);stroke-width:22;stroke-linecap:round;stroke-dashoffset:var(--off);animation:slring 1.4s cubic-bezier(.3,1,.4,1) both}
+@keyframes slring{from{stroke-dashoffset:530}}
+.sl-num{position:absolute;inset:0;display:grid;place-items:center;align-content:center}.sl-num b{font:800 clamp(2.6em,6vw,3.8em)/1 var(--display)}.sl-num small{color:#CFC6EE;font-weight:600}
+.sl-cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:20px;align-items:start}
+.sl-col{background:var(--card);border:3px solid var(--pop-line);box-shadow:0 7px 0 var(--pop-line);border-radius:26px;padding:20px}
+.sl-col h3{margin:0 0 12px;font:800 1.25em var(--display)}
+.sl-col.good{background:color-mix(in srgb,#3DDC84 14%,var(--card))}
+.sl-chips{display:flex;flex-wrap:wrap;gap:8px}
+.sl-chip{background:#3DDC84;color:#1B1630;border:2.5px solid var(--pop-line);box-shadow:0 4px 0 var(--pop-line);border-radius:999px;padding:8px 16px;font:700 1em var(--font)}
+.sl-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.sl-card{position:relative;display:grid;gap:4px;text-align:left;background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);box-shadow:0 5px 0 var(--pop-line);border-radius:20px;padding:16px;font-family:var(--font);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.sl-card:hover{transform:translateY(-3px) rotate(-1deg)}
+.sl-card b{font:800 1.1em var(--display)}.sl-card span{color:var(--muted);font-weight:600;font-size:.92em}
+.sl-card.focus{background:var(--pop-yellow);color:#1B1630}.sl-card.focus span{color:#5E5679}
+.sl-badge{position:absolute;top:-12px;right:12px;background:var(--pop-pink);color:#fff;border:2px solid var(--pop-line);border-radius:999px;padding:2px 10px;font:800 .72em var(--display);text-transform:uppercase;letter-spacing:.05em;transform:rotate(4deg)}
+.sl-note{text-align:left;background:color-mix(in srgb,var(--pop-teal) 18%,var(--card));color:var(--forest);border:2.5px dashed var(--pop-line);border-radius:20px;padding:14px 18px;font:500 1em var(--font)}
+.sl-muted{color:var(--muted);margin:0}
+.sl-foot{text-align:center;color:var(--muted);margin:0}
+.sl-sheet{position:fixed;inset:0;z-index:75;background:rgba(27,22,48,.55);display:grid;place-items:center;padding:16px;animation:tmin .25s ease both}
+.sl-sheet-in{position:relative;width:min(680px,100%);max-height:92vh;overflow:auto;background:var(--card);color:var(--forest);border:3px solid var(--pop-line);box-shadow:0 10px 0 var(--pop-line);border-radius:30px;padding:clamp(22px,4vw,38px);display:grid;gap:12px;animation:lvpop .35s both}
+.sl-sheet-in h2{margin:0;font:800 clamp(1.7em,4vw,2.4em)/1.1 var(--display)}.sl-sheet-in .sl-kick{justify-self:start}
+.sl-sheet-in h3{margin:8px 0 0;font:800 1.05em var(--display)}
+.sl-why{margin:0;font-size:1.1em;line-height:1.5}
+.sl-x{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);font-size:1.1em}
+.sl-tips{display:grid;gap:8px}
+.sl-tip{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:center;text-align:left;background:var(--card);color:var(--forest);border:2px solid var(--line);border-radius:16px;padding:10px 14px;font:500 1em/1.4 var(--font)}
+.sl-tip i{font-style:normal;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--pop-line);font-weight:800}
+.sl-tip:hover{border-color:var(--pop-line)}
+.sl-tip.on{background:var(--pop-yellow);color:#1B1630;border-color:var(--pop-line)}.sl-tip.on i{background:var(--pop-pink);color:#fff}
+.sl-callout{margin:4px 0 0;background:color-mix(in srgb,var(--pop-violet) 14%,var(--card));border-left:5px solid var(--pop-violet);border-radius:12px;padding:12px 14px;font-weight:600}
+.sl-pick{margin:0;font-size:1.05em}
+@media (max-width:760px){.sl-score,.sl-cols{grid-template-columns:1fr}.sl-score{justify-items:center;text-align:center}.sl-score .sl-kick{justify-self:center}}
+.sl-ill{display:block;overflow:visible}
+.sl-ill.pop{width:clamp(110px,14vw,170px);height:auto;filter:drop-shadow(0 6px 0 rgba(27,22,48,.12));animation:slbob 4s ease-in-out infinite}
+@keyframes slbob{50%{transform:translateY(-6px) rotate(-3deg)}}
+.sl-ill.mini{width:46px;height:46px;flex:none}.sl-ill.sl-ic{width:28px;height:28px;flex:none}
+.sl-hero-ill{position:absolute;width:clamp(80px,11vw,130px);right:5%;top:8%;z-index:-1;opacity:.95;animation:slbob 5s ease-in-out infinite}
+.sl-res-ill{width:clamp(90px,12vw,140px);animation:slbob 5s ease-in-out infinite}
+.sl-intro::before{display:none}
+.sl-secs{display:flex;gap:6px;flex-wrap:wrap}
+.sl-secs span{flex:1;min-width:70px;text-align:center;border:2px solid var(--pop-line);border-radius:999px;padding:5px 8px;font:700 .78em var(--font);color:var(--muted);background:var(--card);white-space:nowrap}
+.sl-secs span.done{background:var(--acc-p);color:#1B1630}.sl-secs span.now{background:var(--pop-yellow);color:#1B1630}
+.sl-qgrid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(16px,4vw,44px);align-items:start}
+.sl-qart{padding-top:8px}
+.sl-qmain{display:grid;gap:14px}
+.sl-introline{margin:0;background:color-mix(in srgb,var(--pop-violet) 14%,var(--card));border-radius:12px;padding:8px 12px;font-weight:600}
+.sl-sub{margin:-6px 0 0;color:var(--muted);font-weight:600}
+.sl-opts.many{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.sl-opts.many .sl-opt{text-align:center;padding:12px 10px}
+.sl-opt{display:flex;align-items:center;gap:10px}
+.sl-opts.many .sl-opt{justify-content:center}
+.sl-opt i{font-style:normal;flex:none;width:26px;height:26px;border-radius:8px;border:2.5px solid var(--pop-line);display:grid;place-items:center;font-weight:900;background:var(--card);color:#1B1630}
+.sl-opt.on i{background:var(--pop-yellow)}
+.sl-navr{display:flex;gap:10px}
+.sl-next{background:var(--pop-pink);color:#fff;border:2.5px solid var(--pop-line);box-shadow:0 4px 0 var(--pop-line);border-radius:999px;padding:9px 22px;font:700 1em var(--font)}
+.sl-next:disabled{opacity:.4;box-shadow:none}
+.sl-card{display:flex!important;align-items:center;gap:12px}
+.sl-ct{display:grid;gap:2px}
+.sl-chip{display:inline-flex;align-items:center;gap:8px}
+.sl-score{grid-template-columns:auto minmax(0,1fr) auto!important}
+.sl-nums{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.sl-nums span{display:grid;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.25);border-radius:16px;padding:8px 14px;font-size:.85em;color:#D9D2F5}.sl-nums b{font:800 1.5em var(--display);color:#fff}
+.sl-print{display:flex;flex-wrap:wrap;align-items:center;gap:14px;background:var(--card);border:3px solid var(--pop-line);box-shadow:0 7px 0 var(--pop-line);border-radius:26px;padding:18px 20px}
+.sl-print > div{flex:1;min-width:220px;display:grid}.sl-print b{font:800 1.2em var(--display)}.sl-print span{color:var(--muted)}
+.sl-name{border:2.5px solid var(--pop-line);border-radius:999px;padding:11px 16px;font:600 1em var(--font);background:var(--card);color:var(--forest);min-width:0;width:220px}
+.sl-go.sm{font-size:1em;padding:12px 22px;margin:0}
+.sl-sh-top{display:flex;align-items:center;gap:16px}.sl-sh-top .sl-ill.pop{width:90px}.sl-sh-top .sl-kick{justify-self:start}
+.sl-pers{margin:0;background:var(--pop-yellow);color:#1B1630;border:2.5px solid var(--pop-line);border-radius:16px;padding:10px 14px;font-weight:500}
+.sl-warn{display:block}
+.sl-facts{display:grid;gap:6px;background:color-mix(in srgb,var(--pop-teal) 14%,var(--card));border-radius:16px;padding:14px 16px}
+.sl-facts > b{font:800 1em var(--display)}.sl-facts div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed var(--line);padding-bottom:4px}.sl-facts strong{white-space:nowrap}.sl-facts small{color:var(--muted);line-height:1.4}
+@media (max-width:760px){.sl-qgrid{grid-template-columns:1fr}.sl-qart{justify-self:center;padding:0}.sl-ill.pop{width:96px}.sl-score{grid-template-columns:1fr!important}.sl-res-ill{display:none}.sl-secs span{min-width:0;font-size:0;padding:0;height:10px}.sl-secs span.now{font-size:.75em;height:auto;padding:4px 10px;flex:3}}
+.sl-qgrid.sky{grid-template-columns:1fr}
+.sl-sky{display:grid;gap:10px;justify-items:center}
+.sl-skysvg{width:min(640px,100%);height:auto;display:block;border:3px solid var(--pop-line);box-shadow:0 7px 0 var(--pop-line);border-radius:30px;touch-action:none;cursor:grab!important;outline:none;user-select:none}
+.sl-skysvg:focus-visible{outline:3px solid var(--pop-pink);outline-offset:4px}
+#slStars{transition:opacity .4s}
+.sl-arc{fill:none;stroke:rgba(255,255,255,.28);stroke-width:14;stroke-linecap:round}.sl-arcd{fill:none;stroke:rgba(255,255,255,.7);stroke-width:2.5;stroke-dasharray:2 9;stroke-linecap:round}
+.sl-globe{fill:#2FD4C4;stroke:#1B1630;stroke-width:4}
+.sl-house{fill:#1B1630;stroke:#F6F0FF;stroke-width:1.2;stroke-opacity:.35}.sl-win{fill:#FFE14D;opacity:0;transition:opacity .4s}
+.sl-orb{fill:#FFE14D;stroke:#1B1630;stroke-width:4;transition:fill .4s}.sl-orb.moon{fill:#F6F0FF}
+.sl-orbg{fill:rgba(255,225,77,.25)}.sl-orbm{transition:opacity .4s,fill .4s}
+.sl-arclab{font:700 15px var(--font);fill:#fff;paint-order:stroke;stroke:#1B1630;stroke-width:3}
+.sl-skyread{display:grid;justify-items:center}.sl-skyread b{font:800 clamp(2.2em,6vw,3.4em)/1 var(--display)}.sl-skyread span{font-weight:700;color:var(--acc)}
+.sl-wins,.sl-next2,.sl-more{background:var(--card);border:3px solid var(--pop-line);box-shadow:0 7px 0 var(--pop-line);border-radius:26px;padding:20px}
+.sl-wins{background:color-mix(in srgb,#3DDC84 16%,var(--card))}
+.sl-wins h3,.sl-next2 h3{margin:0 0 10px;font:800 clamp(1.3em,3vw,1.7em) var(--display)}
+.sl-next2{background:color-mix(in srgb,var(--pop-yellow) 22%,var(--card))}.sl-next2 .sl-muted{margin:-4px 0 14px}
+.sl-trys{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.sl-try{position:relative;display:flex;align-items:flex-start;gap:14px;text-align:left;background:var(--card);color:var(--forest);border:3px solid var(--pop-line);box-shadow:0 6px 0 var(--pop-line);border-radius:22px;padding:18px 16px 16px;font-family:var(--font);transform:rotate(var(--r));transition:transform .25s cubic-bezier(.3,1.6,.5,1)}
+.sl-try:hover{transform:rotate(0) translateY(-3px)}
+.sl-try .sl-ill.mini{width:64px;height:64px;flex:none}
+.sl-try .sl-ct{min-width:0;flex:1}.sl-try .sl-ct > *{white-space:normal;overflow-wrap:anywhere}
+.sl-trynum{position:absolute;top:-14px;left:-10px;width:36px;height:36px;border-radius:50%;background:var(--pop-pink);color:#fff;border:3px solid var(--pop-line);display:grid;place-items:center;font:800 1.1em var(--display)}
+.sl-try b{font:800 1.2em var(--display)}.sl-try .sl-ct > span{font-size:1em;line-height:1.4}.sl-try em{font-style:normal;color:var(--acc);font-weight:700;font-size:.9em;margin-top:4px}
+.sl-more summary{cursor:pointer;font:800 1.05em var(--display)}.sl-more .sl-chips{margin-top:12px}
+.sl-chip.ghost{background:var(--card)}
+.sl-opts.icons{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.sl-opt.ico{position:relative;flex-direction:column;justify-content:flex-start;text-align:center;padding:14px 12px 16px;gap:8px}
+.sl-opt.ico .sl-ill.opt{width:78px;height:78px;transition:transform .3s cubic-bezier(.3,1.6,.5,1)}
+.sl-opt.ico.on .sl-ill.opt{transform:scale(1.1) rotate(-5deg)}
+.sl-opt.ico i{position:absolute;top:10px;right:10px}
+.sl-counts{display:grid;gap:12px}
+.sl-cnt{display:grid;grid-template-columns:64px minmax(0,1fr) auto;grid-template-areas:"ic t st" "ic stack stack";gap:4px 14px;align-items:center;background:var(--card);border:2.5px solid var(--pop-line);box-shadow:0 5px 0 var(--pop-line);border-radius:20px;padding:12px 16px}
+.sl-ill.cnt{grid-area:ic;width:64px;height:64px}
+.sl-cntt{grid-area:t;display:grid}.sl-cntt b{font:800 1.15em var(--display)}.sl-cntt small{color:var(--muted)}
+.sl-step{grid-area:st;display:flex;align-items:center;gap:10px}.sl-step button{width:46px;height:46px;border-radius:50%;border:2.5px solid var(--pop-line);background:var(--pop-yellow);color:#1B1630;font:800 1.5em/1 var(--display);box-shadow:0 3px 0 var(--pop-line)}
+.sl-step span{min-width:36px;text-align:center;font:800 1.7em var(--display)}
+.sl-stack{grid-area:stack;display:flex;flex-wrap:wrap;gap:2px;min-height:4px}.sl-ill.tiny{width:30px;height:30px;animation:lvpop .35s both}
+.sl-mg{display:grid;gap:2px;justify-items:center;text-align:center;background:color-mix(in srgb,#3DDC84 18%,var(--card));border:2.5px solid var(--pop-line);border-radius:20px;padding:12px 16px}
+.sl-mg b{font:800 1.6em var(--display)}.sl-mg.mid{background:color-mix(in srgb,#FF8A3D 22%,var(--card))}.sl-mg.hi{background:color-mix(in srgb,#FF4FA3 25%,var(--card))}
+.sl-caff{display:grid;gap:14px}
+.sl-caffsvg{width:100%;height:auto;display:block;background:var(--card);border:3px solid var(--pop-line);box-shadow:0 6px 0 var(--pop-line);border-radius:24px}
+.sl-cbg{fill:color-mix(in srgb,#BFE3FF 40%,var(--card))}.sl-cnight{fill:#1E1A4A;opacity:.85}
+.sl-carea{fill:rgba(255,138,61,.35);transition:d .5s}.sl-cline{fill:none;stroke:#FF8A3D;stroke-width:5;stroke-linecap:round;stroke-dasharray:100;animation:sldraw 1s ease both}
+@keyframes sldraw{from{stroke-dashoffset:100}}
+.sl-cbed{stroke:#1B1630;stroke-width:3;stroke-dasharray:6 6}.sl-cbedt{font:800 15px var(--display);fill:var(--forest);text-anchor:middle}
+.sl-cdot{fill:#FF4FA3;stroke:#1B1630;stroke-width:3;animation:slpulse 1.4s ease-in-out infinite}
+@keyframes slpulse{50%{r:13px}}
+.sl-cdrink{fill:#FFE14D;stroke:#1B1630;stroke-width:3}
+.sl-ct2{font:600 13px var(--font);fill:var(--muted);text-anchor:middle}
+.sl-cread{display:flex;align-items:center;gap:16px;background:color-mix(in srgb,#3DDC84 18%,var(--card));border:2.5px solid var(--pop-line);border-radius:20px;padding:12px 16px}
+.sl-cread.mid{background:color-mix(in srgb,#FF8A3D 22%,var(--card))}.sl-cread.hi{background:color-mix(in srgb,#FF4FA3 25%,var(--card))}
+.sl-cread b{font:800 1.25em var(--display)}.sl-cread small{display:block;color:var(--muted)}
+.sl-batt{position:relative;flex:none;width:70px;height:34px;border:3px solid var(--pop-line);border-radius:8px;background:var(--card);padding:3px}
+.sl-batt::after{content:"";position:absolute;right:-9px;top:8px;width:6px;height:12px;background:var(--pop-line);border-radius:0 3px 3px 0}
+.sl-batt i{display:block;height:100%;border-radius:4px;background:#FF8A3D;transition:width .4s}
+.sl-crange input{width:100%;accent-color:#FF8A3D;height:30px}
+.sl-clab{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-weight:600}.sl-clab b{color:var(--forest);font:800 1.2em var(--display)}
+@media (max-width:560px){.sl-cnt{grid-template-columns:48px minmax(0,1fr);grid-template-areas:"ic t" "st st" "stack stack"}.sl-ill.cnt{width:48px;height:48px}.sl-step{justify-content:center}}
+.sl-scene{display:grid;justify-items:center}
+.sl-room{width:min(560px,100%);height:auto;border:3px solid var(--pop-line);box-shadow:0 6px 0 var(--pop-line);border-radius:24px}
+.sl-room *{transition:fill .8s,opacity .6s,stroke .8s}
+.r-wall{fill:#FFE9B8}.sl-room.dark .r-wall{fill:#2A2366}.r-floor{fill:#E8B877}.sl-room.dark .r-floor{fill:#1E1A4A}
+.r-win{fill:#BFE3FF;stroke:#1B1630;stroke-width:4}.sl-room.dark .r-win{fill:#0B0A24}.r-line{stroke:#1B1630;stroke-width:4;stroke-linecap:round;fill:none}
+.r-moon{fill:#FFE14D;opacity:0}.sl-room.dark .r-moon{opacity:1}
+.r-beam{stroke:rgba(255,225,77,.35);stroke-width:18;stroke-linecap:round;opacity:.9}.sl-room.dark .r-light{opacity:0}
+.r-shade{fill:#FFE14D;stroke:#1B1630;stroke-width:4}.r-glow{fill:rgba(255,225,77,.45)}.sl-room.dark .r-glow{opacity:0}.sl-room.dark .r-shade{fill:#5E5679}
+.r-wave{fill:none;stroke:#FF4FA3;stroke-width:4;stroke-linecap:round;animation:rpulse .8s ease-in-out infinite}.r-n{font:800 26px var(--display);fill:#FF4FA3;animation:rbounce .6s ease-in-out infinite}.r-n.b{animation-delay:.3s}
+@keyframes rpulse{50%{opacity:.3}}@keyframes rbounce{50%{transform:translateY(-6px)}}
+.sl-room.quiet .r-noise{opacity:0}.sl-room.quiet .r-noise *{animation:none}
+.r-bed{fill:#8C6CFF;stroke:#1B1630;stroke-width:4}.r-pill{fill:#fff;stroke:#1B1630;stroke-width:3}.r-head{fill:#FFD6B0;stroke:#1B1630;stroke-width:3}
+.r-eyes{fill:none;stroke:#1B1630;stroke-width:2.5;stroke-linecap:round;opacity:0}.r-eyeo{fill:#1B1630}
+.r-hair{fill:#5E3B22;stroke:#1B1630;stroke-width:3}.r-nose,.r-mouth,.r-ear,.r-fold{fill:none;stroke:#1B1630;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}.r-fold{stroke-width:2;opacity:.5}
+.r-blanket{fill:#2FD4C4;stroke:#1B1630;stroke-width:4}
+.r-blanket2{fill:#FF4FA3;stroke:#1B1630;stroke-width:4}.r-bed.b2{fill:#FFB547}
+.sl-room:has(.r-bed2) .r-lamp{opacity:0}
+.r-sleeper{transform-box:view-box;transform-origin:170px 154px;animation:rtoss 1.3s ease-in-out infinite}
+@keyframes rtoss{0%,100%{transform:rotate(-3deg) translateY(-2px)}25%{transform:rotate(2deg) translateY(-6px)}50%{transform:rotate(4deg)}75%{transform:rotate(-1deg) translateY(-4px)}}
+.r-guy{transform-box:view-box;transform-origin:102px 140px;animation:rhead 1.3s ease-in-out infinite}
+@keyframes rhead{50%{transform:translateY(-4px) rotate(-8deg)}}
+.sl-room.calm .r-sleeper,.sl-room.calm .r-guy{animation:none}.sl-room.calm .r-eyes{opacity:1}.sl-room.calm .r-eyeo{opacity:0}
+.r-hot{fill:none;stroke:#FF8A3D;stroke-width:4;stroke-linecap:round;animation:rheat 1s ease-in-out infinite}.r-sweat{fill:#4FB6FF;animation:rbounce 1s infinite}
+@keyframes rheat{50%{transform:translateY(-5px);opacity:.5}}
+.sl-room.cool .r-heat{opacity:0}.sl-room.cool .r-heat *{animation:none}
+.r-z{font:800 20px var(--display);fill:#F6F0FF;opacity:0}.r-z.s{font-size:16px}.r-z.ss{font-size:13px}
+.sl-room.calm.dark.quiet .r-z{opacity:1;animation:rz 2.4s ease-in-out infinite}.sl-room.calm.dark.quiet .r-z.s{animation-delay:.4s}.sl-room.calm.dark.quiet .r-z.ss{animation-delay:.8s}
+@keyframes rz{0%{opacity:0;transform:translate(0,6px)}40%{opacity:1}100%{opacity:0;transform:translate(8px,-10px)}}
+.sl-mins{display:grid;gap:12px;justify-items:center}.sl-mins .sl-crange{width:min(560px,100%)}
+.sl-mviz{display:grid;justify-items:center;gap:8px;width:100%}
+.sl-clock{width:min(220px,60vw);height:auto}.c-face{fill:var(--card);stroke:var(--pop-line);stroke-width:5}.c-fill{fill:#8C6CFF;opacity:.75}.c-fill.hi{fill:#FF4FA3}.c-fill2{fill:#FF4FA3;stroke:#1B1630;stroke-width:3}
+.c-tick{stroke:var(--pop-line);stroke-width:3;stroke-linecap:round}.c-hub{fill:var(--pop-yellow);stroke:var(--pop-line);stroke-width:3}
+.sl-sheep{position:relative;width:min(320px,80vw);height:70px;overflow:hidden;border-bottom:3px solid var(--pop-line)}
+.sl-fence{position:absolute;left:50%;bottom:0;width:12px;height:30px;margin-left:-6px;background:repeating-linear-gradient(0deg,#C9A27A 0 6px,transparent 6px 12px),linear-gradient(#C9A27A,#C9A27A) center/4px 100% no-repeat;border:2px solid var(--pop-line);border-bottom:0}
+.sl-sh{position:absolute;bottom:0;left:-60px;width:54px;animation:sljump 2s linear infinite}.sl-sh svg{width:100%}
+@keyframes sljump{0%{left:-60px;bottom:0}40%{bottom:0}50%{bottom:30px}60%{bottom:0}100%{left:110%;bottom:0}}
+.sl-mtxt{margin:0;font-weight:600}.sl-mtxt b{font:800 1.3em var(--display)}
+.sl-sunv{width:min(560px,100%);height:auto;border:3px solid var(--pop-line);box-shadow:0 6px 0 var(--pop-line);border-radius:24px}
+.s-sun{fill:#FFE14D;stroke:#1B1630;stroke-width:4}.s-glow{fill:#FFE14D}.s-hill{fill:#7CCB5B;stroke:#1B1630;stroke-width:4}.s-head{fill:#FFD6B0;stroke:#1B1630;stroke-width:3}.s-body{fill:none;stroke:#1B1630;stroke-width:3.5;stroke-linecap:round}
+.sl-charge{display:flex;align-items:center;gap:12px;font-weight:700}.sl-batt.big{width:120px;height:36px}.sl-batt.big i{background:#3DDC84}.sl-charge b{font:800 1.4em var(--display)}
+.sl-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.sl-day{display:grid;justify-items:center;align-content:center;gap:6px;aspect-ratio:.8;background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);box-shadow:0 5px 0 var(--pop-line);border-radius:20px;font-family:var(--font);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.sl-day b{font:800 1em var(--display)}.sl-day.on{background:color-mix(in srgb,#FF4FA3 20%,var(--card));transform:translateY(-4px) rotate(-3deg)}
+.sl-ill.day{width:70%;height:auto;animation:lvpop .4s both}.sl-dot{width:24px;height:24px;border-radius:50%;border:3px dashed var(--line)}
+.sl-dtot{margin:0;text-align:center;font-weight:700;font-size:1.2em}.sl-dtot b{font:800 1.6em var(--display)}
+@media (max-width:560px){.sl-days{gap:4px}.sl-day{border-radius:12px}.sl-day b{font-size:.75em}}
+/* ===== My career quiz ===== */
+.cq{display:grid;gap:20px}
+.cq-intro{position:relative;overflow:hidden;isolation:isolate;display:grid;justify-items:center;gap:14px;text-align:center;background:linear-gradient(150deg,#FFE14D,#FFB547);color:#1B1630;border:3px solid var(--pop-line);box-shadow:0 8px 0 var(--pop-line);border-radius:30px;padding:clamp(28px,6vw,60px) clamp(18px,4vw,48px)}
+.cq-intro h2{margin:0;font:800 clamp(2em,5.5vw,3.6em)/1.06 var(--display);text-wrap:balance}.cq-intro p{margin:0;max-width:32em;font-size:1.15em}
+.cq-intro .sl-rules li{background:rgba(255,255,255,.55);border-color:var(--pop-line)}
+.cq-intro .sl-go{background:#1B1630;color:#fff}
+.cq-demo{display:flex;align-items:center;gap:16px;font-size:3em}.cq-demo span{display:grid;place-items:center;width:90px;height:90px;background:#fff;border:3px solid var(--pop-line);border-radius:22px;box-shadow:0 5px 0 var(--pop-line);animation:cqwob 2.4s ease-in-out infinite}.cq-demo span:last-child{animation-delay:1.2s}.cq-demo b{font:800 .4em var(--display)}
+@keyframes cqwob{50%{transform:rotate(-6deg) translateY(-4px)}}
+.cq-q{display:grid;gap:16px;background:var(--card);border:3px solid var(--pop-line);box-shadow:0 8px 0 var(--pop-line);border-radius:30px;padding:clamp(20px,4vw,40px)}
+.cq-q h2{margin:0;font:800 clamp(1.6em,4vw,2.6em)/1.1 var(--display);text-align:center}
+.cq-prog{height:12px;border:2.5px solid var(--pop-line);border-radius:999px;overflow:hidden}.cq-prog i{display:block;height:100%;background:#FF8A3D;transition:width .35s}
+.cq-n{justify-self:center;font-weight:700;color:var(--muted)}
+.cq-pair{display:grid;grid-template-columns:1fr auto 1fr;gap:clamp(10px,3vw,30px);align-items:center}
+.cq-card{display:grid;justify-items:center;align-content:center;gap:12px;min-height:clamp(200px,34vh,320px);border:3px solid var(--pop-line);box-shadow:0 8px 0 var(--pop-line);border-radius:28px;padding:20px;font-family:var(--font);color:#1B1630;transition:transform .25s cubic-bezier(.3,1.6,.5,1),opacity .3s;animation:lvpop .35s both}
+.cq-card.l{background:#DDF3C2;transform:rotate(-2deg)}.cq-card.r{background:#FFE3B8;transform:rotate(2deg);animation-delay:.06s}
+.cq-card:hover{transform:rotate(0) translateY(-6px) scale(1.02)}
+.cq-card .cqe{font-size:clamp(3.4em,9vw,5.5em);line-height:1}.cq-card b{font:800 clamp(1.15em,2.6vw,1.6em)/1.2 var(--display);text-align:center;text-wrap:balance}
+.cq-card.picked{transform:scale(1.08) rotate(0);box-shadow:0 0 0 6px var(--pop-yellow),0 8px 0 var(--pop-line)}
+.cq-pair:has(.picked) .cq-card:not(.picked){opacity:.35;transform:scale(.94)}
+.cq-or{font:800 1.3em var(--display);background:var(--pop-yellow);border:3px solid var(--pop-line);border-radius:50%;width:56px;height:56px;display:grid;place-items:center}
+.cq-strs{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.cq-str{display:flex;align-items:center;gap:10px;text-align:left;background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);box-shadow:0 4px 0 var(--pop-line);border-radius:18px;padding:12px 14px;font:700 1.02em var(--font);transition:transform .2s}
+.cq-str span{font-size:1.6em}.cq-str.on{background:var(--pop-yellow);color:#1B1630;transform:translateY(-3px) rotate(-1deg)}
+.cq-ladder{display:grid;gap:10px}
+.cq-step{display:flex;align-items:center;gap:16px;text-align:left;margin-left:calc(var(--i)*clamp(0px,4vw,46px));background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);box-shadow:0 5px 0 var(--pop-line);border-radius:20px;padding:14px 18px;font-family:var(--font);transition:transform .2s}
+.cq-step .cqe{font-size:2.2em}.cq-step b{display:block;font:800 1.2em var(--display)}.cq-step small{color:var(--muted);font-size:.95em}
+.cq-step.on{background:var(--pop-yellow);color:#1B1630;transform:translateX(6px)}.cq-step.on small{color:#5E5679}
+.cq-res{display:grid;gap:20px}
+.cq-prof{position:relative;overflow:hidden;isolation:isolate;display:grid;gap:12px;background:linear-gradient(160deg,#24392E,#1A2B22);color:#F4F7EF;border:3px solid var(--pop-line);box-shadow:0 8px 0 var(--pop-line);border-radius:30px;padding:clamp(22px,4vw,40px)}
+.cq-prof::after{content:"";position:absolute;width:260px;aspect-ratio:1;border-radius:50%;right:-80px;top:-90px;background:#FFB547;opacity:.5;z-index:-1}
+.cq-prof .sl-kick{justify-self:start}.cq-prof h2{margin:0;font:800 clamp(2.4em,7vw,4.4em)/1 var(--display)}.cq-prof p{margin:0;font-size:1.15em;max-width:34em;color:#D6E4D1}
+.cq-place b{display:block;font-size:.8em;letter-spacing:.1em;text-transform:uppercase;color:#BFD3BA;margin-bottom:6px}.cq-place div{display:flex;flex-wrap:wrap;gap:8px}
+.cq-place span{background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 14px;font-weight:600}
+.cq-bwrap,.cq-list{background:var(--card);border:3px solid var(--pop-line);box-shadow:0 7px 0 var(--pop-line);border-radius:26px;padding:20px;display:grid;gap:6px}
+.cq-bwrap h3,.cq-list h3{margin:0;font:800 clamp(1.3em,3vw,1.7em) var(--display)}
+.cq-bull{width:min(560px,100%);height:auto;justify-self:center;overflow:visible}
+.cq-bull .r3{fill:color-mix(in srgb,#8EDB3A 18%,var(--card));stroke:var(--pop-line);stroke-width:3}.cq-bull .r2{fill:color-mix(in srgb,#FFB020 38%,var(--card));stroke:var(--pop-line);stroke-width:3}.cq-bull .r1{fill:var(--pop-yellow);stroke:var(--pop-line);stroke-width:3}
+.cq-legend{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}.cq-legend span{display:flex;align-items:center;gap:6px;font-weight:700;font-size:.9em}.cq-legend span::before{content:"";width:16px;height:16px;border-radius:50%;border:2px solid var(--pop-line)}
+.cq-legend .s{color:#FF8A3D}.cq-legend .s::before{display:none}
+.cq-dot .st{font:900 20px var(--display);fill:#FF8A3D;stroke:var(--pop-line);stroke-width:1.5;paint-order:stroke}.cq-dot.star circle{stroke-width:4.5;fill:#fff}
+.cq-areas{display:grid;gap:8px;margin-top:10px}.cq-areas > b{font:800 1.1em var(--display)}.cq-areas > div{display:flex;flex-wrap:wrap;gap:8px}
+.cq-area{display:flex;align-items:center;gap:6px;background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);box-shadow:0 3px 0 var(--pop-line);border-radius:999px;padding:7px 14px;font:700 .92em var(--font)}.cq-area span{font-size:1.2em}.cq-area.on{background:var(--pop-yellow);color:#1B1630}
+.cq-back{justify-self:center;margin-top:6px}
+.cq-top3{display:grid;gap:12px}.cq-top3 h3{margin:0;font:800 clamp(1.4em,3.4vw,2em) var(--display)}
+.cq-t3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:640px){.cq-t3{grid-template-columns:1fr}}
+.cq-t3c{position:relative;display:grid;justify-items:start;gap:6px;text-align:left;background:color-mix(in srgb,#FFB020 22%,var(--card));color:var(--forest);border:3px solid var(--pop-line);box-shadow:0 7px 0 var(--pop-line);border-radius:24px;padding:22px 18px 16px;font-family:var(--font);cursor:pointer;transition:transform .2s}
+.cq-t3c:hover{transform:translateY(-4px) rotate(-1deg)}.cq-t3c.first{background:var(--pop-yellow);color:#1B1630}
+.cq-t3c .n{position:absolute;top:-14px;right:16px;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#FF8A3D;color:#1B1630;border:3px solid var(--pop-line);font:900 1.35em var(--display)}
+.cq-t3c .cqe{font-size:2.6em;line-height:1}.cq-t3c b{font:800 1.3em/1.15 var(--display)}.cq-t3c small{font-weight:700;opacity:.75}.cq-t3c .go{font-weight:800;font-size:.9em;margin-top:4px}
+.cq-dot.star circle{fill:#FFF3C4;stroke:#FF8A3D;stroke-width:7}.cq-dot .nb circle{fill:#FF8A3D;stroke:var(--pop-line);stroke-width:3}.cq-dot .nb text{text-anchor:middle;font:900 16px var(--display);fill:#1B1630;stroke:none}
+.cq-legend .s{color:inherit;font-weight:800}.cq-legend .s i{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#FF8A3D;border:2px solid var(--pop-line);font:900 .75em var(--display);font-style:normal;margin-right:2px;color:#1B1630}
+.cq-uni{margin:0;font-size:.85em;opacity:.8}
+.cq-up{margin:0;padding:10px 14px;border-radius:14px;background:color-mix(in srgb,#8EDB3A 16%,var(--card))}
+.cq-alt{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.cq-q .sl-nav{align-items:center;flex-wrap:wrap;gap:8px}.cq-q .sl-nav .sl-ghost{flex:none}
+.cq-area.nope{opacity:.45;text-decoration:line-through}
+.cq-str.cq-no.on{background:#E4E1D8;color:#1B1630}
+.cq-nahs{display:grid;gap:6px;margin-top:14px}.cq-nahs > b{font:800 1.05em var(--display)}.cq-nahs > div{display:flex;flex-wrap:wrap;gap:8px}
+.cq-nahs button{background:transparent;color:inherit;border:2px dashed currentColor;border-radius:999px;padding:6px 12px;font:600 .88em var(--font);opacity:.75}
+.cq-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.cq-earn.own{background:var(--pop-yellow);color:#1B1630}
+.cq-nahbtn{justify-self:start;margin-top:6px}
+.cq-legend .b::before{background:var(--pop-yellow)}.cq-legend .m::before{background:color-mix(in srgb,#FFB020 38%,var(--card))}.cq-legend .o::before{background:color-mix(in srgb,#8EDB3A 18%,var(--card))}
+.cq-bull .rl{text-anchor:middle;font:800 13px var(--display);fill:var(--muted);letter-spacing:.06em;text-transform:uppercase}.cq-bull .rl.b{fill:#1B1630}
+.cq-dot{cursor:pointer;outline:none}.cq-dot circle{fill:var(--card);stroke:var(--pop-line);stroke-width:3;transition:transform .2s}
+.cq-dot:hover circle,.cq-dot:focus circle{transform:scale(1.12)}
+.cq-dot .cqe{text-anchor:middle;font-size:24px}
+.cq-dot .lb{text-anchor:middle;font:800 12px var(--display);fill:var(--forest);paint-order:stroke;stroke:var(--card);stroke-width:4}
+.cq-dot{animation:cqpop .5s cubic-bezier(.3,1.6,.5,1) both}.cq-dot.mid{animation-delay:.2s}.cq-dot.out{animation-delay:.35s}
+@keyframes cqpop{from{opacity:0}}
+.cq-jobs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-top:6px}
+.cq-job{display:flex;align-items:center;gap:12px;text-align:left;background:var(--card);color:var(--forest);border:2.5px solid var(--pop-line);box-shadow:0 5px 0 var(--pop-line);border-radius:20px;padding:12px 14px;font-family:var(--font);transition:transform .2s cubic-bezier(.3,1.6,.5,1)}
+.cq-job:hover{transform:translateY(-3px) rotate(-1deg)}.cq-job.top{background:color-mix(in srgb,var(--pop-yellow) 45%,var(--card))}
+.cq-job .cqe{font-size:2.2em}.cq-job .t{flex:1;min-width:0;display:grid}.cq-job b{font:800 1.08em var(--display)}.cq-job small{color:var(--muted)}.cq-job em{font-style:normal;font-size:.8em;color:var(--acc);font-weight:700}
+.cq-job .pct{font:800 1em var(--display);white-space:nowrap;text-align:right}
+.cq-sh-top{display:flex;align-items:center;gap:16px}.cq-big{font-size:4em;line-height:1}.cq-sh-top small{color:var(--muted);font-weight:600}.cq-sh-top .sl-kick{justify-self:start}
+.cq-blk b{display:block;font:800 1em var(--display);margin-bottom:2px}.cq-blk p{margin:0}
+.cq-blk.try{background:color-mix(in srgb,#3DDC84 16%,var(--card));border-radius:16px;padding:12px 14px}
+.cq-lad{margin:6px 0 0;padding:0;list-style:none;counter-reset:c;display:grid;gap:6px}
+.cq-lad li{counter-increment:c;display:flex;gap:10px;align-items:center;font-weight:500}
+.cq-lad li::before{content:counter(c);flex:none;width:28px;height:28px;border-radius:50%;background:#FF8A3D;color:#fff;border:2px solid var(--pop-line);display:grid;place-items:center;font:800 .85em var(--display)}
+.cq-lad li:not(:last-child)::after{content:""}
+.cq-earn{display:inline-block;margin-top:8px;background:#3DDC84;color:#1B1630;border:2px solid var(--pop-line);border-radius:999px;padding:4px 12px;font-weight:700;font-size:.9em}
+.cq-watch{margin:0;color:var(--muted)}
+@media (max-width:640px){.cq-pair{grid-template-columns:1fr;gap:10px}.cq-or{justify-self:center;width:46px;height:46px}.cq-card{min-height:150px}.cq-step{margin-left:0}}
 /* Tone dial: home and starters are loud bubblegum; tool pages (resume, leaving, portfolio, skill check-in) go quiet with one accent; Big feelings has its own calm palette. */
 body.tone-focus{--sand:#F4F4F7;--sage:#D5D5DF;--sage-soft:#ECECF2;--line:#E0E0E8;--muted:#5A5868;--blob-o:0;--euc:var(--acc);--euc-strong:var(--acc-s);--pop-pink:var(--acc-p);--chip:#F1F1F6}
 body.tone-focus[data-acc=pink]{--acc:#D42A80;--acc-s:#A8135F;--acc-p:#FF6FB4}
@@ -1763,8 +2060,8 @@ function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt
 function head(title){
   return `<div class="screen-head"><button class="back" data-go="home">${ICONS.home}Home</button><h1>${title}</h1></div>`+(WIP.includes(current)?`<div class="wip-banner"><span>🚧 Under construction. This one still has bits being built, so check it before using it with a student.</span></div>`:'');
 }
-const WIP=['planb','quit','skillcheck'];
-const VIEWS = ['starters','portfolio','resume','leaving','skillcheck','brain','quit','help','planb','attend','emotions'];
+const WIP=['planb','quit'];
+const VIEWS = ['starters','portfolio','resume','leaving','skillcheck','brain','quit','help','planb','attend','emotions','sleep','career'];
 const TOOL_VIEW = {'Resume builder':'resume','Portfolio flipbook':'portfolio','Leaving school decisions':'leaving','Leaving school decision tree':'leaving','Skill check-in':'skillcheck'};
 
 const ICON_PREV='<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
@@ -4369,25 +4666,599 @@ document.addEventListener('click',e=>{
 });
 document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&TM.open&&!document.body.classList.contains('bf-open')){ TM.open=false; tmRender(); } if(e.key==='Enter'&&e.target.id==='tmTask'){ TM.task=e.target.value.trim(); tmStart(25); } });
 
+/* ===== Sleep check: quick questions, a sleep score, strengths and focus areas, and a printable tracker. Nothing is saved. ===== */
+const SL_O='stroke="#1B1630" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"';
+const SL_ILL={
+ clock:`<circle cx="60" cy="66" r="36" fill="#FFE14D" ${SL_O}/><circle cx="60" cy="66" r="27" fill="#fff" ${SL_O}/><path d="M60 50v16l11 7" fill="none" ${SL_O}/><path d="M30 34l12-10M90 34L78 24" fill="none" ${SL_O}/><circle cx="30" cy="30" r="9" fill="#FF4FA3" ${SL_O}/><circle cx="90" cy="30" r="9" fill="#FF4FA3" ${SL_O}/><path d="M38 100l-6 10M82 100l6 10" ${SL_O}/>`,
+ sunrise:`<path d="M18 86h84" ${SL_O}/><path d="M32 86a28 28 0 0 1 56 0Z" fill="#FFB547" ${SL_O}/><path d="M60 40v-12M30 52l-8-8M90 52l8-8M18 70H8M102 70h10" ${SL_O}/><path d="M28 100h64M40 112h40" ${SL_O}/>`,
+ phone:`<rect x="34" y="14" width="52" height="92" rx="10" fill="#8C6CFF" ${SL_O}/><rect x="41" y="25" width="38" height="64" rx="4" fill="#E9E2FF" ${SL_O}/><circle cx="60" cy="97" r="3" fill="#1B1630"/><circle cx="84" cy="18" r="9" fill="#FF4FA3" ${SL_O}/><path d="M48 40h24M48 52h18M48 64h22" ${SL_O}/>`,
+ bed:`<path d="M14 92V40M106 92V64" ${SL_O}/><path d="M14 64h92v24H14z" fill="#8C6CFF" ${SL_O}/><rect x="20" y="50" width="30" height="16" rx="7" fill="#fff" ${SL_O}/><path d="M50 64c10-10 46-8 56 0" fill="#2FD4C4" ${SL_O}/><path d="M78 30h12l-12 14h12M96 16h7l-7 8h7" fill="none" ${SL_O}/>`,
+ can:`<path d="M38 26h44l-3 80H41z" fill="#2FD4C4" ${SL_O}/><path d="M38 26c0-6 44-6 44 0" fill="#fff" ${SL_O}/><path d="M64 46l-10 18h12l-8 18" fill="none" stroke="#FFE14D" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M64 46l-10 18h12l-8 18" fill="none" ${SL_O} stroke-width="2"/>`,
+ cup:`<path d="M26 46h56l-6 52H32z" fill="#FFB547" ${SL_O}/><path d="M82 56c14 0 14 22 0 22" fill="none" ${SL_O}/><path d="M42 34c-4-6 4-10 0-16M56 34c-4-6 4-10 0-16M70 34c-4-6 4-10 0-16" fill="none" ${SL_O}/>`,
+ lamp:`<path d="M40 22h40l12 36H28z" fill="#FFE14D" ${SL_O}/><path d="M60 58v36M42 98h36" ${SL_O}/><path d="M22 70l-10 6M98 70l10 6M60 66v6" stroke="#FFB547" stroke-width="5" stroke-linecap="round"/><circle cx="95" cy="22" r="10" fill="#fff" ${SL_O}/><circle cx="100" cy="18" r="9" fill="#F6F0FF" stroke="none"/>`,
+ cloud:`<path d="M30 80c-14 0-16-22 0-22c-2-16 22-22 28-8c6-14 32-12 32 6c16 0 16 24 0 24z" fill="#E9E2FF" ${SL_O}/><path d="M40 66c6-8 10 8 16 0s10 8 16 0s10 8 14 0" fill="none" ${SL_O}/><circle cx="36" cy="98" r="5" fill="#E9E2FF" ${SL_O}/><circle cx="26" cy="110" r="3" fill="#E9E2FF" ${SL_O}/>`,
+ sun:`<circle cx="60" cy="60" r="24" fill="#FFE14D" ${SL_O}/><path d="M60 20v-10M60 110v-10M20 60H10M110 60h-10M32 32l-7-7M95 95l-7-7M32 88l-7 7M95 25l-7 7" ${SL_O}/><path d="M50 62c4 6 16 6 20 0" fill="none" ${SL_O}/><circle cx="51" cy="54" r="2.5" fill="#1B1630"/><circle cx="69" cy="54" r="2.5" fill="#1B1630"/>`,
+ shoe:`<path d="M14 84c0-14 4-30 10-40h20c2 10 14 16 30 20c18 4 32 8 32 20v6H14z" fill="#FF4FA3" ${SL_O}/><path d="M14 90h92" ${SL_O}/><path d="M42 54l8 4M38 62l8 4" ${SL_O}/><path d="M86 36h20M92 26h14M80 46h22" stroke="#2FD4C4" stroke-width="5" stroke-linecap="round"/>`,
+ vape:`<rect x="48" y="40" width="22" height="66" rx="8" fill="#8C6CFF" ${SL_O}/><rect x="52" y="26" width="14" height="16" rx="4" fill="#fff" ${SL_O}/><path d="M60 22c-8-6 0-12-6-18M72 24c6-6 14-2 16-10" fill="none" stroke="#9A92A8" stroke-width="4" stroke-linecap="round"/><circle cx="59" cy="62" r="4" fill="#FFE14D" ${SL_O}/>`,
+ bottle:`<path d="M50 14h20v20c10 6 14 14 14 26v46H36V60c0-12 4-20 14-26z" fill="#9BE58A" ${SL_O}/><path d="M36 64h48v24H36z" fill="#fff" ${SL_O}/><path d="M50 14h20" ${SL_O}/>`,
+ leaf:`<path d="M60 104V62" ${SL_O}/><path d="M60 62C52 46 52 26 60 12c8 14 8 34 0 50ZM60 62C46 58 32 46 28 30c16 4 28 16 32 32ZM60 62c14-4 28-16 32-32c-16 4-28 16-32 32ZM60 64c-12 4-26 2-36-6c12-4 26-2 36 6ZM60 64c12 4 26 2 36-6c-12-4-26-2-36 6Z" fill="#7CCB5B" ${SL_O}/>`,
+ moon:`<path d="M84 74A36 36 0 1 1 52 22a28 28 0 1 0 32 52Z" fill="#FFE14D" ${SL_O}/><path d="M42 56c3 3 8 3 11 0M58 70c4 4 10 4 14 0" fill="none" ${SL_O}/><path d="M86 22h12l-12 14h12M100 46h8l-8 9h8" fill="none" ${SL_O}/>`
+};
+const slIll=(k,cls='')=>`<svg viewBox="0 0 120 120" class="sl-ill ${cls}" aria-hidden="true">${SL_ILL[k]||''}</svg>`;
+const SL_AREAS={
+ amount:{t:"Hours of sleep",ill:'clock',why:"Teen brains need about 8 to 10 hours. Sleep is when your brain files memories, steadies your mood and grows. When you're short on it, everything gets harder: focus, patience, big feelings.",
+  tips:["Work backwards from your alarm. Count 9 hours back. That's your lights-out goal.","Move bedtime earlier by 15 minutes every few nights, not all at once.","Short on sleep? A nap of 20 minutes before 3pm can help. Longer naps mess up the night.","Count your hours for one week. Just noticing helps."]},
+ routine:{t:"Weekend lie-ins",ill:'sunrise',why:"Your body clock loves a pattern. Big weekend sleep-ins are like flying to another time zone every Friday and back every Monday. That's why Mondays feel so rough.",
+  tips:["Keep weekend wake-up within about an hour or two of school days.","Get light in your eyes soon after waking, even on weekends.","Tired on the weekend? A short nap beats a 3-hour sleep-in.","Keep your fall-asleep time similar on Friday and Saturday too."]},
+ screens:{t:"The last hour before bed",ill:'phone',why:"Scrolling and gaming keep your brain switched on: one more video, one more round. Bright screens up close can also push back the 'getting sleepy' signal a bit.",
+  tips:["Phone down 30 to 60 minutes before sleep. Start with 15 if that's too much.","Swap to something low-key: music with the screen off, a shower, drawing.","Turn on night mode and turn the brightness right down.","Set an app timer that kicks in at night so you don't need willpower."]},
+ phone:{t:"Phone overnight",ill:'phone',why:"Even on silent, a phone in your bed is a magnet. One check at 2am can turn into an hour, and buzzes break up your deepest sleep.",
+  tips:["Charge it across the room or outside your bedroom.","Use Do Not Disturb, with only your key people allowed through.","Grab a cheap alarm clock so your phone doesn't need to be by the bed.","Tell your mates what time you go offline."]},
+ caffeine:{t:"Caffeine",ill:'can',why:"Caffeine sticks around. About half of it is still in your body 5 hours later, so a can at 4pm can still be buzzing at 10pm, even if you feel tired.",
+  facts:[["250ml energy drink","up to 80mg"],["500ml energy drink","up to 160mg"],["Cup of instant coffee","about 80mg"],["Café coffee or big iced coffee","often 100mg+"]],
+  factNote:"Around 3mg per kg of body weight a day is enough to make kids and teens anxious. For a 60kg teen, that's about 180mg: roughly one big energy drink.",
+  tips:["Make your last one before lunch.","Cut down by one a day, not all at once, or you might get headaches.","Swap the afternoon one for water, sparkling water or something caffeine-free.","If you need them to get through the day, that's usually a sign you need more sleep, not more caffeine."]},
+ cues:{t:"Bedtime cues",ill:'lamp',why:"Your body doesn't have an off switch. It looks for clues that bedtime is coming: lights going down, a warm shower, the same steps each night. With no clues, your body thinks it's still daytime.",
+  tips:["Pick 2 or 3 things and do them in the same order every night: shower, teeth, lights low.","Dim the lights for the last half hour.","Keep the stressful stuff (arguments, homework, intense games) away from the last half hour.","Try slow breathing in bed: in for 4, hold for 3, out for 4."]},
+ room:{t:"Your sleep space",ill:'bed',why:"Dark, quiet and not too hot or cold is easiest for sleep. But not everyone gets to choose where or how they sleep, and that's not your fault.",
+  tips:["An eye mask, or a beanie pulled over your eyes, to block light.","Earplugs, a fan, or headphones with low music for noise.","Make your bed space feel like yours: a blanket, a pillow, something comforting.","If you can, keep your bed for sleep, not homework or gaming."],
+  note:"If where you sleep doesn't feel safe or settled, that matters way more than any tip here. Talk to an adult you trust about it."},
+ mind:{t:"Switching off",ill:'cloud',why:"Lying down is often the first quiet moment of the day, so worries jump in. It's really common, and there are ways to turn the volume down.",
+  tips:["Brain dump: write worries or to-dos on paper before bed. Once it's written down, your brain can let go.","Awake for more than about 20 minutes? Get up, do something calm in low light, then try again.","Slow breathing: in for 4, hold for 3, out for 4. Same as the breathing flower.","Picture a calm place in detail: what you'd see, hear and smell there."]},
+ daylight:{t:"Daylight",ill:'sun',why:"Morning daylight is the main thing that sets your body clock. It tells your brain 'it's daytime', so it knows when to make you sleepy later.",
+  tips:["Get outside within an hour of waking, even for 10 minutes.","Walk or ride part of the way to school if you can.","Eat lunch outside instead of inside.","Open the blinds as soon as you wake up."]},
+ moving:{t:"Moving your body",ill:'shoe',why:"Moving during the day builds up 'sleep pressure', so you're actually tired when bedtime comes. It also burns off stress.",
+  tips:["Anything that gets you puffed counts: walking fast, footy, skating, dancing.","Aim for most days, even 20 minutes.","Do hard exercise earlier in the day, not right before bed.","Find a mate to move with. It's easier to show up."]},
+ vape:{t:"Vapes and smokes",ill:'vape',why:"Nicotine is a stimulant, so it keeps your body wired. Cravings can also wake you in the night or first thing in the morning.",
+  tips:["No vaping or smoking in the last couple of hours before bed.","Keep it out of your bedroom so it's not the first thing you reach for.","Want to cut back? The Quitting & AOD app in the hub can help.","Notice how you sleep on nights with less."],note:"No judgement here. This is just about how it affects your sleep."},
+ alcohol:{t:"Alcohol",ill:'bottle',why:"Alcohol might knock you out, but it breaks up your sleep later in the night. You wake more, sleep lighter, and feel wrecked the next day.",
+  tips:["Notice how you feel the morning after, compared to other days.","Have water in between drinks, and some before bed.","Avoid drinking on school nights.","Want to talk about it? The Quitting & AOD app in the hub can help."],note:"No judgement here. This is just about how it affects your sleep."},
+ weed:{t:"Weed",ill:'leaf',why:"Weed can make you drowsy, but it cuts down your dreaming sleep. If you use it to sleep most nights, your body gets used to it, and sleep can be rough for a while when you stop.",
+  tips:["Notice how you sleep and feel on nights with and without it.","Using it to get to sleep? It's worth a chat. There are better options.","Cutting back slowly is easier on your sleep than stopping all at once.","The Quitting & AOD app in the hub can help."],note:"No judgement here. This is just about how it affects your sleep."}
+};
+const SL_DRINK={e:["Energy drink",'can',160,"500ml can"],c:["Coffee",'cup',80,"cup"],i:["Iced coffee",'icedc',100,"carton"],t:["Tea",'tea',30,"cup"],k:["Coke / Pepsi / Dew",'cola',40,"can"],p:["Pre-workout",'tub',150,"scoop"]};
+const SL_OI={
+ lightoff:`<path d="M40 22h40l12 36H28z" fill="#5E5679" ${SL_O}/><path d="M60 58v36M42 98h36" ${SL_O}/><path d="M90 30c-10 0-16-8-14-18c8 0 16 6 14 18Z" fill="#FFE14D" ${SL_O}/>`,
+ shower:`<path d="M30 30c0-14 34-14 34 0" fill="none" ${SL_O}/><path d="M22 34h50" ${SL_O}/><path d="M30 46v6M42 46v10M54 46v6M36 62v6M48 62v8M60 62v6" stroke="#2FD4C4" stroke-width="5" stroke-linecap="round"/><path d="M64 30V14h20v96" fill="none" ${SL_O}/>`,
+ brush:`<rect x="18" y="70" width="70" height="14" rx="7" fill="#8C6CFF" ${SL_O} transform="rotate(-30 60 70)"/><path d="M72 40l8-6M78 48l8-6M84 56l8-6" ${SL_O}/><circle cx="92" cy="30" r="8" fill="#fff" ${SL_O}/><circle cx="100" cy="44" r="5" fill="#fff" ${SL_O}/>`,
+ phoneaway:`<rect x="20" y="70" width="80" height="26" rx="8" fill="#FFB547" ${SL_O}/><rect x="40" y="30" width="30" height="50" rx="6" fill="#8C6CFF" ${SL_O} transform="rotate(-8 55 55)"/><path d="M88 26h12l-12 14h12" fill="none" ${SL_O}/>`,
+ music:`<path d="M44 86V30l44-10v54" fill="none" ${SL_O}/><ellipse cx="36" cy="86" rx="12" ry="9" fill="#FF4FA3" ${SL_O}/><ellipse cx="80" cy="76" rx="12" ry="9" fill="#FF4FA3" ${SL_O}/><path d="M44 42l44-10" ${SL_O}/>`,
+ stress:`<path d="M66 12L38 62h22l-10 46l34-58H62Z" fill="#FFE14D" ${SL_O}/><path d="M22 40l-10-4M24 66H12M98 44l10-6M96 72h12" ${SL_O}/>`,
+ crash:`<path d="M14 92V52M106 92V72" ${SL_O}/><path d="M14 72h92v18H14z" fill="#8C6CFF" ${SL_O}/><path d="M26 66c6-10 20-10 28 0" fill="#fff" ${SL_O}/><path d="M66 22h14l-14 16h14M86 44h8l-8 10h8" fill="none" ${SL_O}/>`,
+ cola:`<path d="M40 24h40l-2 82H42z" fill="#FF6B6B" ${SL_O}/><path d="M40 24c0-6 40-6 40 0" fill="#fff" ${SL_O}/><path d="M46 58c10-8 18 8 28 0" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>`,
+ tea:`<path d="M26 50h56l-4 44H30z" fill="#C9A27A" ${SL_O}/><path d="M82 58c14 0 14 22 0 22" fill="none" ${SL_O}/><path d="M56 50V26" ${SL_O}/><rect x="50" y="16" width="12" height="12" fill="#3DDC84" ${SL_O}/>`,
+ icedc:`<path d="M38 30h44v76H38z" fill="#E7C8A0" ${SL_O}/><path d="M38 30l10-14h24l10 14" fill="#fff" ${SL_O}/><path d="M66 16V4" ${SL_O}/><path d="M38 58h44" ${SL_O}/>`,
+ tub:`<rect x="30" y="38" width="60" height="68" rx="10" fill="#FF4FA3" ${SL_O}/><rect x="26" y="26" width="68" height="16" rx="6" fill="#1B1630"/><path d="M48 62h24M48 76h18" stroke="#fff" stroke-width="5" stroke-linecap="round"/>`};
+Object.assign(SL_ILL,SL_OI);
+function slRoomSVG(sel){ const q=slQ('room'), on=i=>sel.includes(i), dark=on(0), quiet=on(1), temp=on(2), comfy=on(3), share=on(4);
+  const calm=temp&&comfy; return `<svg viewBox="0 0 420 240" class="sl-room${dark?' dark':''}${quiet?' quiet':''}${temp?' cool':''}${comfy?' comfy':''}${calm?' calm':''}" id="slRoom" aria-hidden="true">
+  <rect x="0" y="0" width="420" height="240" rx="22" class="r-wall"/><rect x="0" y="196" width="420" height="44" class="r-floor"/>
+  <g class="r-window"><rect x="40" y="34" width="96" height="76" rx="6" class="r-win"/><path d="M88 34v76M40 72h96" class="r-line"/><circle cx="114" cy="54" r="10" class="r-moon"/><g class="r-light"><path d="M136 60l60 120M136 100l110 80" class="r-beam"/></g></g>
+  <g class="r-lamp"><path d="M326 120h28l8 22h-44z" class="r-shade"/><path d="M340 142v40M326 184h28" class="r-line"/><circle cx="340" cy="132" r="26" class="r-glow"/></g>
+  <g class="r-noise"><path d="M380 40c10 8 10 24 0 32M392 32c16 12 16 36 0 48" class="r-wave"/><text x="300" y="48" class="r-n">♪</text><text x="350" y="88" class="r-n b">!</text></g>
+  ${share?`<g class="r-bed2"><rect x="290" y="160" width="110" height="34" rx="8" class="r-bed b2"/><path d="M290 160v-22M290 194v12M400 194v12" class="r-line"/><rect x="298" y="146" width="26" height="15" rx="7" class="r-pill"/><circle cx="311" cy="145" r="10" class="r-head"/><path d="M318 160c20-16 70-14 82-2v4h-82z" class="r-blanket2"/></g>`:''}
+  <g class="r-bedg"><rect x="70" y="150" width="190" height="44" rx="8" class="r-bed"/><path d="M70 150v-30M70 194v14M260 194v14" class="r-line"/>
+   <rect x="78" y="136" width="40" height="18" rx="8" class="r-pill"/>
+   <g class="r-sleeper"><g class="r-guy"><path d="M90 124c2-10 18-12 24-2" class="r-hair"/><circle cx="102" cy="130" r="13" class="r-head"/><path d="M114 129l4 3l-4 2" class="r-nose"/>
+     <path d="M104 127c2 2 5 2 7 0" class="r-eyes"/><circle cx="108" cy="127" r="2" class="r-eyeo"/><path d="M107 136h4" class="r-mouth"/><path d="M96 132c-3 0-4-4-1-5" class="r-ear"/></g>
+   <path d="M108 154C110 136 128 128 146 132C160 122 186 124 196 138C212 128 240 130 256 146V154Z" class="r-blanket"/><path d="M146 132c4 8 2 16 2 22M196 138c-2 6-2 12 0 16" class="r-fold"/></g></g>
+  <g class="r-heat"><path d="M150 112c-6-8 6-14 0-22M180 104c-6-8 6-14 0-22M210 112c-6-8 6-14 0-22" class="r-hot"/><circle cx="122" cy="120" r="3" class="r-sweat"/></g>
+  <g class="r-zzz"><text x="128" y="108" class="r-z">z</text><text x="142" y="92" class="r-z s">z</text><text x="156" y="78" class="r-z ss">z</text></g></svg>`; }
+function slMinsViz(q,v){
+  if(q.viz==='clock'){ const r=70, w=(m)=>{ const a=Math.min(m,60)/60*Math.PI*2, x=r*Math.sin(a), y=-r*Math.cos(a); return m<=0?'':m>=60?`M0 ${-r}A${r} ${r} 0 1 1 0 ${r}A${r} ${r} 0 1 1 0 ${-r}Z`:`M0 0L0 ${-r}A${r} ${r} 0 ${a>Math.PI?1:0} 1 ${x.toFixed(1)} ${y.toFixed(1)}Z`; };
+    const sheep=Math.round(v/2), lap2=v>60?w(v-60):'';
+    return `<div class="sl-mviz"><svg viewBox="-110 -100 220 200" class="sl-clock" aria-hidden="true"><circle r="84" class="c-face"/><path d="${w(v)}" class="c-fill${v>=30?' hi':''}"/>${lap2?`<path d="${lap2}" class="c-fill2" transform="scale(.6)"/>`:''}${Array.from({length:12},(_,i)=>{ const a=i/12*Math.PI*2; return `<line x1="${(74*Math.sin(a)).toFixed(1)}" y1="${(-74*Math.cos(a)).toFixed(1)}" x2="${(82*Math.sin(a)).toFixed(1)}" y2="${(-82*Math.cos(a)).toFixed(1)}" class="c-tick"/>`; }).join('')}<circle r="8" class="c-hub"/></svg>
+      <div class="sl-sheep" aria-hidden="true"><div class="sl-fence"></div><span class="sl-sh" style="animation-duration:${Math.max(.9,2.6-v/60)}s">${slSheepSVG()}</span></div>
+      <p class="sl-mtxt">That's about <b>${sheep}</b> sheep counted 🐑</p></div>`; }
+  if(q.viz==='sun'){ const f=Math.min(1,v/120), sx=-120+f*240, sy=60-Math.sin(f*Math.PI)*70-f*20;
+    return `<div class="sl-mviz"><svg viewBox="-160 -80 320 180" class="sl-sunv" aria-hidden="true"><defs><linearGradient id="slSunSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${slMix('#6E7BA8','#4FB6FF',f)}"/><stop offset="1" stop-color="${slMix('#B8C1DA','#D9F2FF',f)}"/></linearGradient></defs>
+      <rect x="-160" y="-80" width="320" height="180" rx="20" fill="url(#slSunSky)"/><g transform="translate(${sx.toFixed(1)} ${sy.toFixed(1)})"><circle r="${18+f*8}" class="s-glow" style="opacity:${.2+f*.5}"/><circle r="16" class="s-sun"/></g>
+      <ellipse cx="0" cy="120" rx="240" ry="70" class="s-hill"/><g transform="translate(0 46)" class="s-guy"><circle cx="0" cy="-30" r="7" class="s-head"/><path d="M0 -23v20M0 -18l-10 ${f>.5?-14:6}M0 -18l10 ${f>.5?-14:6}M0 -3l-7 14M0 -3l7 14" class="s-body"/></g></svg>
+      <div class="sl-charge"><span>Body clock charge</span><span class="sl-batt big"><i style="width:${Math.round(f*100)}%"></i></span><b>${Math.round(f*100)}%</b></div></div>`; }
+  return ''; }
+function slSheepSVG(){ return `<svg viewBox="0 0 60 44"><ellipse cx="30" cy="22" rx="20" ry="13" fill="#fff" stroke="#1B1630" stroke-width="3"/><circle cx="18" cy="14" r="5" fill="#fff" stroke="#1B1630" stroke-width="3"/><circle cx="42" cy="14" r="5" fill="#fff" stroke="#1B1630" stroke-width="3"/><ellipse cx="50" cy="20" rx="8" ry="6" fill="#1B1630"/><path d="M20 33v8M40 33v8" stroke="#1B1630" stroke-width="3" stroke-linecap="round"/></svg>`; }
+function slMinsLbl(q,v){ const t=v>=q.max?`${v>=120?(v/60)+' hours':v+' mins'}+`:v>=60?`${Math.floor(v/60)}h${v%60?' '+v%60+'m':''}`:`${v} mins`;
+  const ph=q.viz==='clock'?(v<15?'Out like a light':v<30?'Pretty normal':v<60?'A while':'Ages'):(v<10?'Hardly any':v<30?'A little':v<60?'Decent':'Heaps'); return [t,ph]; }
+function slMinsHTML(q){ const v=typeof SL.a[q.id]==='number'?SL.a[q.id]:q.def, [t,ph]=slMinsLbl(q,v);
+  return `<div class="sl-mins"><div id="slMViz">${slMinsViz(q,v)}</div><div class="sl-skyread"><b id="slMT">${t}</b><span id="slMP">${ph}</span></div>
+    <div class="sl-crange"><input type="range" id="slMins" min="${q.min}" max="${q.max}" step="${q.step}" value="${v}" aria-label="${esc(q.q)}"><div class="sl-clab"><span>${q.min} mins</span><span>${q.max>=120?q.max/60+' hours+':q.max+' mins+'}</span></div></div></div>`; }
+const SL_DAYS=['Mon','Tue','Wed','Thu','Fri','Sat','Sun'];
+function slDaysHTML(){ const d=Array.isArray(SL.a.moving)?SL.a.moving:[]; return `<div class="sl-days">${SL_DAYS.map((x,i)=>`<button class="sl-day${d.includes(i)?' on':''}" data-sl-day="${i}" aria-pressed="${d.includes(i)}">${d.includes(i)?slIll('shoe','day'):'<span class="sl-dot"></span>'}<b>${x}</b></button>`).join('')}</div>
+  <p class="sl-dtot"><b>${d.length}</b> day${d.length===1?'':'s'} a week ${d.length>=5?'🔥':d.length>=3?'💪':''}</p>`; }
+document.addEventListener('input',e=>{ if(e.target.id!=='slMins') return; const q=slVisible()[SL.qi]; const v=+e.target.value; SL.a[q.id]=v; const [t,ph]=slMinsLbl(q,v); document.getElementById('slMViz').innerHTML=slMinsViz(q,v); document.getElementById('slMT').textContent=t; document.getElementById('slMP').textContent=ph; });
+const SL_OI2={
+ game:`<rect x="16" y="40" width="88" height="46" rx="22" fill="#8C6CFF" ${SL_O}/><path d="M36 54v18M27 63h18" ${SL_O}/><circle cx="80" cy="56" r="5" fill="#FFE14D" ${SL_O}/><circle cx="90" cy="68" r="5" fill="#FF4FA3" ${SL_O}/>`,
+ chat:`<path d="M14 24h66v40H40l-14 14V64H14z" fill="#FFE14D" ${SL_O}/><path d="M50 50h56v36H96v12L84 86H50z" fill="#2FD4C4" ${SL_O}/><circle cx="34" cy="44" r="3" fill="#1B1630"/><circle cx="47" cy="44" r="3" fill="#1B1630"/><circle cx="60" cy="44" r="3" fill="#1B1630"/>`,
+ laptop:`<rect x="26" y="26" width="68" height="48" rx="5" fill="#E9E2FF" ${SL_O}/><path d="M50 40l16 10l-16 10z" fill="#FF4FA3" ${SL_O}/><path d="M12 82h96l-6 12H18z" fill="#8C6CFF" ${SL_O}/>`,
+ book:`<path d="M18 30c16-6 30-6 42 4v62c-12-10-26-10-42-4z" fill="#fff" ${SL_O}/><path d="M102 30c-16-6-30-6-42 4v62c12-10 26-10 42-4z" fill="#FFB547" ${SL_O}/><path d="M28 46c8-2 16-2 22 2M28 60c8-2 16-2 22 2" ${SL_O}/>`,
+ tv:`<rect x="16" y="28" width="88" height="58" rx="8" fill="#2FD4C4" ${SL_O}/><rect x="26" y="38" width="68" height="38" rx="4" fill="#1E1A4A" ${SL_O}/><path d="M44 100h32M60 86v14M46 16l14 12l14-12" ${SL_O}/>`};
+Object.assign(SL_ILL,SL_OI2);
+function slCaffMg(){ const c=SL.a.many||{}; return Object.entries(c).reduce((s,[k,n])=>s+(SL_DRINK[k]?SL_DRINK[k][2]*n:0),0); }
+function slCountHTML(){ const dr=(SL.a.drinks||[]).map(i=>slQ('drinks').o[i][1]).filter(k=>SL_DRINK[k]); if(!SL.a.many||typeof SL.a.many!=='object') SL.a.many={}; dr.forEach(k=>{ if(SL.a.many[k]==null) SL.a.many[k]=1; });
+  const mg=slCaffMg();
+  return `<div class="sl-counts">${dr.map(k=>{ const D=SL_DRINK[k], n=SL.a.many[k]; return `<div class="sl-cnt">${slIll(D[1],'cnt')}<div class="sl-cntt"><b>${D[0]}</b><small>per ${D[3]}: about ${D[2]}mg</small></div>
+    <div class="sl-step"><button data-sl-cnt="${k}|-1" aria-label="Fewer ${D[0]}">−</button><span>${n===5?'5+':n}</span><button data-sl-cnt="${k}|1" aria-label="More ${D[0]}">+</button></div>
+    <div class="sl-stack" aria-hidden="true">${Array.from({length:n},()=>slIll(D[1],'tiny')).join('')}</div></div>`; }).join('')}</div>
+    <div class="sl-mg ${mg>=300?'hi':mg>=180?'mid':''}"><b>About ${mg}mg</b><span>${mg>=300?"That's a lot. Way more than enough to make most teens jittery and anxious.":mg>=180?"Enough to make most teens feel anxious or wired.":mg?"A moderate amount.":"None counted yet."}</span></div>`; }
+function slCaffSVG(){ const last=typeof SL.a.last==='number'?SL.a.last:15, bed=typeof SL.a.bed==='number'?SL.a.bed:22.5, mg=slCaffMg()||100;
+  const x0=6, x1=27, X=h=>40+(h-x0)/(x1-x0)*520, Y=f=>190-f*150;
+  let d=''; for(let h=last;h<=x1;h+=.25){ const f=Math.pow(.5,(h-last)/5); d+=(d?'L':'M')+X(h).toFixed(1)+' '+Y(f).toFixed(1); }
+  const fb=Math.pow(.5,Math.max(0,bed-last)/5), pct=Math.round(fb*100), left=Math.round(mg*fb);
+  const ticks=[6,9,12,15,18,21,24,27].map(h=>`<text x="${X(h)}" y="214" class="sl-ct2">${slFmtT(h).replace(':00','')}</text>`).join('');
+  return `<svg viewBox="0 0 600 230" class="sl-caffsvg" aria-hidden="true"><rect x="40" y="40" width="520" height="150" rx="10" class="sl-cbg"/>
+    <rect x="${X(Math.max(x0,bed-0.01))}" y="40" width="${Math.max(0,560-X(bed))}" height="150" class="sl-cnight"/>
+    <path d="${d}L${X(x1)} 190L${X(last)} 190Z" class="sl-carea"/><path d="${d}" class="sl-cline" pathLength="100"/>
+    <line x1="${X(bed)}" y1="30" x2="${X(bed)}" y2="190" class="sl-cbed"/><text x="${X(bed)}" y="24" class="sl-cbedt">Bedtime ${slFmtT(bed)}</text>
+    <circle cx="${X(bed)}" cy="${Y(fb)}" r="9" class="sl-cdot"/><g transform="translate(${X(last)} ${Y(1)})">${'<circle r="11" class="sl-cdrink"/>'}</g>${ticks}</svg>
+    <div class="sl-cread ${pct>=40?'hi':pct>=25?'mid':''}"><span class="sl-batt"><i style="width:${pct}%"></i></span><div><b>${pct}% of your last one is still in you at bedtime</b><small>${pct>=40?"That's still buzzing when you're trying to sleep.":pct>=25?'Still a fair bit hanging around.':'Mostly gone by bedtime. Nice.'}</small></div></div>`; }
+function slCaffHTML(){ const v=typeof SL.a.last==='number'?SL.a.last:15; return `<div class="sl-caff"><div id="slCaffViz">${slCaffSVG()}</div>
+  <div class="sl-crange"><input type="range" id="slLast" min="6" max="23" step="0.5" value="${v}" aria-label="Time of last caffeine drink"><div class="sl-clab"><span>6am</span><b id="slLastT">Last one at ${slFmtT(v)}</b><span>11pm</span></div></div></div>`; }
+document.addEventListener('input',e=>{ if(e.target.id!=='slLast') return; SL.a.last=+e.target.value; document.getElementById('slCaffViz').innerHTML=slCaffSVG(); document.getElementById('slLastT').textContent=`Last one at ${slFmtT(SL.a.last)}`; });
+const SL_SECS={times:"Your times",screens:"Before bed",drinks:"Drinks",bed:"Bedtime",day:"Your day",other:"Other stuff"};
+const SL_Q=[
+ {id:'bed',sec:'times',type:'sky',q:"On a school night, what time do you actually fall asleep?",sub:"Not when you get into bed. When you're out.",min:20,max:27,def:22.5,lo:"8pm",hi:"3am"},
+ {id:'wake',sec:'times',type:'sky',q:"What time do you wake up on a school day?",min:5,max:13,def:7,lo:"5am",hi:"1pm"},
+ {id:'wkd',sec:'times',type:'sky',q:"On the weekend, what time do you usually wake up?",min:6,max:14,def:9.5,lo:"6am",hi:"2pm"},
+ {id:'screens',sec:'screens',ill:'phone',type:'multi',icons:['phone','game','chat','laptop','book','tv','lightoff','shower','brush','music','phoneaway','stress','crash'],q:"What do you usually do before you go to sleep?",sub:"Think about the last hour or so. Pick all that fit.",o:[["Scrolling TikTok, Insta or YouTube",{s:0}],["Gaming",{s:0}],["Snapchat or messaging",{s:1}],["Watching shows on my phone or laptop",{s:1}],["Homework",{s:1}],["TV across the room",{s:2}],["Lights go down or off",{c:1}],["Shower or wash my face",{c:1}],["Teeth and PJs",{c:1}],["Music or a podcast, screen off",{s:3,c:1}],["Phone gets put away",{s:3,c:1}],["Something stressful: arguments, intense games",{c:-1}],["Nothing really, I just crash",{c:0}]]},
+ {id:'phone',sec:'screens',ill:'phone',type:'one',q:"Where's your phone while you sleep?",o:[["In bed with me, sound or vibrate on",0],["In bed with me, on silent",1],["Next to my bed. I check it if I wake up",1],["Next to my bed. I leave it alone",2],["Charging across the room",3],["In another room",3]]},
+ {id:'drinks',sec:'drinks',ill:'can',type:'multi',q:"Which of these do you drink?",sub:"Pick all that fit.",o:[["Energy drinks (Monster, V, Red Bull…)",'e'],["Coffee",'c'],["Iced coffee (Farmers Union, Dare…)",'i'],["Tea",'t'],["Coke, Pepsi or Mountain Dew",'k'],["Pre-workout",'p'],["None of these",'none']]},
+ {id:'many',sec:'drinks',type:'count',q:"On a normal day, how many of each?",when:a=>Array.isArray(a.drinks)&&a.drinks.length&&!a.drinks.includes(6)},
+ {id:'last',sec:'drinks',type:'caff',q:"When's your last one usually?",sub:"Slide it and watch what's still in your body at bedtime.",when:a=>Array.isArray(a.drinks)&&a.drinks.length&&!a.drinks.includes(6)},
+ {id:'room',sec:'bed',ill:'bed',type:'multi',scene:'room',q:"Where you sleep, which of these are true?",sub:"Pick all that fit.",o:[["It gets dark enough",1],["It's quiet enough",1],["It's not too hot or too cold",1],["My bed is comfy",1],["I share my room",0],["None of these",0],["It's not really up to me",null]]},
+ {id:'fall',sec:'bed',type:'mins',viz:'clock',min:0,max:120,step:5,def:20,q:"Once the lights are off, how long does it take you to fall asleep?"},
+ {id:'keep',sec:'bed',ill:'cloud',type:'multi',q:"What keeps you awake?",sub:"Pick any, or skip.",o:[["Worrying about stuff"],["Replaying the day"],["Thinking about tomorrow"],["My body feels wired or restless"],["Noise or people around"],["Bad dreams or waking up scared"],["Hungry or thirsty"],["Not sure"]],when:a=>typeof a.fall==='number'&&a.fall>=15},
+ {id:'daylight',sec:'day',type:'mins',viz:'sun',min:0,max:180,step:5,def:30,q:"On a school day, how much time are you outside in daylight?",sub:"Walking to school, recess, lunch, sport… add it up."},
+ {id:'moving',sec:'day',type:'days',q:"Which days do you move enough to get puffed?",sub:"Sport, walking fast, skating, footy, gym, dancing… tap the days."},
+ {id:'vape',sec:'other',ill:'vape',type:'one',intro:"Last few. No judgement, and 'Rather not say' is always fine.",q:"Do you vape or smoke?",o:[["No",3],["Sometimes, not near bedtime",2],["Most days",1],["Yes, at night or when I wake up",0],["Rather not say",null]]},
+ {id:'alcohol',sec:'other',ill:'bottle',type:'one',q:"How often do you drink alcohol?",o:[["Never",3],["Once in a while",2],["Most weekends",1],["On school nights too",0],["Rather not say",null]]},
+ {id:'weed',sec:'other',ill:'leaf',type:'one',q:"How often do you use weed?",o:[["Never",3],["Once in a while",2],["Most weekends",1],["Most days, or to help me sleep",0],["Rather not say",null]]}
+];
+const SL_ORDER=['amount','routine','screens','phone','caffeine','mind','cues','vape','weed','alcohol','daylight','moving','room'];
+const SL={step:'intro',qi:0,a:{},sel:[],info:null,picked:{},name:''};
+function slReset(){ Object.assign(SL,{step:'intro',qi:0,a:{},sel:[],info:null,picked:{},name:''}); }
+const slQ=id=>SL_Q.find(q=>q.id===id), slV=id=>{ const q=slQ(id), x=SL.a[id]; if(['sky','caff','mins'].includes(q.type)) return typeof x==='number'?x:undefined; if(q.type==='count'||q.type==='days') return undefined; return x==null||typeof x!=='number'?undefined:q.o[x][1]; };
+function slVisible(){ return SL_Q.filter(q=>!q.when||q.when(SL.a)); }
+const SL_SKY=[[0,'#0B0A24','#17133D'],[4,'#0B0A24','#1C1748'],[5,'#2A2366','#6B4FA0'],[6,'#6E5BC4','#FF9E6B'],[7,'#7FB9F5','#FFD9A0'],[9,'#5FAEF7','#BFE3FF'],[14,'#4FA3F5','#BFE3FF'],[18,'#5B7FD6','#FFB37A'],[19.5,'#3B3E8E','#FF7E8E'],[20.5,'#241F5C','#6B4FA0'],[22,'#14113A','#2A2366'],[24,'#0B0A24','#17133D']];
+function slMix(a,b,t){ const h=x=>[1,3,5].map(i=>parseInt(x.slice(i,i+2),16)); const A=h(a),B=h(b); return '#'+A.map((v,i)=>Math.round(v+(B[i]-v)*t).toString(16).padStart(2,'0')).join(''); }
+function slSkyCols(h){ h=((h%24)+24)%24; let i=SL_SKY.length-2; for(let k=0;k<SL_SKY.length-1;k++) if(h>=SL_SKY[k][0]&&h<SL_SKY[k+1][0]){ i=k; break; } const A=SL_SKY[i],B=SL_SKY[i+1], t=(h-A[0])/(B[0]-A[0]); return [slMix(A[1],B[1],t),slMix(A[2],B[2],t)]; }
+function slPhase(h){ h=((h%24)+24)%24; return h<4.5?'Middle of the night':h<5.75?'Twilight':h<7?'Sunrise':h<11?'Morning':h<17?'Daytime':h<19?'Arvo':h<20.5?'Sunset':h<22.5?'Night':'Late night'; }
+function slSkyHTML(q,v){ return `<div class="sl-sky" id="slSky" data-min="${q.min}" data-max="${q.max}"><svg viewBox="-220 -200 440 250" class="sl-skysvg" id="slSkySvg" role="slider" tabindex="0" aria-label="${esc(q.q)}" aria-valuemin="${q.min}" aria-valuemax="${q.max}">
+  <defs><linearGradient id="slSkyG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" id="slSkyA"/><stop offset="1" id="slSkyB"/></linearGradient><clipPath id="slSkyClip"><rect x="-220" y="-200" width="440" height="250" rx="26"/></clipPath></defs>
+  <g clip-path="url(#slSkyClip)"><rect x="-220" y="-200" width="440" height="250" fill="url(#slSkyG)"/><g id="slStars">${Array.from({length:22},(_,i)=>`<circle cx="${(-200+((i*97)%400)).toFixed(0)}" cy="${(-185+((i*53)%150)).toFixed(0)}" r="${i%3?1.3:2}" fill="#fff"/>`).join('')}</g>
+  <path d="M-170 10A170 170 0 0 1 170 10" class="sl-arc"/><path d="M-170 10A170 170 0 0 1 170 10" class="sl-arcd"/>
+  <ellipse cx="0" cy="150" rx="300" ry="150" class="sl-globe"/><path d="M-60 2 l0 -14 l12 -9 l12 9 l0 14Z M-30 2v-10h14v10" class="sl-house"/><rect x="-55" y="-8" width="6" height="6" class="sl-win" id="slWin"/>
+  <g id="slOrb"><circle r="24" class="sl-orbg"/><circle r="17" id="slOrbC" class="sl-orb"/><circle r="15" cx="8" cy="-6" id="slOrbM" class="sl-orbm"/></g></g>
+  <text x="-170" y="38" class="sl-arclab" text-anchor="middle">${q.lo}</text><text x="170" y="38" class="sl-arclab" text-anchor="middle">${q.hi}</text></svg>
+  <div class="sl-skyread"><b id="slSkyT"></b><span id="slSkyP"></span></div></div>`; }
+function slSkySet(v){ const q=slVisible()[SL.qi]; if(!q||q.type!=='sky') return; v=Math.round(Math.max(q.min,Math.min(q.max,v))*4)/4; SL.a[q.id]=v;
+  const t=(v-q.min)/(q.max-q.min), a=Math.PI*(1-t), x=170*Math.cos(a), y=10-170*Math.sin(a), [c1,c2]=slSkyCols(v), h=((v%24)+24)%24, night=h<5.75||h>=19.5;
+  const g=id=>document.getElementById(id); if(!g('slOrb')) return;
+  g('slOrb').setAttribute('transform',`translate(${x.toFixed(1)} ${y.toFixed(1)})`); g('slSkyA').setAttribute('stop-color',c1); g('slSkyB').setAttribute('stop-color',c2);
+  g('slOrbC').setAttribute('class','sl-orb'+(night?' moon':'')); g('slOrbM').style.opacity=night?1:0; g('slOrbM').setAttribute('fill',c1);
+  g('slStars').style.opacity=h<5?1:h<6.5?(6.5-h)/1.5:h>=20?Math.min(1,(h-20)/1.5):0; g('slWin').style.opacity=night?1:0;
+  g('slSkyT').textContent=slFmtT(v); g('slSkyP').textContent=slPhase(v); g('slSkySvg').setAttribute('aria-valuetext',slFmtT(v)); }
+let slSkyDrag=false;
+function slSkyPoint(e){ const svg=document.getElementById('slSkySvg'), q=slVisible()[SL.qi]; if(!svg||!q) return; const pt=svg.createSVGPoint(); pt.x=e.clientX; pt.y=e.clientY; const p=pt.matrixTransform(svg.getScreenCTM().inverse());
+  let ang=Math.atan2(10-p.y,p.x); if(ang<0) ang=p.x<0?Math.PI:0; slSkySet(q.min+(1-ang/Math.PI)*(q.max-q.min)); }
+document.addEventListener('pointerdown',e=>{ if(!e.target.closest||!e.target.closest('#slSkySvg')) return; e.preventDefault(); slSkyDrag=true; e.target.closest('#slSkySvg').setPointerCapture?.(e.pointerId); slSkyPoint(e); });
+document.addEventListener('pointermove',e=>{ if(slSkyDrag) slSkyPoint(e); });
+document.addEventListener('pointerup',()=>{ slSkyDrag=false; });
+document.addEventListener('keydown',e=>{ if(e.target.id!=='slSkySvg') return; const q=slVisible()[SL.qi]; if(e.key==='ArrowRight'||e.key==='ArrowUp'){ e.preventDefault(); slSkySet(SL.a[q.id]+.25); } if(e.key==='ArrowLeft'||e.key==='ArrowDown'){ e.preventDefault(); slSkySet(SL.a[q.id]-.25); } });
+function slFmtT(h){ h=((h%24)+24)%24; const H=Math.floor(h), M=Math.round((h-H)*60), ap=H>=12?'pm':'am', h12=H%12||12; return `${h12}${M?':'+String(M).padStart(2,'0'):''}${ap}`; }
+function slStats(){
+  const st={}, sc={}, bed=slV('bed'), wake=slV('wake'), wkd=slV('wkd');
+  if(bed!=null&&wake!=null){ st.hours=Math.round(((24+wake)-bed)*2)/2; sc.amount=st.hours>=8.5?3:st.hours>=7.5?2:st.hours>=6.5?1:0; st.goal=slFmtT(wake-9); }
+  if(wake!=null&&wkd!=null){ st.shift=Math.max(0,wkd-wake); sc.routine=st.shift<=1?3:st.shift<=2?2:st.shift<=3?1:0; }
+  const sel=id=>Array.isArray(SL.a[id])?SL.a[id]:null;
+  const scr=sel('screens'); if(scr&&scr.length){ const O=scr.map(i=>slQ('screens').o[i][1]); const sv=O.filter(o=>o.s!=null).map(o=>o.s);
+    if(sv.length) sc.screens=Math.floor(sv.reduce((a,b)=>a+b,0)/sv.length); else if(O.some(o=>o.c===1)) sc.screens=3;
+    const pos=O.filter(o=>o.c===1).length, stress=O.some(o=>o.c===-1); sc.cues=Math.max(0,Math.min(3,pos)-(stress?1:0)); st.stress=stress; }
+  if(slV('phone')!=null) sc.phone=slV('phone');
+  const dr=sel('drinks'); if(dr&&dr.length){ if(dr.includes(6)) sc.caffeine=3; else { st.drinks=dr.map(i=>slQ('drinks').o[i][1]); const v=[]; if(SL.a.many&&typeof SL.a.many==='object'){ const mg=slCaffMg(); st.mg=mg; v.push(mg<100?3:mg<180?2:mg<300?1:0); }
+      const l=slV('last'); if(l!=null){ const bed=slV('bed')??22.5; st.atBed=Math.round(Math.pow(.5,Math.max(0,bed-l)/5)*100); v.push(l<=12?3:l<=15?2:l<=18?1:0); } if(v.length) sc.caffeine=Math.min(...v); } }
+  const rm=sel('room'); if(rm&&rm.length){ if(rm.includes(6)) st.notMine=true; else { const n=rm.filter(i=>slQ('room').o[i][1]===1).length; sc.room=n>=4?3:n===3?2:n===2?1:0; } }
+  const fm=slV('fall'); if(fm!=null){ st.fall=fm; sc.mind=fm<15?3:fm<30?2:fm<60?1:0; }
+  const dm=slV('daylight'); if(dm!=null){ st.daylight=dm; sc.daylight=dm<10?0:dm<30?1:dm<60?2:3; }
+  if(Array.isArray(SL.a.moving)){ const n=SL.a.moving.length; st.moving=n; sc.moving=n===0?0:n<=2?1:n<=4?2:3; }
+  const kp=sel('keep')||[]; st.nightmares=kp.includes(5); st.noise=kp.includes(4);
+  ['vape','alcohol','weed'].forEach(k=>{ if(slV(k)!=null) sc[k]=slV(k); });
+  return {st,sc};
+}
+function slResult(){
+  const {st,sc}=slStats(), done=Object.entries(sc), by=k=>SL_ORDER.indexOf(k);
+  const score=done.length?Math.round(done.reduce((s,[,v])=>s+v,0)/(done.length*3)*100):0;
+  let imp=done.filter(([,v])=>v<=1).sort((a,b)=>a[1]-b[1]||by(a[0])-by(b[0])).map(([k])=>k);
+  if(!imp.length) imp=done.filter(([,v])=>v===2).sort((a,b)=>by(a[0])-by(b[0])).map(([k])=>k);
+  const SUBS=['vape','alcohol','weed'];
+  let strong=done.filter(([k,v])=>v===3&&!SUBS.includes(k)).map(([k])=>k).sort((a,b)=>by(a)-by(b)).filter(k=>!imp.includes(k));
+  if(!strong.length) strong=done.filter(([k,v])=>v===2&&!SUBS.includes(k)).map(([k])=>k).filter(k=>!imp.includes(k));
+  const band=score>=85?["Sleep legend","Your sleep habits are looking strong. Keep doing what you're doing."]:score>=65?["Pretty solid","Good foundations. A couple of tweaks could make mornings easier."]:score>=45?["Running on low","Some habits are working against you. Small changes add up fast."]:["Running on empty","Sleep is having a rough time. That's really common for teens, and it's fixable, one small thing at a time."];
+  return {score,band,strong:strong.slice(0,4),imp,focus:imp.slice(0,2),st};
+}
+function slRing(score){ const r=84, c=2*Math.PI*r, off=c*(1-score/100);
+  return `<svg viewBox="0 0 200 200" class="sl-ring" aria-hidden="true"><circle cx="100" cy="108" r="${r}" class="sh"/><circle cx="100" cy="100" r="${r}" class="bg"/><circle cx="100" cy="100" r="${r}" class="fg" style="stroke-dasharray:${c.toFixed(1)};--off:${off.toFixed(1)}" transform="rotate(-90 100 100)"/></svg>`; }
+function slPersonal(k,st){
+  if(k==='amount'&&st.hours!=null) return `You're getting about <b>${st.hours} hours</b> on school nights. Teens need about 8 to 10. To get 9 hours, you'd want to be asleep by <b>${st.goal}</b>.`;
+  if(k==='routine'&&st.shift!=null) return st.shift?`Your weekend wake-up is about <b>${st.shift} hour${st.shift===1?'':'s'} later</b> than school days.`:`Your weekend wake-up matches school days. Nice.`;
+  if(k==='caffeine'&&st.mg!=null) return `You're having about <b>${st.mg}mg</b> of caffeine a day${st.atBed!=null?`, and about <b>${st.atBed}%</b> of your last one is still in you at bedtime`:''}.`;
+  if(k==='caffeine'&&st.drinks&&(st.drinks.includes('e')||st.drinks.includes('p'))) return `Energy drinks and pre-workout are usually the biggest caffeine hits. Check the can or tub for how much is in it.`;
+  if(k==='cues'&&st.stress) return `Stressful stuff right before bed tells your body to stay alert. Try moving it earlier.`;
+  if(k==='daylight'&&st.daylight!=null) return `You're getting about <b>${st.daylight} minutes</b> of daylight on school days. Aim for at least 30, ideally in the morning.`;
+  if(k==='moving'&&st.moving!=null) return `You're moving <b>${st.moving} day${st.moving===1?'':'s'}</b> a week. Even adding one more helps.`;
+  if(k==='mind'&&st.fall!=null&&!st.nightmares) return `It takes you about <b>${st.fall} minutes</b> to drop off. Under 20 is the sweet spot.`;
+  if(k==='mind'&&st.nightmares) return `<span class="sl-warn">Bad dreams or waking up scared a lot? That's worth talking about with someone you trust or a GP. You don't have to just put up with it.</span>`;
+  return ''; }
+function sleepHTML(){
+  let body='';
+  if(SL.step==='intro') body=`<div class="sl-intro"><div class="sl-stars" aria-hidden="true">${'<i></i>'.repeat(14)}</div>${slIll('moon','sl-hero-ill')}<span class="sl-kick">Sleep check</span>
+    <h2>How's your sleep, really?</h2><p>A few quick questions about your nights and days. You'll get a sleep score, what you're already nailing, and one or two things to try.</p>
+    <ul class="sl-rules"><li>No right or wrong answers</li><li>Skip anything you like</li><li>Nothing is saved</li></ul>
+    <button class="sl-go" data-sl="start">Let's go</button></div>`;
+  else if(SL.step==='q'){ const vis=slVisible(), q=vis[SL.qi], cur=SL.a[q.id], multi=q.type==='multi';
+    const secs=Object.keys(SL_SECS), si=secs.indexOf(q.sec);
+    body=`<div class="sl-q${SL.anim?' anim':''}"><div class="sl-secs">${secs.map((s,i)=>`<span class="${i<si?'done':i===si?'now':''}">${SL_SECS[s]}</span>`).join('')}</div>
+      <div class="sl-qgrid${['sky','count','caff','mins','days'].includes(q.type)||q.scene||q.icons?' sky':''}">${['sky','count','caff','mins','days'].includes(q.type)||q.scene||q.icons?'':`<div class="sl-qart">${slIll(q.ill,'pop')}</div>`}<div class="sl-qmain">
+      ${q.intro?`<p class="sl-introline">${q.intro}</p>`:''}<h2>${q.q}</h2>${q.sub?`<p class="sl-sub">${q.sub}</p>`:''}
+      ${q.type==='sky'?slSkyHTML(q):q.type==='count'?slCountHTML():q.type==='caff'?slCaffHTML():q.type==='mins'?slMinsHTML(q):q.type==='days'?slDaysHTML():`${q.scene?`<div class="sl-scene">${slRoomSVG(SL.sel)}</div>`:''}<div class="sl-opts${!multi&&(q.o.length>7||q.o.every(o=>o[0].length<4))?' many':''}${multi?' multi':''}${q.icons?' icons':''}">${q.o.map((o,i)=>{ const on=multi?SL.sel.includes(i):cur===i; const alt=o[1]===null||o[1]==='none'||/^None of these/.test(o[0]); return `<button class="sl-opt${on?' on':''}${alt?' alt':''}${q.icons?' ico':''}" data-sl-ans="${i}" aria-pressed="${on}">${q.icons?slIll(q.icons[i],'opt'):''}${multi?`<i>${on?'✓':''}</i>`:''}<span>${o[0]}</span></button>`; }).join('')}</div>`}
+      <div class="sl-nav">${SL.qi?'<button class="sl-ghost" data-sl="back">← Back</button>':'<span></span>'}<span class="sl-navr"><button class="sl-ghost" data-sl="skip">Skip</button>${multi?`<button class="sl-next" data-sl="next"${SL.sel.length?'':' disabled'}>Next →</button>`:['sky','count','caff','mins','days'].includes(q.type)?`<button class="sl-next" data-sl="skynext">That's me →</button>`:''}</span></div></div></div></div>`; }
+  else { const R=slResult(), st=R.st, f=R.focus;
+    const stat=[st.hours!=null&&[`${st.hours}h`,'sleep on school nights'],st.shift!=null&&[`+${st.shift}h`,'weekend sleep-in'],st.mg!=null&&[`${st.mg}mg`,'caffeine a day']].filter(Boolean);
+    const tryCard=(k,i)=>{ const A=SL_AREAS[k], pk=SL.picked[k]; return `<button class="sl-try" data-sl-info="${k}" style="--r:${i?2:-2}deg"><span class="sl-trynum">${i+1}</span>${slIll(A.ill,'mini')}<span class="sl-ct"><b>${A.t}</b><span>${pk!=null?`★ ${A.tips[pk]}`:esc(A.tips[0])}</span><em>${pk!=null?'Your pick. Tap to change':'Tap for more ideas →'}</em></span></button>`; };
+    body=`<div class="sl-res"><div class="sl-score"><div class="sl-rw">${slRing(R.score)}<div class="sl-num"><b>${R.score}</b><small>/100</small></div></div>
+      <div class="sl-sc-txt"><span class="sl-kick">Your sleep score</span><h2>${R.band[0]}</h2><p>${R.band[1]}</p>
+      ${stat.length?`<div class="sl-nums">${stat.map(n=>`<span><b>${n[0]}</b>${n[1]}</span>`).join('')}</div>`:''}</div>${slIll('moon','sl-res-ill')}</div>
+      <section class="sl-wins"><h3>Your wins 🏆</h3>${R.strong.length?`<div class="sl-chips">${R.strong.map(k=>`<button class="sl-chip" data-sl-info="${k}">${slIll(SL_AREAS[k].ill,'sl-ic')}${SL_AREAS[k].t}</button>`).join('')}</div>`:`<p class="sl-muted">You showed up and did the check. That's a win. Everyone starts somewhere.</p>`}</section>
+      ${f.length?`<section class="sl-next2"><h3>Try next</h3><p class="sl-muted">Just ${f.length===1?'this one':'these two'}. Small changes, big difference.</p><div class="sl-trys">${f.map(tryCard).join('')}</div></section>`:`<section class="sl-wins"><h3>Try next</h3><p class="sl-muted">Honestly? Keep doing what you're doing.</p></section>`}
+      ${R.imp.length>2?`<details class="sl-more"><summary>More ideas if you're keen</summary><div class="sl-chips">${R.imp.slice(2).map(k=>`<button class="sl-chip ghost" data-sl-info="${k}">${slIll(SL_AREAS[k].ill,'sl-ic')}${SL_AREAS[k].t}</button>`).join('')}</div></details>`:''}
+      ${st.notMine?`<button class="sl-note" data-sl-info="room"><b>Your sleep space isn't really up to you.</b> That's not your fault. Tap for things that can still help.</button>`:''}
+      <div class="sl-print"><div><b>Take it with you 🖨️</b><span>Your score, your wins and what you're trying next, on one page. Stick it on your wall.</span></div>
+        <input class="sl-name" id="slName" type="text" maxlength="30" placeholder="Your first name (optional)" value="${esc(SL.name||'')}" autocomplete="off" aria-label="First name for the printout"><button class="sl-go sm" data-sl="pdf">Print my sleep plan</button></div>
+      <p class="sl-foot">Always tired no matter what you do, or you snore loudly? Worth checking in with a GP.</p>
+      <div class="sl-nav c"><button class="sl-ghost" data-sl="again">Do it again</button></div></div>`; }
+  const info=SL.info?slInfoHTML(SL.info):'';
+  return head("Sleep check")+`<div class="sl">${body}</div>${info}`;
+}
+function slInfoHTML(k){ const A=SL_AREAS[k], pk=SL.picked[k], pers=slPersonal(k,slStats().st);
+  return `<div class="sl-sheet" role="dialog" aria-label="${A.t}"><div class="sl-sheet-in"><button class="sl-x" data-sl="close" aria-label="Close">✕</button>
+    <div class="sl-sh-top">${slIll(A.ill,'pop')}<div><span class="sl-kick">Level up</span><h2>${A.t}</h2></div></div>
+    ${pers?`<p class="sl-pers">${pers}</p>`:''}<p class="sl-why">${A.why}</p>
+    ${A.facts?`<div class="sl-facts"><b>What's in it?</b>${A.facts.map(f=>`<div><span>${f[0]}</span><strong>${f[1]}</strong></div>`).join('')}<small>${A.factNote} Source: Food Standards Australia New Zealand.</small></div>`:''}
+    <h3>Pick one to try this week</h3><div class="sl-tips">${A.tips.map((t,i)=>`<button class="sl-tip${pk===i?' on':''}" data-sl-tip="${i}"><i>${pk===i?'★':i+1}</i><span>${t}</span></button>`).join('')}</div>
+    ${A.note?`<p class="sl-callout">${A.note}</p>`:''}
+    ${pk!=null?`<p class="sl-pick">This week: <b>${A.tips[pk]}</b></p>`:''}</div></div>`; }
+document.addEventListener('input',e=>{ if(e.target.id==='slName') SL.name=e.target.value; });
+function slPdf(){
+  if(!window.jspdf){ toast("The PDF maker didn't load. Check the internet connection and try again."); return; }
+  const R=slResult(), st=R.st, { jsPDF }=window.jspdf, d=new jsPDF({unit:'mm',format:'a4'}), name=(SL.name||'').trim();
+  const INK=[27,22,48], NAVY=[42,35,102], YEL=[255,225,77], PINK=[255,79,163], GRN=[61,220,132], LAV=[217,210,245], W=210;
+  const txt=(t,x,y,o={})=>{ d.setFont('helvetica',o.b?'bold':'normal'); d.setFontSize(o.s||11); d.setTextColor(...(o.c||INK)); d.text(t,x,y,o.a?{align:o.a}:undefined); };
+  const wrap=(t,x,y,w,o={})=>{ d.setFont('helvetica',o.b?'bold':'normal'); d.setFontSize(o.s||11); d.setTextColor(...(o.c||INK)); const L=d.splitTextToSize(t,w); L.forEach((l,i)=>d.text(l,x,y+i*(o.s||11)*0.45)); return L.length*(o.s||11)*0.45; };
+  const box=(x,y,w,h,fill,r=6)=>{ d.setFillColor(...INK); d.roundedRect(x+1.2,y+1.6,w,h,r,r,'F'); d.setFillColor(...fill); d.setDrawColor(...INK); d.setLineWidth(.8); d.roundedRect(x,y,w,h,r,r,'FD'); };
+  // header
+  d.setFillColor(...NAVY); d.rect(0,0,W,78,'F');
+  d.setFillColor(...YEL); d.circle(182,20,9,'F'); d.setFillColor(...NAVY); d.circle(187,16,8,'F');
+  [[20,14],[48,8],[90,16],[130,9],[160,40],[30,60],[150,72],[196,58]].forEach(([x,y])=>{ d.setFillColor(255,255,255); d.circle(x,y,.7,'F'); });
+  d.setFillColor(...YEL); d.setDrawColor(...INK); d.setLineWidth(.6); d.roundedRect(18,14,48,9,4.5,4.5,'FD'); txt('MY SLEEP PLAN',42,20,{b:true,s:9.5,a:'center'});
+  txt(name?`${name}'s sleep check`:'My sleep check',18,36,{b:true,s:22,c:[255,255,255]});
+  const cx=40, cy=58; d.setDrawColor(70,62,140); d.setLineWidth(4); d.circle(cx,cy,13,'S'); d.setDrawColor(...YEL); const n=Math.max(1,Math.round(R.score/100*72));
+  for(let i=0;i<n;i++){ const a1=-Math.PI/2+i/72*2*Math.PI, a2=-Math.PI/2+(i+1)/72*2*Math.PI; d.line(cx+13*Math.cos(a1),cy+13*Math.sin(a1),cx+13*Math.cos(a2),cy+13*Math.sin(a2)); }
+  txt(String(R.score),cx,cy+2.5,{b:true,s:19,c:[255,255,255],a:'center'}); txt('/100',cx,cy+8,{s:7,c:LAV,a:'center'});
+  txt(R.band[0],62,55,{b:true,s:20,c:[255,255,255]}); wrap(R.band[1],62,62,130,{s:10.5,c:LAV});
+  let y=90;
+  const stats=[st.hours!=null&&[`${st.hours}h`,'sleep on school nights'],st.shift!=null&&[`+${st.shift}h`,'weekend sleep-in'],st.mg!=null&&[`${st.mg}mg`,'caffeine a day'],st.fall!=null&&[`${st.fall} min`,'to fall asleep']].filter(Boolean).slice(0,4);
+  if(stats.length){ const bw=(174-(stats.length-1)*5)/stats.length; stats.forEach((sx,i)=>{ const x=18+i*(bw+5); box(x,y,bw,20,[255,255,255],5); txt(sx[0],x+bw/2,y+9,{b:true,s:15,a:'center'}); txt(sx[1],x+bw/2,y+15.5,{s:8.5,c:[94,86,121],a:'center'}); }); y+=31; }
+  // wins
+  const wins=R.strong; const wh=wins.length?12+Math.ceil(wins.length/2)*11:22; box(18,y,174,wh,[221,247,232]); txt('My wins',26,y+9,{b:true,s:14});
+  if(wins.length) wins.forEach((k,i)=>{ const x=26+(i%2)*82, yy=y+14+Math.floor(i/2)*11; d.setFillColor(...GRN); d.setDrawColor(...INK); d.setLineWidth(.6); d.roundedRect(x,yy,76,8,4,4,'FD'); txt('+  '+SL_AREAS[k].t,x+4,yy+5.6,{b:true,s:10}); });
+  else wrap("I showed up and did the check. That's a win.",26,y+16,160,{s:10.5,c:[94,86,121]});
+  y+=wh+10;
+  // try next
+  txt("What I'm trying next",18,y+4,{b:true,s:15}); y+=10;
+  (R.focus.length?R.focus:[]).forEach((k,i)=>{ const A=SL_AREAS[k], pk=SL.picked[k], tip=A.tips[pk!=null?pk:0]; d.setFont('helvetica','normal'); d.setFontSize(11); const L=d.splitTextToSize(tip,140); const h=18+L.length*5;
+    box(18,y,174,h,i?[255,236,246]:[255,246,200]); d.setFillColor(...PINK); d.setDrawColor(...INK); d.circle(30,y+9,5.5,'FD'); txt(String(i+1),30,y+11,{b:true,s:12,c:[255,255,255],a:'center'});
+    txt(A.t,40,y+10,{b:true,s:13}); L.forEach((l,j)=>txt(l,40,y+17+j*5,{s:11})); y+=h+7; });
+  if(!R.focus.length) { wrap("Keep doing what I'm doing.",18,y+4,174,{s:11}); y+=12; }
+  // check boxes week
+  if(R.focus.length&&y<250){ box(18,y,174,30,[255,255,255]); txt('Did I try it this week? Tick a box each day.',26,y+9,{b:true,s:12}); ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach((dd,i)=>{ const x=30+i*23; d.setDrawColor(...INK); d.setLineWidth(.6); d.roundedRect(x,y+13,11,11,2,2,'S'); txt(dd,x+5.5,y+28.5,{s:7.5,c:[94,86,121],a:'center'}); }); y+=40; }
+  txt('Always tired no matter what, or snore loudly? Worth checking in with a GP.',105,286,{s:8.5,c:[94,86,121],a:'center'});
+  saveBlob(d.output('blob'),`${name?name+' ':''}sleep plan.pdf`).then(ok=>{ if(ok) toast("Downloaded. Remember to delete it from Downloads on shared computers."); });
+}
+function slRender(top,anim){ SL.anim=!!anim; app.innerHTML=sleepHTML(); if(top) window.scrollTo({top:0});
+  const q=SL.step==='q'&&slVisible()[SL.qi]; if(q&&q.type==='caff'&&typeof SL.a.last!=='number') SL.a.last=15;
+  if(q&&q.type==='mins'&&typeof SL.a[q.id]!=='number') SL.a[q.id]=q.def; if(q&&q.type==='days'&&!Array.isArray(SL.a.moving)) SL.a.moving=[];
+  if(q&&q.type==='sky'){ if(typeof SL.a[q.id]!=='number') SL.a[q.id]=q.def; slSkySet(SL.a[q.id]); } }
+function slGo(d){ const vis=slVisible(); SL.qi=Math.max(0,SL.qi+d); if(SL.qi>=vis.length){ SL.step='res'; slRender(true); return; } const q=slVisible()[SL.qi]; SL.sel=q.type==='multi'&&Array.isArray(SL.a[q.id])?[...SL.a[q.id]]:[]; slRender(false,true); }
+function slClick(e){
+  const a=e.target.closest('[data-sl]'); if(a){ const v=a.dataset.sl, vis=slVisible(), q=vis[SL.qi];
+    if(v==='start'){ SL.step='q'; SL.qi=0; SL.sel=[]; slRender(true,true); }
+    if(v==='back') slGo(-1);
+    if(v==='skip'){ delete SL.a[q.id]; SL.skipped={...(SL.skipped||{}),[q.id]:1}; slGo(1); }
+    if(v==='next'){ SL.a[q.id]=[...SL.sel]; slGo(1); }
+    if(v==='skynext'){ slGo(1); }
+    if(v==='again'){ slReset(); slRender(true); }
+    if(v==='close'){ SL.info=null; slRender(); }
+    if(v==='pdf') slPdf();
+    return true; }
+  const an=e.target.closest('[data-sl-ans]'); if(an){ const i=+an.dataset.slAns, q=slVisible()[SL.qi];
+    if(q.type==='multi'){ const o=q.o[i], excl=o[1]==='none'||/^None of these/.test(o[0])||o[1]===null;
+      if(SL.sel.includes(i)) SL.sel=SL.sel.filter(x=>x!==i); else SL.sel=excl?[i]:[...SL.sel.filter(x=>{ const oo=q.o[x]; return !(oo[1]==='none'||/^None of these/.test(oo[0])||oo[1]===null); }),i];
+      if(q.scene){ const r=document.getElementById('slRoom'); if(r){ const tmp=document.createElement('div'); tmp.innerHTML=slRoomSVG(SL.sel); const n=tmp.firstElementChild; r.setAttribute('class',n.getAttribute('class')); const b2=r.querySelector('.r-bed2'), nb2=n.querySelector('.r-bed2'); if(!!b2!==!!nb2){ if(nb2) r.querySelector('.r-bedg').before(nb2); else b2.remove(); } }
+        document.querySelectorAll('[data-sl-ans]').forEach(b=>{ const k=+b.dataset.slAns, on=SL.sel.includes(k); b.classList.toggle('on',on); b.setAttribute('aria-pressed',on); const ii=b.querySelector('i'); if(ii) ii.textContent=on?'✓':''; });
+        const nx=document.querySelector('[data-sl="next"]'); if(nx) nx.disabled=!SL.sel.length; return true; }
+      slRender(); return true; }
+    SL.a[q.id]=i; an.classList.add('on'); setTimeout(()=>slGo(1),260); return true; }
+  const dy=e.target.closest('[data-sl-day]'); if(dy){ const i=+dy.dataset.slDay, d=SL.a.moving; SL.a.moving=d.includes(i)?d.filter(x=>x!==i):[...d,i]; slRender(); return true; }
+  const cn=e.target.closest('[data-sl-cnt]'); if(cn){ const [k,d]=cn.dataset.slCnt.split('|'); SL.a.many[k]=Math.max(0,Math.min(5,(SL.a.many[k]||0)+ +d)); slRender(); return true; }
+  const inf=e.target.closest('[data-sl-info]'); if(inf){ SL.info=inf.dataset.slInfo; slRender(); return true; }
+  const tp=e.target.closest('[data-sl-tip]'); if(tp){ const i=+tp.dataset.slTip; SL.picked[SL.info]=SL.picked[SL.info]===i?null:i; slRender(); return true; }
+  if(SL.info&&e.target.classList.contains('sl-sheet')){ SL.info=null; slRender(); return true; }
+  return false;
+}
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&current==='sleep'&&SL.info){ SL.info=null; slRender(); } });
+
+/* ===== My career quiz: This-or-That cards, strengths, study, then a bullseye of matched jobs and a student profile. Nothing is saved. ===== */
+const CQ_D=[ /* [dimension, left label, left emoji, right label, right emoji] */
+ ['out','Working outside','🌤️','Working inside','🏠'],
+ ['hands','Using my hands and tools','🔨','Talking with people','💬'],
+ ['fix','Fixing what\'s broken','🔧','Making things look good','✨'],
+ ['active','On my feet all day','👟','Mostly in one spot','🪑'],
+ ['routine','Same kind of jobs every day','🔁','Something different every day','🎲'],
+ ['animals','Working with animals','🐾','Working with little kids','🧸'],
+ ['machines','Engines and machines','⚙️','Food and cooking','🍳'],
+ ['team','A big busy team','👥','A small crew or on my own','🧍'],
+ ['early','Early start, early finish','🌅','Later start, later finish','🌙'],
+ ['dirty','Getting dirty is fine','🟤','Keep me clean','🧼'],
+ ['build','Building something you can see','🧱','Looking after someone','❤️'],
+ ['drive','Driving around','🚚','One workplace','📍'],
+ ['organise','Sorting and organising','📦','Being creative','🎨'],
+ ['care','Helping someone who\'s unwell or older','🤝','Serving customers','🛍️'],
+ ['busy','Loud and busy','📢','Calm and quiet','🍃'],
+ ['screen','On a computer','💻','Away from screens','📵'],
+ ['rules','Clear rules and a uniform','🎖️','Doing things my own way','🧢']];
+const CQ_S=[['fit','Strong and fit','💪'],['fixer','Working out how things work','🧩'],['people','Good with people','😊'],['patient','Patient','⏳'],['calm','Staying calm','🧘'],['kids','Good with kids','🧸'],['animals','Good with animals','🐶'],['creative','Arty, good eye','🎨'],['organised','Tidy and organised','📋'],['reliable','Hard worker, turns up','⏰'],['cook','Cooking','🍳'],['outdoors','Love being outdoors','🌿'],['tech','Good with tech','💻'],['getit','Getting what others are going through','💛']];
+const CQ_L=[["Learn on the job","Start straight away. They train you as you go.","🧑‍🔧"],["A short course","A few days to a few months. Tickets, licences, Cert II.","📜"],["Apprenticeship or traineeship","Get paid while you learn. Usually 1 to 4 years.","💵"],["A longer TAFE course","Cert IV or Diploma. Usually 1 to 2 years.","🎓"]];
+const CQ_G={build:["Building and construction","🧱"],mech:["Mechanical, metal and automotive","🔧"],care:["Health and care","🩺"],kids:["Kids and education","🧸"],beauty:["Barbering, hair and beauty","💈"],food:["Food and hospitality","🍳"],nature:["Animals, plants and farms","🌿"],logi:["Warehouse, transport and retail","📦"],fit:["Sport and fitness","🏃"],creative:["Creative and digital","🎨"],serve:["Defence, emergency and security","🛡️"],community:["Community and youth work","🫶"],office:["Office, tech and customer service","💻"],civil:["Civil, mining and roads","🚧"],tour:["Tourism, surf and outdoors","🏄"]};
+const CQ_TYPES={build:["The Builder","You like making real things you can stand back and look at. Hands-on, practical, and proud of a job done properly."],mech:["The Fixer","You like working out how things work and making them go again. Give you a problem and a toolbox and you're happy."],care:["The Carer","People feel safe around you. You're patient, kind and good at looking after others when they need it."],kids:["The Mentor","You've got time for little ones and you're good at keeping things fun and calm. Kids remember people like you."],beauty:["The Stylist","You've got a good eye and like making people look and feel good. Creative, social and detail-y."],food:["The Host","You like busy places, good food and keeping people happy. You work fast and you don't mind the rush."],nature:["The Outdoors One","You'd rather be outside than stuck at a desk. Animals, plants, dirt, sunshine: that's your office."],logi:["The Organiser","You like things sorted, moving and done. Reliable, practical and great in a team."],fit:["The Mover","You've got energy to burn and you like helping people get active and stay safe."],creative:["The Creator","You see the world in pictures, colours and ideas. You'd rather make something new than follow a template."],serve:["The Protector","You step up when things go wrong. You like structure, a team that has your back and a job that matters."],community:["The Connector","You get people. You listen, you don't judge, and you want to help others get where they're going."],office:["The Go-to","You like things sorted and running smoothly. People come to you when they need something done right."],civil:["The Operator","Big machines, big sites, big days. You like hard work you can see from the road."],tour:["The Adventurer","Sun, water, people and something different every day. You want a job that almost feels like a holiday."]};
+const CQ_J=[
+ {id:'ware',n:'Warehouse worker',e:'📦',g:'logi',lvl:1,t:{out:-1,hands:.6,active:1,routine:.8,team:.5,early:.6,organise:1,busy:.4,drive:-.4},s:['fit','organised','reliable'],do:"Pick, pack and move stock so it gets to the right place on time.",day:"Scan orders, grab items from shelves, pack boxes, load trucks. Lots of walking and lifting.",good:"you like being busy, being organised and working in a team.",lad:["Start as a picker/packer (some places take you at 16+)","Get your forklift licence","Cert III in Warehousing Operations","Team leader or store manager"],try:"Ask about work experience at a local supermarket distribution centre or hardware store yard.",watch:"Shift work and heavy lifting."},
+ {id:'fork',n:'Forklift driver',e:'🚜',g:'logi',lvl:1,t:{out:-.3,hands:.8,machines:1,routine:.8,early:.6,organise:.6,team:.2,drive:.3},s:['calm','reliable','organised'],do:"Drive forklifts to load, unload and move stock safely.",day:"Unload trucks, stack pallets, move stock around the yard. Careful driving all day.",good:"you like machines, staying calm and doing things carefully.",lad:["Start as a warehouse or yard hand","Get your forklift licence (a high risk work licence)","Other machines: reach truck, telehandler","Leading hand"],try:"Ask a warehouse or timber yard if you can watch a forklift driver for a day.",watch:"You need to be 18 for the licence."},
+ {id:'deliv',n:'Delivery driver',e:'🚚',g:'logi',lvl:1,t:{drive:1,out:.3,team:-.8,active:.5,routine:.4,early:.5,care:-.4,organise:.4},s:['reliable','organised','calm'],do:"Drive around delivering parcels, food or goods to people and businesses.",day:"Load the van, plan your run, drive, drop off, scan, repeat. Mostly on your own.",good:"you like driving, being on your own and keeping moving.",lad:["Get your P plates","Start with local deliveries","Truck licence (light rigid, then medium rigid)","Interstate driving or your own run"],try:"Get your L plates and practise. Driving hours are your first qualification.",watch:"You need a full licence. Some jobs need you to be 21+ for insurance."},
+ {id:'retail',n:'Retail assistant',e:'🛍️',g:'logi',lvl:0,t:{out:-1,hands:-.6,care:-1,team:.4,routine:.3,busy:.5,organise:.4},s:['people','reliable','organised'],do:"Help customers, work the till and keep the shop looking good.",day:"Serve customers, stack shelves, price items, tidy up, answer questions.",good:"you like chatting to people and keeping things neat.",lad:["Casual job after school","Cert II or III in Retail","Department or shift supervisor","Store manager"],try:"Hand your resume in to local shops. The Resume app can help.",watch:"Weekend and late shifts, and the odd grumpy customer."},
+ {id:'barista',n:'Barista and café crew',e:'☕',g:'food',lvl:1,t:{machines:-1,care:-.8,hands:-.2,busy:.8,team:.6,early:.8,out:-.8,active:.6},s:['people','reliable','cook'],do:"Make coffee, serve food and keep the café running.",day:"Open up early, make coffees, take orders, clean up, smile through the rush.",good:"you like busy mornings, people and being quick.",lad:["Short barista course","Casual café job","Cert II or III in Hospitality","Café supervisor or your own coffee van"],try:"Do a short barista course, or ask a local café about a trial shift.",watch:"Very early starts and fast pace."},
+ {id:'cook',n:'Cook or chef',e:'🧑‍🍳',g:'food',lvl:2,t:{machines:-1,hands:.6,busy:1,team:.6,active:.8,out:-1,dirty:.2,early:-.3,create:0,organise:-.2},s:['cook','reliable','fit'],do:"Prep and cook food in a busy kitchen.",day:"Chop, prep, cook, plate up, clean down. Hot, loud and fast.",good:"you love food, can handle a rush and like being part of a crew.",lad:["Kitchen hand","Cookery apprenticeship (Cert III in Commercial Cookery)","Cook, then chef","Head chef or your own food truck"],try:"Kitchen hand jobs are a great way in. Ask local cafés and pubs.",watch:"Nights and weekends, and it's hot work."},
+ {id:'baker',n:'Baker',e:'🥐',g:'food',lvl:2,t:{machines:-1,hands:1,early:1,routine:.7,team:-.2,out:-1,busy:-.2,organise:.2},s:['cook','reliable','patient'],do:"Make bread, pies and cakes, usually before the sun comes up.",day:"Start very early, mix dough, shape, bake, decorate, clean up. Done by lunch.",good:"you're an early bird who likes making things with your hands.",lad:["Bakery assistant","Baking apprenticeship (Cert III in Baking)","Qualified baker","Your own bakery"],try:"Ask a local bakery about work experience.",watch:"Really early starts, like 3 or 4am."},
+ {id:'butcher',n:'Butcher',e:'🥩',g:'food',lvl:2,t:{machines:-.5,hands:1,routine:.6,early:.7,care:-.6,dirty:.5,out:-1,team:.2},s:['fit','reliable','people'],do:"Cut, prepare and sell meat.",day:"Break down meat, make sausages, serve customers, keep everything super clean.",good:"you're good with your hands and don't mind blood and cold rooms.",lad:["Butcher's assistant","Butchery apprenticeship","Qualified butcher","Shop manager or owner"],try:"Ask a local butcher if you can try a day.",watch:"Cold rooms, sharp knives and early starts."},
+ {id:'labour',n:'Construction labourer',e:'👷',g:'build',lvl:1,t:{out:1,hands:1,active:1,dirty:1,build:1,early:1,team:.6,busy:.6},s:['fit','reliable','outdoors'],do:"Help tradies on building sites: carry, clean, dig and set up.",day:"On site by 7am, move materials, help the trades, clean up. Hard, physical, outdoors.",good:"you're strong, like being outside and want to start earning fast.",lad:["Get your White Card (one-day course)","Labouring work","Cert II in Construction Pathways","Into a trade apprenticeship"],try:"Get your White Card. It's one day and opens heaps of doors.",watch:"Heat, early starts and heavy work."},
+ {id:'carp',n:'Carpenter',e:'🪚',g:'build',lvl:2,t:{out:.7,hands:1,build:1,active:.8,fix:.4,dirty:.6,early:.8,team:.3},s:['fit','fixer','reliable'],do:"Build frames, decks, roofs and fit-outs from timber.",day:"Measure, cut, nail, build. Every job is different and you can see what you made.",good:"you like building real things and seeing your progress.",lad:["White Card and labouring","Carpentry apprenticeship (4 years, paid)","Qualified carpenter","Builder or your own business"],try:"Ask about a school-based apprenticeship (SBAT) while you're still at school.",watch:"Some measuring and maths. You learn it on the job."},
+ {id:'elec',n:'Electrician',e:'⚡',g:'build',lvl:2,t:{hands:1,fix:1,machines:.5,build:.6,out:.2,routine:-.6,active:.6,team:-.2},s:['fixer','calm','reliable'],do:"Install and fix wiring, lights, power and solar.",day:"Wire houses, find faults, install solar and lights. Lots of problem solving.",good:"you like puzzles, fixing things and being careful.",lad:["Pre-apprenticeship course","Electrical apprenticeship (4 years, paid)","Licensed electrician","Solar, air con or your own business"],try:"Look into a pre-apprenticeship course at TAFE.",watch:"More maths and theory than most trades. Worth it, it pays well."},
+ {id:'plumb',n:'Plumber',e:'🔧',g:'build',lvl:2,t:{hands:1,fix:1,dirty:1,out:.4,routine:-.6,drive:.4,team:-.4,active:.7},s:['fixer','fit','reliable'],do:"Install and fix pipes, taps, toilets, drains and hot water.",day:"Drive to jobs, find the leak, dig, fix and connect. Every day's different.",good:"you like fixing things and don't mind getting dirty.",lad:["White Card and labouring","Plumbing apprenticeship (4 years, paid)","Licensed plumber","Your own business"],try:"Ask a local plumber if you can tag along for work experience.",watch:"Yes, sometimes it's toilets. You get used to it."},
+ {id:'paint',n:'Painter',e:'🖌️',g:'build',lvl:2,t:{hands:1,fix:-.8,build:.4,organise:-.6,out:.2,routine:.4,team:-.4,dirty:.4},s:['creative','patient','reliable'],do:"Prep and paint houses, offices and buildings.",day:"Sand, fill, tape up, paint, clean up. Neat, careful work.",good:"you're patient, careful and like making things look fresh.",lad:["Painter's offsider","Painting apprenticeship","Qualified painter","Your own business"],try:"Help paint something at home or school and see if you like it.",watch:"Ladders and fumes, so safety gear matters."},
+ {id:'tile',n:'Tiler or bricklayer',e:'🧱',g:'build',lvl:2,t:{hands:1,build:1,out:.5,routine:.6,active:1,fix:-.3,dirty:.7,team:-.2},s:['fit','patient','creative'],do:"Lay bricks, blocks or tiles in houses and buildings.",day:"Mix, measure, lay, level. Slow and steady, and it looks great at the end.",good:"you're fit, patient and like neat work.",lad:["Labouring","Bricklaying or tiling apprenticeship","Qualified tradie","Your own business"],try:"Get your White Card and ask a local tiler or brickie.",watch:"Hard on your back and knees."},
+ {id:'land',n:'Landscaper or gardener',e:'🌳',g:'nature',lvl:1,t:{out:1,hands:1,active:1,dirty:.8,build:.5,organise:-.4,busy:-.6,early:.6},s:['outdoors','fit','creative'],do:"Build and look after gardens, parks and outdoor spaces.",day:"Plant, mow, lay paths, build retaining walls. Outside all day.",good:"you love the outdoors and making places look good.",lad:["Gardening or mowing jobs","Cert II in Horticulture or Cert III in Landscape Construction","Qualified landscaper","Council parks crew or your own business"],try:"Start a mowing round, or ask the school groundsperson if you can help out.",watch:"Weather. Hot summers, wet winters."},
+ {id:'farm',n:'Farmhand',e:'🐄',g:'nature',lvl:0,t:{out:1,animals:.8,hands:1,early:1,dirty:1,active:1,busy:-.8,team:-.5,machines:.4},s:['outdoors','fit','animals'],do:"Help run a farm: animals, crops, fences and machinery.",day:"Feed stock, fix fences, drive the tractor, pick fruit. Up with the sun.",good:"you love being outside, around animals and away from crowds.",lad:["Casual farm or picking work","Cert II in Agriculture","Tractor and machinery skills","Farm manager"],try:"The Northern Rivers has heaps of farms (macadamias, bananas, berries). Ask about picking or farm-stay work.",watch:"Early starts, all weathers, sometimes remote."},
+ {id:'animal',n:'Animal attendant',e:'🐕',g:'nature',lvl:1,t:{animals:1,care:.4,hands:.5,active:.6,dirty:.6,busy:-.3,out:.2,early:.4},s:['animals','patient','calm'],do:"Look after animals at kennels, shelters, vets or wildlife parks.",day:"Feed, clean, walk and care for animals. Sometimes help the vet.",good:"you're patient and animals just like you.",lad:["Volunteer at a shelter or wildlife carer group","Cert II in Animal Care","Cert III in Animal Care Services","Vet nurse (Cert IV)"],try:"Volunteer with an animal shelter or WIRES wildlife rescue.",watch:"Lots of cleaning up after animals, and some sad days."},
+ {id:'groom',n:'Dog groomer',e:'🐩',g:'nature',lvl:1,t:{animals:1,fix:-.8,hands:.8,organise:-.6,busy:-.4,out:-1,team:-.6},s:['animals','creative','patient'],do:"Wash, clip and style dogs so they look and feel great.",day:"Bath, blow dry, clip nails, trim and style. Some dogs love it, some don't!",good:"you love dogs and have a creative eye.",lad:["Grooming assistant","Dog grooming course","Qualified groomer","Your own mobile grooming van"],try:"Ask a local groomer if you can help bath dogs.",watch:"Wet, hairy and some wriggly clients."},
+ {id:'mech',n:'Mechanic',e:'🚗',g:'mech',lvl:2,t:{machines:1,fix:1,hands:1,dirty:.8,out:-.4,routine:-.3,team:.2},s:['fixer','reliable','fit'],do:"Service and fix cars, utes and trucks.",day:"Diagnose problems, change oil, replace brakes, test drive. Greasy and satisfying.",good:"you love engines and working out what's wrong.",lad:["Workshop hand","Cert II in Automotive (pre-apprenticeship)","Light vehicle apprenticeship (4 years, paid)","Qualified mechanic or your own workshop"],try:"Ask a local workshop about work experience.",watch:"Greasy, and some computer work on new cars."},
+ {id:'tyre',n:'Tyre fitter',e:'🛞',g:'mech',lvl:0,t:{machines:1,hands:1,routine:.8,active:.8,dirty:.6,team:.4,fix:.5,out:-.3},s:['fit','reliable','fixer'],do:"Fit, fix and balance tyres on cars and trucks.",day:"Jack up cars, swap tyres, balance wheels. Fast, physical and practical.",good:"you like cars and want to start earning quickly.",lad:["Start as a tyre fitter","Learn on the job","Cert III in Automotive Tyre Servicing","Into a mechanic apprenticeship"],try:"Walk in and ask at local tyre shops.",watch:"Heavy lifting and busy days."},
+ {id:'panel',n:'Panel beater or spray painter',e:'🎨',g:'mech',lvl:2,t:{machines:1,hands:1,fix:.3,organise:-.5,dirty:.6,out:-.6,busy:.2},s:['creative','fixer','patient'],do:"Repair dents and damage and repaint cars so they look brand new.",day:"Fix dents, sand, fill, spray. Making a smashed car look perfect again.",good:"you like cars and have a good eye for detail.",lad:["Workshop hand","Panel beating or refinishing apprenticeship","Qualified tradie","Your own smash repair shop"],try:"Ask a local smash repair shop for work experience.",watch:"Dust and fumes, so you wear safety gear."},
+ {id:'hair',n:'Hairdresser',e:'💇',g:'beauty',lvl:2,t:{hands:.2,fix:-1,care:-.6,organise:-1,out:-1,team:.2,routine:-.3,dirty:-.6,busy:.3},s:['creative','people','patient'],do:"Cut, colour and style hair, and make people feel great.",day:"Chat with clients, cut, colour, style, sweep up, book the next one.",good:"you're creative, social and like making people feel good.",lad:["Salon assistant","Hairdressing apprenticeship (Cert III)","Senior stylist","Your own salon or barber shop"],try:"Ask a local salon about Saturday work or work experience.",watch:"On your feet all day."},
+ {"id": "barber", "n": "Barber", "e": "💈", "g": "beauty", "lvl": 2, "t": {"fix": -0.6, "organise": -0.8, "out": -1, "hands": 0.6, "care": -0.6, "team": -0.2, "busy": 0.4, "routine": -0.2, "dirty": -0.6, "rules": -0.4, "screen": -0.5}, "s": ["creative", "people", "patient"], "do": "Cut, fade and style hair and beards.", "day": "Clients come in, you chat, do fades, line-ups and beard trims, sweep up, next client.", "good": "you've got a good eye, steady hands and you can chat to anyone.", "lad": ["Practise on mates (with their okay!)", "Barbering apprenticeship (Cert III in Barbering)", "Qualified barber", "Your own chair or barber shop"], "try": "Ask a local barber shop about sweeping up on Saturdays and watching how it's done.", "watch": "On your feet all day, and building up regular clients takes time."},
+ {id:'beauty',n:'Beauty or nail tech',e:'💅',g:'beauty',lvl:1,t:{fix:-1,organise:-1,care:-.5,out:-1,busy:-.6,dirty:-1,active:-.6,team:-.3,hands:.3},s:['creative','people','patient'],do:"Do nails, lashes, brows and skin treatments.",day:"Clients book in, you do their nails or treatment, chat and make them feel good.",good:"you've got a good eye, steady hands and like chatting.",lad:["Short nail or lash course","Cert III in Nail Technology or Beauty Services","Cert IV in Beauty Therapy","Your own salon or mobile business"],try:"Practise on friends and family, and look at short courses.",watch:"Lots of sitting and fine detail work."},
+ {id:'ece',n:'Early childhood educator',e:'🧸',g:'kids',lvl:2,t:{animals:-1,hands:-.6,care:.4,build:-.6,out:.2,active:.6,routine:-.3,busy:.6,team:.6},s:['kids','patient','calm'],do:"Look after and teach little kids at childcare or preschool.",day:"Play, read, sing, help with meals and naps, settle upset kids, chat to parents.",good:"you're patient, fun and great with little ones.",lad:["Volunteer or babysit","Cert III in Early Childhood Education and Care (traineeships available)","Diploma (room leader)","Centre director"],try:"Ask about a traineeship or work experience at a local childcare centre.",watch:"Loud, busy and lots of nappies."},
+ {id:'tutor',n:'Teacher\'s aide',e:'📚',g:'kids',lvl:3,t:{animals:-1,hands:-.8,care:.5,build:-.6,out:-.6,busy:.2,team:.4,early:.4},s:['kids','patient','calm'],do:"Help students who need extra support at school.",day:"Sit with students in class, help with reading and tasks, keep things calm.",good:"you know what it's like when school's hard, and you're patient.",lad:["Volunteer helping younger kids","Cert III or IV in School Based Education Support","Learning support officer","Further study if you want"],try:"Ask your school if you can help in a younger class.",watch:"You'll need a Working With Children Check."},
+ {id:'aged',n:'Aged care worker',e:'👵',g:'care',lvl:2,t:{care:1,build:-1,hands:-.4,busy:-.4,active:.6,early:.4,routine:.4,team:.4},s:['patient','people','calm'],do:"Help older people with daily life: meals, showering, getting around, chatting.",day:"Help people get ready, have meals, take walks, play cards and stay safe.",good:"you're kind, patient and like older people's stories.",lad:["Cert III in Individual Support (traineeships available)","Aged care worker","Team leader","Into nursing"],try:"Visit or volunteer at a local aged care home.",watch:"Some personal care like showering. You get trained."},
+ {id:'disab',n:'Disability support worker',e:'🤝',g:'care',lvl:2,t:{care:1,build:-1,hands:-.5,routine:-.6,drive:.4,team:-.4,out:.2},s:['patient','people','calm'],do:"Help people with disability live their life their way.",day:"Help with shopping, cooking, outings, appointments and hobbies. Every day's different.",good:"you're patient, respectful and good at reading people.",lad:["Cert III in Individual Support (Disability)","Support worker","Cert IV in Disability Support","Team leader or coordinator"],try:"Ask about traineeships with local disability services.",watch:"You'll usually need your licence and a Working With Children Check."},
+ {id:'ain',n:'Assistant in nursing',e:'🩺',g:'care',lvl:2,t:{care:1,build:-1,hands:-.2,active:.8,busy:.6,team:.8,early:.4,routine:-.2,dirty:-.2},s:['patient','calm','people'],do:"Help nurses look after patients in hospitals and health services.",day:"Help patients wash, eat and move, take basic checks, keep the ward running.",good:"you want to help people, stay calm and might like nursing one day.",lad:["Cert III in Health Services Assistance","Assistant in nursing","Diploma of Nursing (Enrolled Nurse)","Uni later if you want to be a Registered Nurse"],try:"Ask about health traineeships, and look at volunteering at the local hospital.",watch:"Shift work and some tough days."},
+ {id:'clean',n:'Cleaner',e:'🧽',g:'logi',lvl:0,t:{routine:1,hands:.6,team:-.6,busy:-.8,active:.8,early:.4,organise:.6,out:-.6},s:['reliable','organised','calm'],do:"Keep homes, offices, schools or hotels clean and fresh.",day:"Vacuum, mop, wipe down, empty bins. Often early mornings or evenings.",good:"you like working on your own, quietly, and seeing a clean result.",lad:["Start cleaning (lots of casual work)","Cert II in Cleaning","Supervisor","Your own cleaning business"],try:"Hotels and holiday rentals around here always need cleaners.",watch:"Repetitive, and odd hours."},
+ {id:'fitness',n:'Fitness instructor',e:'🏋️',g:'fit',lvl:3,t:{active:1,hands:-.6,care:.2,busy:.6,routine:-.4,team:.4,early:.6,out:.2},s:['fit','people','reliable'],do:"Run gym classes and help people get fit.",day:"Run classes, show people how to use equipment, keep the gym safe.",good:"you love training and helping people push themselves.",lad:["Gym or sports volunteering","Cert III in Fitness","Cert IV in Fitness (personal trainer)","Your own PT business"],try:"Help coach a junior sports team.",watch:"Early mornings and evenings are the busy times."},
+ {"id": "life", "n": "Aquatic centre crew", "e": "🏊", "g": "fit", "lvl": 0, "t": {"out": -0.2, "active": 0.6, "care": -0.2, "routine": 0.4, "busy": 0.4, "team": 0.4, "hands": -0.4, "screen": -0.4}, "s": ["fit", "people", "reliable"], "do": "Work at the pool: front desk, kiosk, cleaning and helping out with swim school.", "day": "Serve customers, clean change rooms, set up lanes, watch and learn from the lifeguards.", "good": "you like the pool, being active and being around people.", "lad": ["Casual front desk, kiosk or cleaning job", "Bronze Medallion and first aid", "Pool lifeguard or swim teacher course", "Lifeguard, swim teacher or centre supervisor"], "try": "Ask your local aquatic centre about casual jobs.", "watch": "To become a lifeguard later, you need to be a strong swimmer."},
+ {"id": "design", "n": "Graphic designer", "e": "🖍️", "g": "creative", "lvl": 3, "t": {"organise": -1, "hands": -0.4, "out": -1, "active": -1, "screen": 1, "fix": -0.6, "busy": -0.4, "dirty": -1, "rules": -0.4}, "s": ["creative", "tech", "organised"], "do": "Design logos, posters, signs and social posts for businesses.", "day": "Talk to a client, sketch ideas, design on the computer, tweak it until they love it.", "good": "you're always drawing and you notice when something looks off.", "lad": ["Make stuff for fun: posters, logos, merch", "Cert III or IV in Design", "Junior designer or print shop", "Designer, or freelancing for yourself"], "try": "Design a poster for a school event or a mate's business on Canva.", "watch": "Lots of screen time, and clients change their minds a lot. You'll need a portfolio of your work."},
+ {"id": "content", "n": "Social media and content creator", "e": "📱", "g": "creative", "lvl": 3, "t": {"organise": -0.8, "screen": 1, "hands": -0.6, "routine": -0.8, "out": -0.4, "rules": -0.8, "team": -0.4, "busy": 0.2}, "s": ["creative", "tech", "people"], "do": "Make photos, videos and posts for businesses' social media.", "day": "Film, edit, write captions, post, check what's working. Usually for a business, not just your own page.", "good": "you're always on socials and know what makes a good post.", "lad": ["Make content for a local business or club", "Cert III in Screen and Media", "Social media assistant", "Social media manager or freelancer"], "try": "Offer to run the socials for a local café, gym or sports club for a month.", "watch": "Hard truth: going viral on your own page is rare. The real jobs are making content for businesses."},
+ {"id": "stage", "n": "Events and stage crew", "e": "🎤", "g": "creative", "lvl": 1, "t": {"hands": 1, "busy": 1, "early": -1, "team": 0.6, "routine": -1, "active": 1, "machines": 0.5, "out": 0.2}, "s": ["fit", "fixer", "reliable"], "do": "Set up and pack down stages, lights and sound for gigs, festivals and events.", "day": "Unload trucks, build stages, run cables, help the show run, pack it all down at 2am.", "good": "you love music and festivals and don't mind late nights.", "lad": ["Volunteer at local festivals and events", "Short courses: White Card, working at heights", "Cert III in Live Production", "Lighting or sound tech"], "try": "The Northern Rivers has heaps of festivals. Volunteer at one and help the crew.", "watch": "Late nights, weekends, and gigs come and go."},
+ {"id": "photo", "n": "Photographer", "e": "📷", "g": "creative", "lvl": 3, "t": {"organise": -1, "routine": -1, "screen": 0.4, "rules": -0.8, "team": -0.6, "drive": 0.4, "hands": -0.2}, "s": ["creative", "people", "tech"], "do": "Take photos at weddings and events, and for businesses and real estate.", "day": "Shoot the job, then edit the photos on the computer and send them off.", "good": "you notice light and moments, and you're always taking photos.", "lad": ["Take photos of everything and build a portfolio", "Photographer's assistant or second shooter", "Cert IV in Photography", "Your own photography business"], "try": "Offer to take photos at a school or sports event.", "watch": "Gear is expensive, and most photographers work for themselves."},
+ {"id": "game", "n": "Game designer", "e": "🎮", "g": "creative", "lvl": 3, "t": {"screen": 1, "organise": -0.8, "out": -1, "active": -1, "hands": -0.6, "fix": 0.4, "team": 0.3, "dirty": -1}, "s": ["tech", "creative", "fixer"], "do": "Design and build video games: levels, characters and how the game plays.", "day": "Plan ideas with the team, build in game software, test, fix bugs, test again.", "good": "you don't just play games, you wonder how they're made.", "lad": ["Make small games for free (Roblox Studio, Scratch, Unity)", "Cert IV in IT or Screen and Media", "Diploma of Game Design", "Junior game developer or tester"], "try": "Build a level in Roblox Studio or Minecraft and get a mate to play it.", "watch": "Hard truth: it's competitive and needs a lot of study and a portfolio. Worth it if you love it."},
+ {"id": "adf", "n": "Defence Force", "e": "🎖️", "g": "serve", "lvl": 0, "t": {"rules": 1, "team": 1, "active": 1, "out": 0.6, "early": 1, "routine": 0.3, "busy": 0.4, "dirty": 0.4}, "s": ["fit", "reliable", "calm"], "do": "Join the Army, Navy or Air Force. There are hundreds of jobs inside, from cooks to mechanics to drivers.", "day": "Early start, fitness, training, then your actual job. You live and work with your team.", "good": "you like structure, being part of a team and a challenge.", "lad": ["Get fit and finish at least Year 10", "Apply through Defence Jobs (tests, medical, fitness)", "Paid basic training", "Train in a trade or role (paid the whole time)"], "try": "Talk to Defence Jobs, or look into cadets and the Defence gap year.", "watch": "You usually need to be 17+, pass fitness, medical and aptitude tests, and be okay with moving away."},
+ {"id": "security", "n": "Security officer", "e": "🦺", "g": "serve", "lvl": 1, "t": {"rules": 0.8, "early": -1, "care": -0.4, "hands": -0.6, "busy": 0.2, "routine": 0.6, "team": -0.2, "active": 0.4}, "s": ["calm", "reliable", "people"], "do": "Keep people and places safe at venues, shops, events and building sites.", "day": "Check IDs, patrol, watch cameras, calm things down when they get heated.", "good": "you stay calm, notice everything and can talk people down.", "lad": ["Cert II in Security Operations", "NSW security licence", "Security officer (venues, events, patrols)", "Supervisor or control room"], "try": "Look up the security licence course at TAFE or a local trainer.", "watch": "You need to be 18 and pass a criminal record check. Lots of nights and weekends."},
+ {"id": "fire", "n": "Firefighter", "e": "🚒", "g": "serve", "lvl": 2, "t": {"rules": 0.8, "team": 1, "active": 1, "out": 0.6, "care": 0.4, "dirty": 0.6, "busy": 0.4, "routine": -0.8, "hands": 0.6}, "s": ["fit", "calm", "reliable"], "do": "Fight fires, rescue people and help out in floods and crashes.", "day": "Train, check the trucks and gear, do community visits, then drop everything when the alarm goes.", "good": "you're fit, brave and stay calm when things get scary.", "lad": ["Volunteer with the RFS or SES (you can start young)", "Get fit, get your licence and first aid", "Apply to Fire and Rescue NSW", "Paid recruit training"], "try": "Join your local RFS brigade or SES unit. They train you for free.", "watch": "Paid jobs are very competitive. Volunteering first helps heaps."},
+ {"id": "police", "n": "Police officer", "e": "👮", "g": "serve", "lvl": 3, "t": {"rules": 1, "team": 0.6, "care": 0.2, "routine": -1, "drive": 0.6, "busy": 0.6, "hands": -0.4, "active": 0.4}, "s": ["calm", "people", "reliable"], "do": "Keep communities safe, help people in trouble and respond to emergencies.", "day": "Patrol, answer calls, help at crashes, talk to people, write a lot of reports.", "good": "you want to help people and can stay calm in hard situations.", "lad": ["Finish school or a Cert IV", "Get your licence and first aid", "Apply to NSW Police (tests and checks)", "Police study, then probationary constable"], "try": "Look into PCYC programs. They're run with local police.", "watch": "Long study, shift work, background checks, and some really hard days."},
+ {"id": "youth", "n": "Youth worker", "e": "🫶", "g": "community", "lvl": 3, "t": {"care": 0.8, "build": -1, "hands": -1, "routine": -1, "team": 0.2, "busy": 0.2, "out": 0.2, "screen": -0.4}, "s": ["getit", "people", "calm"], "do": "Support young people going through tough stuff to get where they want to go.", "day": "Hang out, listen, run groups, help with school, housing or jobs, link people to help.", "good": "you've been through stuff yourself and want to be the person you needed.", "lad": ["Volunteer with a youth service or sports club", "Cert IV in Youth Work", "Youth worker", "Senior youth worker or case manager"], "try": "Ask your youth worker how they got into it. (Yes, really. Ask!)", "watch": "You'll need a Working With Children Check, and you need to look after yourself too."},
+ {"id": "peer", "n": "Peer support worker", "e": "💛", "g": "community", "lvl": 3, "t": {"care": 1, "build": -1, "hands": -1, "busy": -0.6, "team": -0.2, "routine": -0.4}, "s": ["getit", "patient", "calm"], "do": "Use your own lived experience to support people going through something similar.", "day": "Meet with people, listen, share what helped you, help them make a plan.", "good": "you've come through something hard and want to use it to help others.", "lad": ["Look after your own wellbeing first", "Volunteer with a support service", "Cert IV in Mental Health Peer Work", "Peer worker"], "try": "Look into headspace youth reference groups.", "watch": "Usually for when you're a bit older and steady in your own recovery."},
+ {"id": "commsup", "n": "Community support worker", "e": "🏘️", "g": "community", "lvl": 2, "t": {"care": 0.8, "build": -0.8, "hands": -0.4, "routine": -0.6, "drive": 0.6, "team": 0.2}, "s": ["people", "patient", "reliable"], "do": "Help people in your community with housing, food, appointments and getting back on their feet.", "day": "Visit people, help with forms and calls, run the food pantry, drive people to appointments.", "good": "you like helping people sort out real-life problems.", "lad": ["Volunteer at a neighbourhood centre or food pantry", "Cert III or IV in Community Services (traineeships available)", "Support worker", "Case worker"], "try": "Volunteer at your local neighbourhood centre.", "watch": "You'll usually need a licence and some checks."},
+ {"id": "aboh", "n": "Aboriginal health worker", "e": "🌏", "g": "community", "lvl": 2, "t": {"care": 1, "build": -1, "hands": -0.4, "team": 0.4, "drive": 0.4, "routine": -0.4}, "s": ["getit", "people", "patient"], "do": "Support Aboriginal and Torres Strait Islander people and families with their health, in a culturally safe way.", "day": "Visit families, help at the clinic, run health days, help people feel comfortable seeing doctors.", "good": "you're proud of your culture and want your mob to be healthy.", "lad": ["Volunteer with your local Aboriginal medical service", "Cert III in Aboriginal and/or Torres Strait Islander Primary Health Care (traineeships available)", "Aboriginal health worker", "Cert IV, then health practitioner"], "try": "Ask your local Aboriginal medical service about traineeships.", "watch": "These roles are for Aboriginal and Torres Strait Islander people."},
+ {"id": "admin", "n": "Admin or receptionist", "e": "🗂️", "g": "office", "lvl": 2, "t": {"out": -1, "active": -1, "organise": 1, "screen": 0.8, "dirty": -1, "hands": -0.6, "routine": 0.8, "early": 0.2, "busy": -0.2, "rules": 0.4}, "s": ["organised", "people", "tech"], "do": "Keep an office running: answer phones, book appointments, sort emails and files.", "day": "Greet people, answer the phone, book things in, type things up, keep everyone organised.", "good": "you're organised, friendly and like things running smoothly.", "lad": ["Casual job or work experience in an office", "Cert III in Business (traineeships available)", "Office admin or receptionist", "Office manager"], "try": "Ask about a school-based traineeship in business.", "watch": "Lots of sitting and screen time."},
+ {"id": "callc", "n": "Customer service or call centre", "e": "🎧", "g": "office", "lvl": 0, "t": {"out": -1, "active": -1, "hands": -1, "care": -0.6, "screen": 0.8, "routine": 0.8, "team": 0.6, "busy": 0.4, "dirty": -1}, "s": ["people", "calm", "tech"], "do": "Help customers over the phone, chat or email.", "day": "Take calls, sort out problems, update accounts, stay calm with cranky customers.", "good": "you're a good talker and stay calm under pressure.", "lad": ["Customer service job (lots train on the job)", "Cert III in Customer Engagement", "Team leader", "Trainer or manager"], "try": "Practise phone skills: call and book something yourself.", "watch": "Some customers are rude, and you're stuck at a desk."},
+ {"id": "it", "n": "IT support", "e": "💻", "g": "office", "lvl": 2, "t": {"screen": 1, "fix": 1, "machines": 0.5, "out": -1, "hands": -0.2, "active": -0.6, "dirty": -1, "routine": -0.4}, "s": ["tech", "fixer", "patient"], "do": "Fix computers, phones, wi-fi and printers, and help people who are stuck.", "day": "Answer help requests, set up laptops, fix network problems, explain things patiently.", "good": "you're the one your family asks to fix the wi-fi.", "lad": ["Fix stuff for family and friends", "Cert III in Information Technology (traineeships available)", "IT support or help desk", "Networks or cyber security"], "try": "Ask your school's IT person if you can help out.", "watch": "You need patience for people who 'didn't touch anything'."},
+ {"id": "traffic", "n": "Traffic controller", "e": "🚦", "g": "civil", "lvl": 1, "t": {"out": 1, "early": 1, "routine": 0.8, "active": 0.6, "hands": -0.4, "rules": 0.6, "team": 0.2, "busy": -0.2}, "s": ["reliable", "calm", "outdoors"], "do": "Keep drivers and workers safe around road works with the stop/slow bat.", "day": "Set up signs, hold the bat, chat on the radio, stay switched on all day.", "good": "you're reliable, outdoorsy and don't mind long days.", "lad": ["White Card", "Traffic control tickets (short course)", "Traffic controller", "Road crew or traffic management planner"], "try": "Get your White Card first. It's step one for most site work.", "watch": "Long hot days, and you usually need to be 18 for the tickets."},
+ {"id": "roadcrew", "n": "Road and civil crew", "e": "🚧", "g": "civil", "lvl": 1, "t": {"out": 1, "hands": 1, "build": 1, "dirty": 1, "active": 1, "early": 1, "team": 0.6, "machines": 0.6, "rules": 0.4}, "s": ["fit", "outdoors", "reliable"], "do": "Build and fix roads, drains, bridges and footpaths.", "day": "On site early: dig, lay pipes, pour concrete, help the machine operators.", "good": "you like hard outdoor work and seeing roads go in.", "lad": ["White Card", "Cert II or III in Civil Construction", "Civil labourer", "Leading hand or plant operator"], "try": "There's heaps of road work around here since the floods. Ask local civil companies.", "watch": "Hot, physical work with early starts."},
+ {"id": "plant", "n": "Machine operator", "e": "🏗️", "g": "civil", "lvl": 2, "t": {"machines": 1, "out": 1, "drive": 0.6, "hands": 0.6, "routine": 0.4, "dirty": 0.8, "early": 1, "team": -0.4, "active": -0.4, "build": 0.6}, "s": ["calm", "reliable", "fixer"], "do": "Drive big machines like excavators, rollers and loaders on building and road sites.", "day": "Pre-start checks, then dig, load and level, all from the driver's seat.", "good": "you love big machines and you're careful and steady.", "lad": ["Labouring or civil crew", "Civil construction traineeship", "Machine tickets (excavator, skid steer, roller)", "Experienced operator (great pay)"], "try": "Look for civil construction traineeships.", "watch": "You need your licence, and usually to be 18 for tickets."},
+ {"id": "mine", "n": "Mine or FIFO worker", "e": "⛏️", "g": "civil", "lvl": 1, "t": {"machines": 0.8, "out": 0.6, "dirty": 1, "early": 1, "team": 0.8, "rules": 0.8, "routine": 0.6, "active": 0.8, "hands": 0.8}, "s": ["fit", "reliable", "calm"], "do": "Work on mine sites driving trucks, operating machines or helping the trades.", "day": "12-hour shifts, strict safety rules, big machines. Then fly home for your days off.", "good": "you want big money and can handle being away from home.", "lad": ["Get your licence, White Card and first aid", "Civil or labouring experience", "Entry-level mine job or traineeship", "Operator or trade"], "try": "Get your White Card and some site experience first. Mines love people with tickets.", "watch": "You need to be 18, pass drug and alcohol tests, and be away from home for weeks at a time."},
+ {"id": "council", "n": "Council outdoor worker", "e": "🏞️", "g": "civil", "lvl": 0, "t": {"out": 1, "hands": 1, "active": 1, "routine": 0.4, "team": 0.6, "early": 1, "dirty": 0.6, "rules": 0.4, "drive": 0.4}, "s": ["outdoors", "reliable", "fit"], "do": "Look after parks, roads, beaches and footpaths for the local council.", "day": "Mow, fix potholes, clean up parks, empty bins, maintain playgrounds.", "good": "you want a steady outdoor job looking after your area.", "lad": ["Casual or labouring work", "Council traineeship (Cert II or III)", "Outdoor worker", "Team leader"], "try": "Check your local council's jobs page for traineeships.", "watch": "Council jobs can be competitive, but they're steady."},
+ {"id": "surf", "n": "Surf or swim instructor", "e": "🏄", "g": "tour", "lvl": 1, "t": {"out": 1, "active": 1, "care": 0.2, "hands": -0.4, "busy": 0.2, "routine": -0.2, "early": 0.6, "team": 0.2}, "s": ["fit", "outdoors", "people"], "do": "Teach people to surf or swim, and keep them safe.", "day": "Set up boards, run lessons, keep an eye on the water, cheer people on.", "good": "you live at the beach and love helping people have a go.", "lad": ["Bronze Medallion with Surf Life Saving", "Surf or swim instructor course", "Surf school or swim school instructor", "Head coach or your own surf school"], "try": "Join your local surf club. Nippers or Bronze is the start.", "watch": "Seasonal work, and you need to be a strong swimmer."},
+ {"id": "outrec", "n": "Outdoor rec leader", "e": "🧗", "g": "tour", "lvl": 3, "t": {"out": 1, "active": 1, "routine": -1, "team": 0.6, "care": 0.3, "busy": 0.2, "hands": 0.2}, "s": ["outdoors", "fit", "people"], "do": "Lead camps, kayaking, hiking, rock climbing and adventure activities.", "day": "Run activities at a camp or adventure company, keep groups safe and having fun.", "good": "you love adventure and you're good at keeping a group going.", "lad": ["Volunteer at camps or scouts", "First aid and short skills courses", "Cert III or IV in Outdoor Leadership", "Outdoor instructor or camp coordinator"], "try": "Ask school camps or local adventure companies if they need helpers.", "watch": "Lots of time away from home, and it depends on the weather."},
+ {"id": "guest", "n": "Hotel and tourism worker", "e": "🏨", "g": "tour", "lvl": 2, "t": {"out": -0.4, "care": -1, "hands": -0.6, "busy": 0.6, "team": 0.6, "routine": -0.2, "organise": 0.4}, "s": ["people", "organised", "reliable"], "do": "Look after tourists at hotels, resorts, holiday parks and tour companies.", "day": "Check guests in, answer questions, book tours, help keep the place running.", "good": "you're friendly and like meeting people from everywhere.", "lad": ["Casual job at a holiday park or hotel", "Cert III in Tourism or Hospitality (traineeships available)", "Front desk or guest services", "Supervisor or manager"], "try": "The coast is packed with tourism work. Ask at holiday parks and hotels.", "watch": "Weekends, holidays and busy summers."},
+ {"id": "deck", "n": "Deckhand", "e": "⚓", "g": "tour", "lvl": 1, "t": {"out": 1, "machines": 0.6, "hands": 0.8, "active": 0.8, "dirty": 0.6, "early": 1, "team": 0.4, "routine": -0.2}, "s": ["fit", "outdoors", "reliable"], "do": "Work on boats: fishing, tours, ferries or whale watching.", "day": "Ropes, cleaning, helping passengers, handling fish or gear, learning to drive the boat.", "good": "you love the water and don't get seasick.", "lad": ["Boat licence and first aid", "Deckhand work", "Coxswain ticket (Cert II in Maritime Operations)", "Skipper"], "try": "Ask at local marinas and fishing co-ops.", "watch": "Seasickness is real, and so are the early starts."},
+ {"id": "ranger", "n": "Ranger or bush regenerator", "e": "🦘", "g": "nature", "lvl": 1, "t": {"out": 1, "hands": 0.8, "dirty": 0.8, "active": 1, "busy": -1, "animals": 0.4, "team": 0.2, "early": 0.6, "routine": -0.2}, "s": ["outdoors", "fit", "patient"], "do": "Look after national parks, bushland and Country: weeding, planting, tracking animals and protecting the land.", "day": "Pull weeds, plant trees, check traps and cameras, fix tracks, map plants.", "good": "you love the bush and want to look after it.", "lad": ["Volunteer with Landcare or a bush regen group", "Cert II or III in Conservation and Ecosystem Management", "Bush regenerator or an Aboriginal ranger program", "Ranger"], "try": "Join a Landcare working bee, and ask about local Aboriginal ranger programs.", "watch": "Hot, prickly work, and ranger jobs are competitive."},
+ {"id": "khand", "n": "Kitchenhand", "e": "🍽️", "g": "food", "lvl": 0, "t": {"machines": -0.6, "hands": 0.8, "busy": 1, "team": 0.6, "active": 1, "out": -1, "dirty": 0.4, "routine": 0.6, "early": -0.4}, "s": ["reliable", "fit", "cook"], "do": "Wash dishes, prep food and keep a kitchen running.", "day": "Wash up, peel and chop, clean, help the chefs through the rush.", "good": "you want a job fast and might like cooking later.", "lad": ["Kitchenhand (no experience needed)", "Food safety short course", "Cookery apprenticeship", "Chef"], "try": "Ask local cafés, pubs and clubs. Kitchenhand jobs come up all the time.", "watch": "Wet hands, hot kitchens, nights and weekends."},
+ {"id": "oshc", "n": "Before and after school care", "e": "🛝", "g": "kids", "lvl": 1, "t": {"animals": -1, "hands": -0.4, "care": 0.3, "active": 0.8, "busy": 0.6, "team": 0.6, "out": 0.4, "early": 0.2, "routine": -0.2}, "s": ["kids", "people", "fit"], "do": "Run games and activities for school kids before and after school and in the holidays.", "day": "Set up activities, play sport, help with homework, keep everyone safe.", "good": "you're fun, full of energy and kids think you're cool.", "lad": ["Coach a junior sports team or volunteer", "OSHC assistant (often trained on the job)", "Cert III or Diploma in School Age Education and Care", "Coordinator"], "try": "Ask local OSHC services about casual or holiday care jobs.", "watch": "You need a Working With Children Check, and the shifts are split (mornings and afternoons)."},
+ {"id": "mua", "n": "Makeup artist", "e": "💄", "g": "beauty", "lvl": 1, "t": {"fix": -1, "organise": -1, "out": -1, "dirty": -1, "hands": 0.4, "routine": -0.6, "rules": -0.4, "drive": 0.4, "team": -0.4, "busy": 0.2}, "s": ["creative", "people", "patient"], "do": "Do makeup for weddings, formals, events and photo shoots.", "day": "Travel to clients, do their makeup, take photos for your page, book the next one.", "good": "you're creative and love making people feel amazing.", "lad": ["Practise and post your work", "Short makeup course", "Cert III in Make-Up", "Your own makeup business"], "try": "Do makeup for friends' formals and build a photo portfolio.", "watch": "Work can be up and down, and weddings mean early starts."},
+ {"id": "sportrec", "n": "Sport and rec assistant", "e": "⚽", "g": "fit", "lvl": 2, "t": {"active": 1, "out": 0.6, "team": 0.6, "busy": 0.6, "hands": -0.4, "care": 0.2, "routine": -0.4}, "s": ["fit", "people", "kids"], "do": "Help run sport programs, leisure centres and holiday activities.", "day": "Set up equipment, run games, coach, help at the leisure centre front desk.", "good": "you love sport and getting people moving.", "lad": ["Coach or umpire junior sport", "Cert III in Sport and Recreation (traineeships available)", "Rec officer at a leisure centre", "Sport development officer"], "try": "Volunteer to coach or umpire at a local club.", "watch": "Weekends and school holidays are the busy times."},
+ {"id": "boiler", "n": "Boilermaker or welder", "e": "🔥", "g": "mech", "lvl": 2, "t": {"machines": 0.8, "hands": 1, "fix": 0.5, "dirty": 0.9, "build": 0.7, "out": -0.2, "active": 0.7, "busy": 0.5, "screen": -0.6}, "s": ["fit", "fixer", "patient"], "do": "Cut, weld and shape metal to build and fix things like trailers, gates, tanks and machinery.", "day": "Read plans, cut steel, weld, grind, fit parts together. Sparks, noise and big satisfying builds.", "good": "you like making strong, solid things and don't mind heat and noise.", "lad": ["Welding short course or metal pre-apprenticeship", "Engineering apprenticeship (Cert III in Engineering, Fabrication Trade)", "Qualified boilermaker", "Specialist welder, mines or your own fab shop"], "try": "Ask about a welding taster at TAFE, or a local fabrication or trailer shop.", "watch": "Hot, loud work, and you'll wear a lot of safety gear."},
+ {"id": "plaster", "n": "Plasterer", "e": "🪣", "g": "build", "lvl": 2, "t": {"hands": 1, "build": 0.8, "active": 0.8, "dirty": 0.8, "routine": 0.5, "out": -0.6, "team": -0.2, "fix": -0.2, "screen": -0.5}, "s": ["fit", "patient", "reliable"], "do": "Put up and finish plasterboard walls and ceilings so they're smooth and ready to paint.", "day": "Measure, cut, lift sheets, screw them up, set the joins, sand smooth.", "good": "you're fit, patient and like a really neat finish.", "lad": ["Labouring or plasterer's offsider", "Wall and ceiling lining apprenticeship (Cert III)", "Qualified plasterer", "Your own business"], "try": "Get your White Card and ask local plasterers if they need an offsider.", "watch": "Dusty work, lots of lifting and working overhead."},
+ {"id": "roof", "n": "Roof plumber", "e": "🪜", "g": "build", "lvl": 2, "t": {"out": 1, "hands": 1, "build": 0.8, "active": 1, "early": 1, "dirty": 0.5, "team": -0.2, "screen": -0.5}, "s": ["fit", "calm", "reliable"], "do": "Install and fix metal roofs, gutters and downpipes.", "day": "Up on roofs early: measure, cut sheets, screw them down, fit gutters. Great views.", "good": "you're fit, okay with heights and like being outside.", "lad": ["White Card and labouring", "Roof plumbing apprenticeship (Cert III)", "Licensed roof plumber", "Your own business"], "try": "Ask local roofing companies about labouring work.", "watch": "Heights, heat and hot tin in summer. You wear a safety harness every day."},
+ {"id": "concrete", "n": "Concreter", "e": "🪨", "g": "build", "lvl": 1, "t": {"out": 1, "hands": 1, "build": 1, "dirty": 1, "active": 1, "early": 1, "team": 0.6, "busy": 0.4, "screen": -0.5}, "s": ["fit", "reliable", "outdoors"], "do": "Pour and finish concrete for slabs, driveways and footpaths.", "day": "Set up formwork, pour, spread and smooth it before it sets. Fast and physical.", "good": "you're strong, like early finishes and seeing a clean slab.", "lad": ["White Card and labouring", "Concreting work (learn on the job)", "Cert III in Concreting (apprenticeships available)", "Your own concreting business"], "try": "Ask concreters about labouring. They often need extra hands.", "watch": "Very physical, early starts, and hard on your back."},
+ {"id": "cabinet", "n": "Cabinet maker or joiner", "e": "🪵", "g": "build", "lvl": 2, "t": {"hands": 1, "build": 1, "out": -0.8, "machines": 0.5, "routine": 0.2, "organise": 0.2, "dirty": 0.3, "busy": -0.2, "team": -0.2, "screen": -0.4}, "s": ["creative", "patient", "fixer"], "do": "Build kitchens, cupboards, furniture and wardrobes in a workshop.", "day": "Read plans, cut timber and board on big machines, put it together, sand, install.", "good": "you like woodwork, precision and making things look beautiful.", "lad": ["Woodwork at school or a pre-apprenticeship", "Cabinet making apprenticeship (Cert III)", "Qualified cabinet maker", "Your own workshop"], "try": "Ask a local kitchen or joinery workshop for work experience.", "watch": "Loud machines, and you need to measure carefully."},
+ {"id": "fridgie", "n": "Air con and fridge tech", "e": "❄️", "g": "build", "lvl": 2, "t": {"fix": 1, "hands": 0.9, "machines": 0.7, "drive": 0.5, "out": 0.2, "routine": -0.5, "dirty": 0.4, "team": -0.3, "screen": -0.3}, "s": ["fixer", "calm", "reliable"], "do": "Install and fix air conditioners, fridges and cool rooms.", "day": "Drive to jobs, install split systems, find faults, fix cool rooms in cafés and on farms.", "good": "you like fixing things and working out problems.", "lad": ["Pre-apprenticeship course", "Refrigeration and air conditioning apprenticeship (Cert III)", "Licensed tech", "Your own business"], "try": "Ask a local air con company about work experience.", "watch": "Hot roofs and ceilings in summer, and some electrical theory."},
+ {"id": "diesel", "n": "Diesel or heavy vehicle mechanic", "e": "🚛", "g": "mech", "lvl": 2, "t": {"machines": 1, "fix": 1, "hands": 1, "dirty": 1, "out": 0.2, "drive": 0.2, "team": 0.2, "active": 0.6, "screen": -0.5}, "s": ["fixer", "fit", "reliable"], "do": "Service and fix trucks, tractors, buses and big machinery.", "day": "Find faults, pull engines apart, replace parts. Big engines, big tools.", "good": "you love big machines and getting your hands dirty.", "lad": ["Workshop hand", "Cert II in Automotive (pre-apprenticeship)", "Heavy vehicle apprenticeship (Cert III)", "Mines, farms or your own workshop"], "try": "Ask a truck, bus or farm machinery dealer about work experience.", "watch": "Greasy, heavy work. Good pay once you're qualified."},
+ {"id": "autoelec", "n": "Auto electrician", "e": "🔋", "g": "mech", "lvl": 2, "t": {"machines": 1, "fix": 1, "hands": 0.8, "dirty": 0.3, "screen": 0.2, "out": -0.4, "routine": -0.4}, "s": ["fixer", "patient", "tech"], "do": "Fix the electrical side of cars and trucks: wiring, batteries, lights, air con and computers.", "day": "Hunt down electrical faults, fit lights and accessories, plug in diagnostic tools.", "good": "you like puzzles and electronics as much as cars.", "lad": ["Workshop hand", "Cert II in Automotive", "Auto electrical apprenticeship (Cert III)", "Qualified auto sparky"], "try": "Ask a 4WD accessories shop or auto electrician about work experience.", "watch": "Lots of problem solving and some theory."},
+ {"id": "marine", "n": "Marine or small engine mechanic", "e": "🚤", "g": "mech", "lvl": 2, "t": {"machines": 1, "fix": 1, "hands": 1, "out": 0.3, "dirty": 0.6, "team": -0.4, "busy": -0.2, "screen": -0.5}, "s": ["fixer", "patient", "outdoors"], "do": "Fix outboards, boats, jet skis, mowers and chainsaws.", "day": "Service outboards, test run boats, fix mowers and chainsaws.", "good": "you love engines and being near the water.", "lad": ["Fix mowers and bikes at home", "Workshop hand at a marine or mower shop", "Marine or outdoor power equipment apprenticeship (Cert III)", "Qualified mechanic or your own shop"], "try": "Ask local marinas or mower shops if you can help out.", "watch": "Busy in summer, quieter in winter."},
+ {"id": "shaper", "n": "Surfboard shaper", "e": "🌊", "g": "creative", "lvl": 1, "t": {"hands": 1, "organise": -0.8, "fix": -0.3, "out": -0.4, "dirty": 0.6, "team": -0.8, "rules": -0.8, "busy": -0.6, "screen": -0.3}, "s": ["creative", "patient", "fixer"], "do": "Shape and glass surfboards by hand (and with machines).", "day": "Cut blanks, shape foam, glass with resin, sand, fix dings.", "good": "you surf, you're patient and you love making things by hand.", "lad": ["Fix dings on your mates' boards", "Get a start sweeping and sanding in a surf factory", "Learn from a shaper (mostly on the job)", "Your own label"], "try": "There are surf factories all along this coast. Ask about sanding or ding repairs.", "watch": "Hard truth: there aren't many jobs, and it's dusty, fumy work. Most shapers started out fixing dings."},
+ {"id": "aqua", "n": "Aquaculture worker", "e": "🦪", "g": "nature", "lvl": 1, "t": {"out": 1, "animals": 0.6, "hands": 1, "early": 1, "dirty": 1, "active": 1, "machines": 0.3, "busy": -0.6, "team": -0.2, "screen": -0.6}, "s": ["outdoors", "fit", "animals"], "do": "Farm oysters, prawns or fish: feeding, cleaning, grading and harvesting.", "day": "Out on the water or ponds early: check stock, clean gear, grade oysters, pack orders.", "good": "you love the water and don't mind wet, smelly, outdoor work.", "lad": ["Casual work on an oyster or prawn farm", "Cert II in Aquaculture", "Cert III in Aquaculture", "Farm supervisor or your own leases"], "try": "There are oyster and prawn farms on our rivers. Ask about casual work.", "watch": "Wet, cold, early and smelly. You'll need to be okay on boats."}
+];
+(()=>{ /* fill in the two newer cards for older jobs */ const SC={build:-.5,mech:-.5,nature:-.6,civil:-.5,fit:-.5,beauty:-.4,food:-.4,care:-.4,kids:-.4,logi:-.3,tour:-.5};
+  CQ_J.forEach(j=>{ if(j.t.screen==null&&SC[j.g]!=null) j.t.screen=SC[j.g]; if(j.t.rules==null&&j.lad.some(x=>/your own/i.test(x))) j.t.rules=-.3; if(j.t.rules==null&&j.g==='care') j.t.rules=.3; }); })();
+const CQ_UP={"elec": "Electrical contractor, or an electrical engineer (uni)", "carp": "Builder, site manager or building inspector", "plumb": "Plumbing contractor or hydraulic designer", "aged": "Enrolled or registered nurse", "disab": "Case manager, or an occupational therapist (uni)", "ain": "Registered nurse or midwife (uni)", "ece": "Early childhood teacher (uni)", "tutor": "Teacher (uni)", "youth": "Social worker or counsellor (uni)", "peer": "Mental health worker or counsellor", "commsup": "Case manager or social worker (uni)", "aboh": "Aboriginal health practitioner, nurse or doctor (uni)", "fitness": "Exercise physiologist or physio (uni)", "sportrec": "Sport development officer or PE teacher (uni)", "animal": "Vet nurse, or a vet (uni)", "ranger": "National parks ranger or environmental scientist (uni)", "land": "Landscape designer or horticulturist", "farm": "Farm manager or agronomist (uni)", "aqua": "Hatchery manager or marine scientist (uni)", "mech": "Service manager or your own workshop", "diesel": "Mine maintenance supervisor", "it": "Cyber security or software developer", "design": "Art director or UX designer", "game": "Game developer (Diploma or uni)", "police": "Detective or specialist police", "fire": "Station officer", "adf": "Officer roles, or a trade or degree Defence pays for", "admin": "Office manager or HR", "cook": "Head chef or restaurant owner", "guest": "Hotel or tourism manager", "outrec": "Outdoor education teacher (uni)", "plant": "Site supervisor", "roadcrew": "Civil supervisor, or a civil engineer (uni)", "boiler": "Engineering supervisor or welding inspector", "cabinet": "Kitchen designer or your own workshop", "ware": "Logistics manager", "retail": "Store or area manager", "security": "Security manager", "hair": "Salon owner or hair educator", "barber": "Shop owner or barbering educator", "life": "Aquatic centre manager", "fridgie": "Your own business or a refrigeration engineer", "khand": "Chef or kitchen manager", "barista": "Café manager or owner", "labour": "Into any trade apprenticeship"};
+const CQ_UNI="This quiz looks at jobs you can get into through work, short courses, apprenticeships, traineeships and TAFE. Uni is still on the table later. Lots of people go after a trade or TAFE course.";
+const CQ={step:'intro',i:0,a:{},nei:{},str:[],no:[],nah:[],lvl:null,open:null,name:'',area:''};
+function cqReset(){ Object.assign(CQ,{step:'intro',i:0,a:{},nei:{},str:[],no:[],nah:[],lvl:null,open:null,area:''}); }
+function cqScore(j){ let num=0,den=0; for(const [d,v] of Object.entries(j.t)){ const a=CQ.a[d]; if(a){ num+=a*v; den+=Math.abs(v); } else if(CQ.nei[d]&&Math.abs(v)>=.5){ num-=Math.abs(v)*.7; den+=Math.abs(v); } /* neither = both ends are a no */ }
+  let sc=den?num/(den+1.2):0; sc+=j.s.filter(x=>CQ.str.includes(x)).length*.08; const gap=CQ.lvl==null?0:Math.max(0,j.lvl-CQ.lvl); sc-=gap*.2;
+  return {pct:Math.max(5,Math.min(98,Math.round(50+sc*55))),gap}; }
+function cqFit(p){ if(CQ.exp) return 'Worth a look'; return p>=80?'Strong fit':p>=62?'Worth a look':'Maybe'; }
+function cqOk(r){ return !CQ.no.includes(r.j.g)&&!CQ.nah.includes(r.j.id); }
+function cqResults(){ const R=CQ_J.map(j=>({j,...cqScore(j)})).sort((a,b)=>b.pct-a.pct), V0=R.filter(cqOk);
+  CQ.exp=Object.values(CQ.a).filter(x=>x).length<5;
+  let V=V0; if(CQ.exp){ /* lots of "Either": show a spread across areas instead of fake matches */ const by={}; V0.forEach(r=>(by[r.j.g]=by[r.j.g]||[]).push(r)); const gs=Object.values(by); V=[]; for(let i=0;V.length<V0.length;i++) gs.forEach(a=>{ if(a[i]) V.push(a[i]); }); }
+  const L=V.length?V:R;
+  if(CQ.exp) return {R,V:L,type:["The Explorer","You're open to heaps of things, and that's a strength. You get to try stuff out and see what sticks. Here's a mix to start with."],g:null};
+  const gs={}; L.slice(0,6).forEach((r,i)=>{ gs[r.j.g]=(gs[r.j.g]||0)+(6-i)*(6-i); }); const g=Object.entries(gs).sort((a,b)=>b[1]-a[1])[0][0];
+  return {R,V:L,type:CQ_TYPES[g],g}; }
+function cqPlace(){ const c=[]; const A=CQ.a;
+  if(A.out) c.push(A.out>0?'🌤️ Outside':'🏠 Inside'); if(A.hands) c.push(A.hands>0?'🔨 Hands-on':'💬 People'); if(A.active) c.push(A.active>0?'👟 On your feet':'🪑 Settled'); if(A.routine) c.push(A.routine>0?'🔁 Routine':'🎲 Variety');
+  if(A.team) c.push(A.team>0?'👥 Big team':'🧍 Small crew'); if(A.early) c.push(A.early>0?'🌅 Early starts':'🌙 Later starts'); if(A.busy) c.push(A.busy>0?'📢 Busy':'🍃 Calm'); if(A.screen) c.push(A.screen>0?'💻 On a computer':'📵 Off screens'); if(A.rules) c.push(A.rules>0?'🎖️ Clear rules':'🧢 My own way'); return c; }
+function cqBullseye(list,top3){ /* rings = how much training, like myfuture's bullseyes */
+  const SH={ware:'Warehouse',fork:'Forklift',deliv:'Delivery',retail:'Retail',barista:'Barista',cook:'Chef',baker:'Baker',butcher:'Butcher',labour:'Labourer',carp:'Carpenter',elec:'Sparky',plumb:'Plumber',paint:'Painter',tile:'Tiler',land:'Landscaper',farm:'Farmhand',animal:'Animal care',groom:'Groomer',mech:'Mechanic',tyre:'Tyres',panel:'Panel beater',hair:'Hairdresser',barber:'Barber',beauty:'Beauty',ece:'Childcare',tutor:'Teacher aide',aged:'Aged care',disab:'Disability',ain:'Nursing',clean:'Cleaner',fitness:'Fitness',life:'Pool crew',boiler:'Welder',plaster:'Plasterer',roof:'Roofer',concrete:'Concreter',cabinet:'Cabinets',fridgie:'Air con',diesel:'Diesel mech',autoelec:'Auto sparky',marine:'Marine mech',shaper:'Shaper',aqua:'Aquaculture',design:'Designer',content:'Socials',tattoo:'Tattoo',stage:'Stage crew',photo:'Photos',game:'Games',adf:'Defence',security:'Security',fire:'Firie',police:'Police',youth:'Youth work',peer:'Peer work',commsup:'Community',aboh:'Health worker',admin:'Admin',callc:'Cust. service',it:'IT support',traffic:'Traffic',roadcrew:'Road crew',plant:'Machines',mine:'Mining',council:'Council',surf:'Surf',outrec:'Outdoor rec',guest:'Tourism',deck:'Deckhand',ranger:'Ranger',khand:'Kitchenhand',oshc:'OSHC',mua:'Makeup',sportrec:'Sport'};
+  const ring=[list.filter(r=>r.j.lvl<=1).slice(0,4),list.filter(r=>r.j.lvl===2).slice(0,9),list.filter(r=>r.j.lvl===3).slice(0,5)];
+  const R=[68,156,222]; let dots='';
+  ring.forEach((L,ri)=>L.forEach((r,i)=>{ const n=L.length, off=ri===0?-90:-90+ri*24, a=(off+i*360/Math.max(n,ri===0?1:n))*Math.PI/180, rr=ri===0&&n===1?0:R[ri], x=rr*Math.cos(a), y=rr*Math.sin(a), star=top3&&top3.includes(r.j.id);
+    dots+=`<g class="cq-dot r${ri}${star?' star':''}" data-cq-job="${r.j.id}" transform="translate(${x.toFixed(1)} ${y.toFixed(1)})" role="button" tabindex="0" aria-label="${esc(r.j.n)}${r.pct!=null?', '+cqFit(r.pct):''}"><circle r="${star?33:27}"/><text y="9" class="cqe">${r.j.e}</text>${star?`<g class="nb" transform="translate(25 -25)"><circle r="13"/><text y="5">${top3.indexOf(r.j.id)+1}</text></g>`:''}<text y="${star?52:44}" class="lb">${SH[r.j.id]||esc(r.j.n)}</text></g>`; }));
+  return `<svg viewBox="-260 -260 520 520" class="cq-bull" aria-hidden="false"><circle r="250" class="r3"/><circle r="192" class="r2"/><circle r="120" class="r1"/>${dots}</svg>
+    <div class="cq-legend"><span class="b">Start now: on the job or a short course</span><span class="m">Earn while you learn: apprenticeship or traineeship</span><span class="o">Longer TAFE course</span>${top3?'<span class="s"><i>1</i><i>2</i><i>3</i> Your top 3</span>':''}</div>`; }
+function careerHTML(){
+  let b='';
+  if(CQ.step==='intro') b=`<div class="cq-intro"><span class="sl-kick">My career quiz</span><h2>Not sure what you want to do?</h2><p>That's normal. Pick between two things, over and over. No right answers, just go with your gut.</p>
+    <div class="cq-demo"><span>🌤️</span><b>or</b><span>🏠</span></div><ul class="sl-rules"><li>About 3 minutes</li><li>Can't pick? Tap "Both" or "Neither"</li><li>Nothing is saved</li></ul><p class="cq-uni">Covers jobs you can start through work, apprenticeships and TAFE. Uni can come later.</p><button class="sl-go" data-cq="start">Let's go</button></div>`;
+  else if(CQ.step==='tot'){ const [d,l,le,r,re]=CQ_D[CQ.i];
+    b=`<div class="cq-q"><div class="cq-prog"><i style="width:${(CQ.i/CQ_D.length*100).toFixed(1)}%"></i></div><span class="cq-n">${CQ.i+1} of ${CQ_D.length}</span>
+      <h2>Would you rather…</h2><div class="cq-pair"><button class="cq-card l" data-cq-pick="1"><span class="cqe">${le}</span><b>${l}</b></button><span class="cq-or">or</span><button class="cq-card r" data-cq-pick="-1"><span class="cqe">${re}</span><b>${r}</b></button></div>
+      <div class="sl-nav">${CQ.i?'<button class="sl-ghost" data-cq="back">← Back</button>':'<span></span>'}<span class="cq-alt"><button class="sl-ghost" data-cq-pick="0">Both are fine</button><button class="sl-ghost" data-cq-pick="n">Neither</button></span></div></div>`; }
+  else if(CQ.step==='str') b=`<div class="cq-q"><div class="cq-prog"><i style="width:100%"></i></div><h2>What are you good at?</h2><p class="sl-sub">Pick up to 3. Ask a mate if you're not sure.</p>
+    <div class="cq-strs">${CQ_S.map(([k,t,e])=>`<button class="cq-str${CQ.str.includes(k)?' on':''}" data-cq-str="${k}" aria-pressed="${CQ.str.includes(k)}"><span>${e}</span>${t}</button>`).join('')}</div>
+    <div class="sl-nav"><button class="sl-ghost" data-cq="back">← Back</button><button class="sl-next" data-cq="tono">Next →</button></div></div>`;
+  else if(CQ.step==='no') b=`<div class="cq-q"><div class="cq-prog"><i style="width:100%"></i></div><h2>Anything you'd avoid?</h2><p class="sl-sub">Tap any that are a hard no. Skip if nothing.</p>
+    <div class="cq-strs">${Object.entries(CQ_G).map(([k,[t,e]])=>`<button class="cq-str cq-no${CQ.no.includes(k)?' on':''}" data-cq-no="${k}" aria-pressed="${CQ.no.includes(k)}"><span>${CQ.no.includes(k)?'🚫':e}</span>${t}</button>`).join('')}</div>
+    <div class="sl-nav"><button class="sl-ghost" data-cq="back">← Back</button><button class="sl-next" data-cq="tolvl">${CQ.no.length?'Next →':'Nothing, next →'}</button></div></div>`;
+  else if(CQ.step==='lvl') b=`<div class="cq-q"><h2>How much training are you up for?</h2><p class="sl-sub">Pick the most you'd be happy to do. You can always change your mind later.</p>
+    <div class="cq-ladder">${CQ_L.map(([t,d,e],i)=>`<button class="cq-step${CQ.lvl===i?' on':''}" data-cq-lvl="${i}" style="--i:${i}"><span class="cqe">${e}</span><span><b>${t}</b><small>${d}</small></span></button>`).join('')}</div>
+    <div class="sl-nav"><button class="sl-ghost" data-cq="back">← Back</button><button class="sl-next" data-cq="res"${CQ.lvl==null?' disabled':''}>See my matches →</button></div></div>`;
+  else { const {R,V,type}=cqResults(), top=V.slice(0,12), pl=cqPlace(), top3=V.slice(0,3).map(r=>r.j.id);
+    b=`<div class="cq-res"><div class="cq-prof"><span class="sl-kick">You're…</span><h2>${type[0]}</h2><p>${type[1]}</p>
+      ${pl.length?`<div class="cq-place"><b>Your kind of workplace</b><div>${pl.map(x=>`<span>${x}</span>`).join('')}</div></div>`:''}
+      ${CQ.str.length?`<div class="cq-place"><b>Your strengths</b><div>${CQ.str.map(k=>{ const s=CQ_S.find(x=>x[0]===k); return `<span>${s[2]} ${s[1]}</span>`; }).join('')}</div></div>`:''}</div>
+      <section class="cq-top3"><h3>${CQ.exp?'Three to start with':'Your top 3'}</h3><div class="cq-t3">${top.slice(0,3).map((r,i)=>`<button class="cq-t3c${i===0?' first':''}" data-cq-job="${r.j.id}"><span class="n">${i+1}</span><span class="cqe">${r.j.e}</span><b>${r.j.n}</b><small>${cqFit(r.pct)} · ${['Start now','Start now','Earn while you learn','TAFE course'][r.j.lvl]}</small><span class="go">Find out more →</span></button>`).join('')}</div></section>
+      <section class="cq-bwrap">${CQ.area?`<h3>${CQ_G[CQ.area][1]} ${CQ_G[CQ.area][0]} bullseye</h3><p class="sl-muted">Every job in this area. The middle needs the least training. Tap one to find out more.</p>${cqBullseye(R.filter(r=>r.j.g===CQ.area&&!CQ.nah.includes(r.j.id)),top3)}<button class="sl-ghost cq-back" data-cq-area="">← Back to my bullseye</button>`
+        :`<h3>Your career bullseye 🎯</h3><p class="sl-muted">Your best matches. The middle needs the least training to get started. Tap a job to find out more.</p>${cqBullseye(V.slice(0,16),top3)}`}
+        <div class="cq-areas"><b>Explore an area</b><div>${Object.entries(CQ_G).map(([k,[t,e]])=>`<button class="cq-area${CQ.area===k?' on':''}${CQ.no.includes(k)?' nope':''}" data-cq-area="${k}"><span>${e}</span>${t}</button>`).join('')}</div></div></section>
+      <section class="cq-list"><h3>More to check out</h3><div class="cq-jobs">${top.slice(3,9).map((r,i)=>`<button class="cq-job" data-cq-job="${r.j.id}"><span class="cqe">${r.j.e}</span><span class="t"><b>${r.j.n}</b><small>${CQ_G[r.j.g][0]}</small>${r.gap?'<em>Needs a bit more training</em>':''}</span><span class="pct">${cqFit(r.pct)}</span></button>`).join('')}</div>
+        ${CQ.no.length||CQ.nah.length?`<div class="cq-nahs"><b>Not for you</b><span class="sl-muted">Tap one to bring it back.</span><div>${CQ.no.map(k=>`<button data-cq-no="${k}">🚫 ${CQ_G[k][0]}</button>`).join('')}${CQ.nah.map(k=>{ const j=CQ_J.find(x=>x.id===k); return `<button data-cq-nah="${k}">👎 ${j.n}</button>`; }).join('')}</div></div>`:''}</section>
+      <div class="sl-print"><div><b>Take your profile with you 🖨️</b><span>Your type, your strengths and your top jobs on one page.</span></div><input class="sl-name" id="cqName" type="text" maxlength="30" placeholder="Your first name (optional)" value="${esc(CQ.name)}" autocomplete="off" aria-label="First name for the printout"><button class="sl-go sm" data-cq="pdf">Print my profile</button></div>
+      <p class="sl-foot">This is a starting point, not a final answer. Try things out: work experience, tasters and part-time jobs tell you heaps.<br>${CQ_UNI}</p>
+      <div class="sl-nav c"><button class="sl-ghost" data-cq="again">Do it again</button></div></div>`; }
+  return head("My career quiz")+`<div class="cq">${b}</div>${CQ.open?cqSheet(CQ.open):''}`;
+}
+function cqSheet(id){ const j=CQ_J.find(x=>x.id===id), r=cqScore(j);
+  return `<div class="sl-sheet cq-sheet" role="dialog" aria-label="${esc(j.n)}"><div class="sl-sheet-in"><button class="sl-x" data-cq="close" aria-label="Close">✕</button>
+    <div class="cq-sh-top"><span class="cq-big">${j.e}</span><div><span class="sl-kick">${cqFit(r.pct)}</span><h2>${j.n}</h2><small>${CQ_G[j.g][1]} ${CQ_G[j.g][0]}</small></div></div>
+    <p class="sl-pers">${j.do}</p>
+    <div class="cq-blk"><b>A normal day</b><p>${j.day}</p></div>
+    <div class="cq-blk"><b>You'd be great at this if</b><p>${j.good}</p></div>
+    <div class="cq-blk"><b>How to get there</b><ol class="cq-lad">${j.lad.map(x=>`<li>${x}</li>`).join('')}</ol><div class="cq-badges">${j.lvl>=2?'<span class="cq-earn">💵 You can earn while you learn</span>':''}${j.lad.some(x=>/your own/i.test(x))?'<span class="cq-earn own">🧢 You could be your own boss one day</span>':''}</div></div>
+    <div class="cq-blk try"><b>Try it now</b><p>${j.try}</p></div>
+    <p class="cq-watch"><b>Heads up:</b> ${j.watch}</p>${CQ_UP[j.id]?`<p class="cq-up"><b>🔭 Down the road:</b> ${CQ_UP[j.id]}</p>`:''}
+    <button class="sl-ghost cq-nahbtn" data-cq-nah="${j.id}">${CQ.nah.includes(j.id)?'↩ Bring it back':'👎 Nah, not for me'}</button></div></div>`; }
+function cqRender(top){ app.innerHTML=careerHTML(); if(top) window.scrollTo({top:0}); }
+function cqClick(e){
+  const a=e.target.closest('[data-cq]'); if(a){ const v=a.dataset.cq;
+    if(v==='start'){ CQ.step='tot'; CQ.i=0; cqRender(true); }
+    if(v==='back'){ if(CQ.step==='tot') CQ.i=Math.max(0,CQ.i-1); else if(CQ.step==='str'){ CQ.step='tot'; CQ.i=CQ_D.length-1; } else if(CQ.step==='no') CQ.step='str'; else if(CQ.step==='lvl') CQ.step='no'; cqRender(); }
+    if(v==='tono'){ CQ.step='no'; cqRender(true); }
+    if(v==='tolvl'){ CQ.step='lvl'; cqRender(true); }
+    if(v==='res'){ CQ.step='res'; cqRender(true); }
+    if(v==='again'){ cqReset(); cqRender(true); }
+    if(v==='close'){ CQ.open=null; cqRender(); }
+    if(v==='pdf') cqPdf();
+    return true; }
+  const p=e.target.closest('[data-cq-pick]'); if(p){ const d=CQ_D[CQ.i][0], v=p.dataset.cqPick; CQ.a[d]=v==='n'?0:+v; if(v==='n') CQ.nei[d]=1; else delete CQ.nei[d]; p.classList.add('picked'); setTimeout(()=>{ if(CQ.i<CQ_D.length-1) CQ.i++; else CQ.step='str'; cqRender(); },300); return true; }
+  const s=e.target.closest('[data-cq-str]'); if(s){ const k=s.dataset.cqStr; if(CQ.str.includes(k)) CQ.str=CQ.str.filter(x=>x!==k); else if(CQ.str.length<3) CQ.str=[...CQ.str,k]; else toast('Just 3. Tap one to swap it out.'); cqRender(); return true; }
+  const no=e.target.closest('[data-cq-no]'); if(no){ const k=no.dataset.cqNo; CQ.no=CQ.no.includes(k)?CQ.no.filter(x=>x!==k):[...CQ.no,k]; cqRender(); return true; }
+  const nh=e.target.closest('[data-cq-nah]'); if(nh){ const k=nh.dataset.cqNah; const was=CQ.nah.includes(k); CQ.nah=was?CQ.nah.filter(x=>x!==k):[...CQ.nah,k]; CQ.open=null; cqRender(); if(!was) toast('Gone. Good to know what you don\'t want too.'); return true; }
+  const l=e.target.closest('[data-cq-lvl]'); if(l){ CQ.lvl=+l.dataset.cqLvl; cqRender(); return true; }
+  const ar=e.target.closest('[data-cq-area]'); if(ar){ CQ.area=ar.dataset.cqArea; cqRender(); document.querySelector('.cq-bwrap')?.scrollIntoView({behavior:'smooth',block:'start'}); return true; }
+  const j=e.target.closest('[data-cq-job]'); if(j){ CQ.open=j.dataset.cqJob; cqRender(); return true; }
+  if(CQ.open&&e.target.classList.contains('sl-sheet')){ CQ.open=null; cqRender(); return true; }
+  return false; }
+document.addEventListener('input',e=>{ if(e.target.id==='cqName') CQ.name=e.target.value; });
+document.addEventListener('keydown',e=>{ if(current!=='career') return; if(e.key==='Escape'&&CQ.open){ CQ.open=null; cqRender(); } if(e.key==='Enter'&&e.target.closest&&e.target.closest('.cq-dot')){ CQ.open=e.target.closest('.cq-dot').dataset.cqJob; cqRender(); }
+  if(CQ.step==='tot'&&!CQ.open){ if(e.key==='ArrowLeft') document.querySelector('[data-cq-pick="1"]')?.click(); if(e.key==='ArrowRight') document.querySelector('[data-cq-pick="-1"]')?.click(); } });
+const CQ_SHORT={out:['Outside','Inside'],hands:['Hands-on','Talking with people'],fix:['Fixing things','Making things look good'],active:['On my feet','In one spot'],routine:['Routine','Variety'],animals:['Animals','Little kids'],machines:['Machines','Food'],team:['Big team','Small crew'],early:['Early starts','Later starts'],dirty:['Getting dirty','Staying clean'],build:['Building','Looking after people'],drive:['On the road','One workplace'],organise:['Organising','Creating'],care:['Helping people','Serving customers'],busy:['Loud and busy','Calm and quiet'],screen:['On a computer','Away from screens'],rules:['Clear rules','My own way']};
+const CQ_AV={out:{1:'Being stuck inside all day','-1':'Working out in the weather'},hands:{1:'Talking to people all day','-1':'Heavy hands-on work'},active:{1:'Sitting still all day','-1':'Being on your feet all day'},routine:{1:'Never knowing what comes next','-1':'Doing the same thing every day'},team:{1:'Working on your own','-1':'Big, crowded teams'},early:{1:'Late nights','-1':'Really early starts'},dirty:{'-1':'Messy, dirty work'},busy:{1:'Quiet, slow places','-1':'Loud, busy places'},screen:{'-1':'Sitting at a computer'},rules:{1:'Workplaces with no structure','-1':'Lots of rules and uniforms'},drive:{1:'Being stuck in one place','-1':'Driving all day'}};
+function cqAvoid(){ const L=[];
+  CQ.no.forEach(k=>L.push(CQ_G[k][0])); CQ.nah.forEach(k=>L.push(CQ_J.find(x=>x.id===k).n));
+  CQ_D.forEach(([d])=>{ if(CQ.nei[d]) L.push(`${CQ_SHORT[d][0]} or ${CQ_SHORT[d][1].toLowerCase()}`); });
+  CQ_D.forEach(([d])=>{ const a=CQ.a[d]; if(a&&CQ_AV[d]&&CQ_AV[d][a]) L.push(CQ_AV[d][a]); });
+  return [...new Set(L)].slice(0,7); }
+function cqPdf(){
+  if(!window.jspdf){ toast("The PDF maker didn't load. Check the internet connection and try again."); return; }
+  const {V:R,type}=cqResults(), {jsPDF}=window.jspdf, d=new jsPDF({unit:'mm',format:'a4'}), name=(CQ.name||'').trim(), W=210, M=20;
+  const INK=[30,34,30], FOREST=[31,58,44], AMBER=[255,138,61], GOLD=[255,176,32], SOFT=[226,240,214], GREY=[110,116,108], RULE=[214,218,208];
+  const txt=(t,x,y,o={})=>{ d.setFont('helvetica',o.b?'bold':'normal'); d.setFontSize(o.s||10); d.setTextColor(...(o.c||INK)); const op={}; if(o.a) op.align=o.a; if(o.cs) op.charSpace=o.cs; d.text(t,x,y,Object.keys(op).length?op:undefined); };
+  const wrap=(t,x,y,w,o={})=>{ d.setFont('helvetica',o.b?'bold':'normal'); d.setFontSize(o.s||10); d.setTextColor(...(o.c||INK)); const L=d.splitTextToSize(t,w), lh=(o.s||10)*(o.lh||.43); L.forEach((l,i)=>d.text(l,x,y+i*lh)); return L.length*lh; };
+  const head=(t,x,y,w)=>{ txt(t.toUpperCase(),x,y,{b:true,s:8.5,c:FOREST,cs:.6}); d.setDrawColor(...RULE); d.setLineWidth(.3); d.line(x,y+2.5,x+w,y+2.5); };
+  // header
+  txt('MY CAREER PROFILE',M,20,{b:true,s:8.5,c:GREY,cs:.8}); if(name) txt(name,W-M,20,{b:true,s:10,a:'right'});
+  d.setDrawColor(...INK); d.setLineWidth(.6); d.line(M,24,W-M,24);
+  txt(CQ.exp?'Right now you\'re':'You\'re',M,38,{s:12,c:GREY}); txt(type[0],M,51,{b:true,s:30,c:FOREST});
+  let y=60+wrap(type[1],M,60,122,{s:11,lh:.46,c:INK});
+  // bullseye mark, top right, clear of the text
+  const cx=174, cy=44; [[19,SOFT],[12.5,[255,214,140]],[6,[255,225,77]]].forEach(([r,f])=>{ d.setFillColor(...f); d.setDrawColor(...INK); d.setLineWidth(.4); d.circle(cx,cy,r,'FD'); });
+  d.setFillColor(...AMBER); d.circle(cx,cy,1.8,'F');
+  y=Math.max(y+6,72);
+  // your mix
+  const rows=CQ_D.filter(([k])=>CQ.a[k]||CQ.nei[k]).slice(0,10);
+  if(rows.length){ head('Your mix',M,y,W-2*M); y+=10;
+    const x0=78, x1=132;
+    rows.forEach(([k])=>{ const [L,Rr]=CQ_SHORT[k], a=CQ.a[k], nei=!a;
+      txt(L,x0-5,y+1.2,{b:a===1,s:9.5,c:a===1?INK:GREY,a:'right'}); txt(Rr,x1+5,y+1.2,{b:a===-1,s:9.5,c:a===-1?INK:GREY});
+      d.setDrawColor(...RULE); d.setLineWidth(1.4); d.line(x0,y,x1,y);
+      if(nei){ txt('neither',(x0+x1)/2,y-2,{s:7.5,c:GREY,a:'center'}); d.setFillColor(255,255,255); d.setDrawColor(...GREY); d.setLineWidth(.5); d.circle((x0+x1)/2,y,1.8,'FD'); }
+      else { const mx=a===1?x0+6:x1-6; d.setDrawColor(...AMBER); d.setLineWidth(1.4); d.line((x0+x1)/2,y,mx,y); d.setFillColor(...AMBER); d.setDrawColor(...INK); d.setLineWidth(.4); d.circle(mx,y,2.4,'FD'); }
+      y+=7.2; });
+    y+=4; }
+  // two columns
+  const cw=80, xL=M, xR=W-M-cw, top=y; head("You'd do well at",xL,y,cw); head("You'd probably avoid",xR,y,cw);
+  let yl=y+10; R.slice(0,4).forEach((r,i)=>{ const j=r.j; d.setFillColor(...(i<3?AMBER:RULE)); d.circle(xL+3.2,yl-1.3,3.2,'F'); txt(String(i+1),xL+3.2,yl,{b:true,s:8.5,c:INK,a:'center'});
+    txt(j.n,xL+9,yl,{b:true,s:11}); yl+=4.6; yl+=wrap('First step: '+j.lad[0]+'.',xL+9,yl,cw-9,{s:8.8,c:GREY,lh:.42})+3.4; });
+  let yr=y+10; const av=cqAvoid();
+  if(av.length) av.forEach(t=>{ d.setDrawColor(...GREY); d.setLineWidth(.5); d.line(xR+1,yr-2.6,xR+4,yr+.4); d.line(xR+4,yr-2.6,xR+1,yr+.4); yr+=wrap(t,xR+8,yr,cw-8,{s:10,lh:.42})+2.6; });
+  else yr+=wrap('Nothing stood out as a hard no. Nice and open.',xR,yr,cw,{s:10,c:GREY});
+  y=Math.max(yl,yr)+4;
+  // strengths
+  const st=CQ.str.map(k=>CQ_S.find(x=>x[0]===k)[1]);
+  if(st.length&&y<240){ head('Your strengths',M,y,W-2*M); y+=9; let x=M; st.forEach(t=>{ d.setFont('helvetica','bold'); d.setFontSize(9.5); const w=d.getTextWidth(t)+9; if(x+w>W-M){ x=M; y+=10; } d.setDrawColor(...FOREST); d.setFillColor(...SOFT); d.setLineWidth(.4); d.roundedRect(x,y-4.6,w,7,3.5,3.5,'FD'); txt(t,x+4.5,y,{b:true,s:9.5,c:FOREST}); x+=w+4; }); y+=11; }
+  // next step
+  if(y<258){ head('My next step',M,y,W-2*M); y+=11; d.setDrawColor(...RULE); d.setLineWidth(.3); for(let i=0;i<3&&y<282;i++){ d.line(M,y,W-M,y); y+=9; } }
+  txt('A starting point, not a final answer. Try things out: work experience, tasters and part-time jobs tell you heaps.',W/2,286,{s:7.5,c:GREY,a:'center'}); txt('Covers jobs you can start through work, apprenticeships, traineeships and TAFE. Uni is still an option later.',W/2,290,{s:7.5,c:GREY,a:'center'});
+  saveBlob(d.output('blob'),`${name?name+' ':''}career profile.pdf`).then(ok=>{ if(ok) toast("Downloaded. Remember to delete it from Downloads on shared computers."); });
+}
+
 const SVG=(d)=>`<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
 const APPS=[
   {n:"How do I leave school?", go:"leaving", g:"linear-gradient(145deg,#7FF0E4,#2FD4C4)", i:SVG('<path d="M12 21V4"/><path d="M12 5h6l2 2.5-2 2.5h-6"/><path d="M12 11H6l-2 2.5L6 16h6"/>')},
   {n:"Build me a resume", go:"resume", g:"linear-gradient(145deg,#FF9BCB,#FF4FA3)", i:SVG('<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 15.5h5M10 8.5h2"/>')},
   {n:"Quitting & AOD", go:"quit", g:"linear-gradient(145deg,#C6F57A,#8EDB3A)", i:SVG('<circle cx="12" cy="12" r="8.5"/><path d="M6 18 18 6"/>')},
   {n:"Plan B", go:"planb", g:"linear-gradient(145deg,#FFC2D8,#FF6FA0)", i:SVG('<path d="M3.5 6.5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2H9l-3 2.5V13H5.5a2 2 0 0 1-2-2z"/><path d="M14.5 9h4a2 2 0 0 1 2 2v4.5a2 2 0 0 1-2 2H18v2.5l-3-2.5h-2.5a2 2 0 0 1-2-2v-1"/>')},
-  {n:"I don't know what I want to do", g:"linear-gradient(145deg,#FFEB85,#FFC93D)", i:SVG('<circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>')},
+  {n:"My career quiz", go:"career", g:"linear-gradient(145deg,#FFEB85,#FFC93D)", i:SVG('<circle cx="12" cy="12" r="8.5"/><path d="m15.5 8.5-2 5-5 2 2-5z"/>')},
   {n:"Portfolio documents", go:"portfolio", g:"linear-gradient(145deg,#C3B2FF,#8C6CFF)", i:SVG('<path d="M3 7.5V18a1.5 1.5 0 0 0 1.5 1.5h15A1.5 1.5 0 0 0 21 18V9a1.5 1.5 0 0 0-1.5-1.5H12L10 5H4.5A1.5 1.5 0 0 0 3 6.5z"/>')},
   {n:"I need help beyond you", go:"help", g:"linear-gradient(145deg,#FFC2A3,#FF8A3D)", i:SVG('<path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10" r="2.3"/>')},
   {n:"The brain", go:"brain", g:"linear-gradient(145deg,#FFB8DA,#F27AB8)", i:SVG('<path d="M12 5.5a3 3 0 0 0-5.6-1.2A3 3 0 0 0 4 8.8a3 3 0 0 0 .3 5.3A3.2 3.2 0 0 0 8.5 19a3 3 0 0 0 3.5.5"/><path d="M12 5.5a3 3 0 0 1 5.6-1.2A3 3 0 0 1 20 8.8a3 3 0 0 1-.3 5.3 3.2 3.2 0 0 1-4.2 4.9 3 3 0 0 1-3.5.5"/><path d="M12 5.5v14"/>')},
   {n:"Skills check-in", go:"skillcheck", g:"linear-gradient(145deg,#A8CCFF,#5B9BFF)", i:SVG('<path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/>')},
   {n:"Feelings wheel", go:"emotions", g:"linear-gradient(145deg,#FFE07A,#FF9F6B 50%,#FF6FB4)", i:SVG('<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v17M3.5 12h17M6 6l12 12M18 6 6 18"/>')},
-  {n:"Sleep", g:"linear-gradient(145deg,#B8B0FF,#6E62E6)", i:SVG('<path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10z"/><path d="M16 4.5h3l-3 3.5h3"/>')},
+  {n:"Sleep", go:"sleep", g:"linear-gradient(145deg,#B8B0FF,#6E62E6)", i:SVG('<path d="M19.5 14.5A8 8 0 0 1 9.5 4.5a8 8 0 1 0 10 10z"/><path d="M16 4.5h3l-3 3.5h3"/>')},
   {n:"My attendance", go:"attend", g:"linear-gradient(145deg,#A8F0E0,#3CCFB0)", i:SVG('<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="m8.5 14.5 2.3 2.3 4.7-4.6"/>')}
 ];
 function appsHTML(){
   return `<section class="apps" aria-label="Tools">${APPS.map((a,i)=>`<button class="app${a.go||a.tm?'':' soon'}" ${a.tm?'data-tm-btn':a.go?`data-go="${a.go}"`:`data-soon="${i}"`} style="--g:${a.g}"><span class="ai">${a.i}</span>${a.go?(WIP.includes(a.go)?'<span class="wip-tag"><span>Under construction</span></span>':''):a.tm?'':'<span class="soon-tag">Soon</span>'}<b>${esc(a.n)}</b></button>`).join('')}</section>`;
 }
-const TONE={resume:'pink',leaving:'teal',portfolio:'violet',skillcheck:'blue',brain:'pink',quit:'green',help:'orange',planb:'rose',attend:'teal',emotions:'violet'};
+const TONE={resume:'pink',leaving:'teal',portfolio:'violet',skillcheck:'blue',brain:'pink',quit:'green',help:'orange',planb:'rose',attend:'teal',emotions:'violet',sleep:'violet',career:'orange'};
 function render(){
   brainStop();
   document.body.classList.toggle('tone-focus',!!TONE[current]); document.body.dataset.acc=TONE[current]||'';
@@ -4395,6 +5266,8 @@ function render(){
   app.classList.toggle('focus', current==='starters');
   try{ history.replaceState(null,'', current==='home' ? location.pathname + location.search : '#'+current); }catch(e){}
   if(current==='portfolio'){ app.innerHTML = flipbookHTML(); window.scrollTo({top:0}); return; }
+  if(current==='career'){ app.innerHTML = careerHTML(); window.scrollTo({top:0}); return; }
+  if(current==='sleep'){ app.innerHTML = sleepHTML(); window.scrollTo({top:0}); return; }
   if(current==='emotions'){ app.innerHTML = emotionsHTML(); window.scrollTo({top:0}); return; }
   if(current==='attend'){ app.innerHTML = attendHTML(); window.scrollTo({top:0}); return; }
   if(current==='planb'){ app.innerHTML = planbHTML(); window.scrollTo({top:0}); return; }
@@ -5122,6 +5995,8 @@ document.addEventListener('click',e=>{
   if(current==='planb' && pbClick(e)) return;
   if(current==='attend' && atClick(e)) return;
   if(current==='emotions' && emClick(e)) return;
+  if(current==='sleep' && slClick(e)) return;
+  if(current==='career' && cqClick(e)) return;
   if(current==='skillcheck' && skClick(e)) return;
   if(current==='resume' && rbClick(e)) return;
   if(e.target.closest('[data-tb]')){tbMode=(tbMode+1)%3;renderTermbar();const r=e.target.closest('.termbar')?.querySelector('[data-tb]')?.getBoundingClientRect();if(r)confetti(r.left+r.width/2,r.top+r.height/2,12);return}
